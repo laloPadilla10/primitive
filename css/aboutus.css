@@ -1,0 +1,97 @@
+
+/* Cores */
+:root{
+
+    --background          : FFFFFF;
+
+}
+
+#img-icon {
+width: 100px;
+height: 100px;
+
+}
+/* icon color */
+
+/* .btn {
+
+    color: #ffff
+
+} */
+
+
+/* profile btn astr */
+#btn-p {
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+    background-color: #A66CFF;
+    display: inline-block;
+    color: #ffff
+    
+
+}
+
+/* cart btn*/
+#btn-shop {
+
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+    background-color: #A66CFF;
+    color: #ffff
+
+}
+
+/* search btn*/
+#docsearch {
+
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+    color: #9C9EFE
+
+
+}
+
+.p{
+    font-family: 'DM sans';
+    
+    
+}
+
+/* Title about settings */
+
+.about {
+    font-family: 'VT323';
+    font-size: 100px;
+    color: #FC00DE;
+    text-align: right;
+}
+
+
+
+/* nav bar collapse settings */
+
+.collapse {
+
+    background-color: #A66CFF;
+    font-family: 'DM sans';
+    font-size: 300px;
+    text-align: center;
+
+}
+
+
+/*.row {
+    border: #9C9EFE 2px solid;
+
+}*/
+
+
+
+
+
+
+
+
