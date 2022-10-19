@@ -1,16 +1,16 @@
-
 /* Cores */
-:root{
+:root {
 
-    --background          : FFFFFF;
+    --background: FFFFFF;
 
 }
 
 #img-icon {
-width: 100px;
-height: 100px;
+    width: 100px;
+    height: 100px;
 
 }
+
 /* icon color */
 
 /* .btn {
@@ -28,8 +28,6 @@ height: 100px;
     background-color: #A66CFF;
     display: inline-block;
     color: #ffff
-    
-
 }
 
 /* cart btn*/
@@ -40,7 +38,6 @@ height: 100px;
     width: 40px;
     background-color: #A66CFF;
     color: #ffff
-
 }
 
 /* search btn*/
@@ -50,14 +47,12 @@ height: 100px;
     height: 40px;
     width: 40px;
     color: #9C9EFE
-
-
 }
 
-.p{
+.p {
     font-family: 'DM sans';
-    
-    
+
+
 }
 
 /* Title about settings */
@@ -88,10 +83,16 @@ height: 100px;
 
 }*/
 
+/*.carousel-item {
+
+    width: 850px;
+    height: 850px;
+}*/
 
 
+.d-block w-100{
 
+    width: 500px;
+    height: 281px;
 
-
-
-
+}
