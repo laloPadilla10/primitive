@@ -13,21 +13,22 @@ const validarEmail = (email) => {
 
   function enviarEmail(e) {
     e.preventDefault();
-    if (validarForm()){
+    if (validarForm()){ 
         Email.send({
+            Token: "a11f9b8e-238d-461a-8ef9-18d47073743a",
             Host: "smtp.gmail.com",
             Username: "proyectoprimitive7@gmail.com",
             Password: "@proyecto_7",
-            To: 'lvg051091@gmail.com',
-            From: "proyectoprimitive7@gmail.com",
+            To: 'proyectoprimitive7@gmail.com',
+            From: email.value,
             Subject: "Contacto",
             Body:  "El usuario: " + nombre.value + "\n" +
                     "Correo: " + email.value + "\n" +
                     "Telefono: " + telefono.value + "\n"+
                     "Envia el siguiente mensaje: \n" + mensaje.value
-          }).then(function (message) {
-              alert("Mail has been sent successfully "+ message)
-        });
+          }).then (
+            message => alert("Mail has been sent successfully "+ message)
+        );
     }
     
   }
