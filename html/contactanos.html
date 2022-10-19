@@ -1,25 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contactanos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Primitive Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <!--CSS Personalizado-->
-    <link rel="stylesheet" href="../css/contactanos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=VT323&display=swap"
+        rel="stylesheet">
+
 </head>
+
 <body>
     <!-- Barra de navegación -->
     <div>
         <div class="collapse" id="navbarToggleExternalContent">
             <div class="bg-dark p-4">
-                <h1 class="text-white h1"> <a color:white href="./aboutus.html">Sobre Nosotros</a></h1>
+                <h1 class="text-white h1"> <a color:white href="../index.html">Sobre Nosotros</a></h1>
             </div>
             <div class="bg-dark p-4">
-                <h1 class="text-white h1"> <a href="./categorias.html">Categorías</a></h1>
+                <h1 class="text-white h1"> <a href=""></a> Categorías</h1>
             </div>
             <div class="bg-dark p-4">
                 <h1 class="text-white h1">Promociones</h1>
@@ -28,7 +32,7 @@
                 <h1 class="text-white h1">Novedades</h1>
             </div>
             <div class="bg-dark p-4">
-                <h1 class="text-white h1"><a color:white href="./contactanos.html">Contáctanos</a></h1>
+                <h1 class="text-white h1"> <a href="../index.html   ">Contáctanos</a></h1>
             </div>
 
         </div>
@@ -41,10 +45,7 @@
                 </button>
                 <div class="container">
                     <div class="row">
-                        <a href="/index.html" target="" class="col-md-1 mx-3 btn btn-danger"><i
-                            class="fa-solid fa-house"></i>
-                        </a>
-                        <a href="./login.html" target="" class="col-md-1 mx-3 btn btn-danger"><i
+                        <a href="#" target="" class="col-sm-1 mx-3 btn btn-danger"><i
                                 class="fa-solid fa-user-astronaut"></i>
                         </a>
                         <form class="col-sm-4 mx-3 d-flex" role="search">
@@ -53,7 +54,7 @@
                                 <button class="btn btn-outline-light" type="submit">Search</button>
                             </div>
                         </form>
-                        <a href="./shoppingcart.html" target="" class="col-md-1 btn btn-danger"><i
+                        <a href="#" target="" class="col-sm-1 btn btn-danger"><i
                                 class="fa-solid fa-cart-shopping"></i></a>
 
                     </div>
@@ -61,37 +62,72 @@
             </div>
         </nav>
     </div>
-
     <!-- Content -->
-    <br>
-    <br>
+    
 
-    <h1 class="" id="title">Contáctanos</h1>
-    <br>
-    <hr>
-
-    <!-- Footer -->
-    <footer class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <a>Copyright 2022 Primitive</a>
-                <a href="#" target="_blank">Términos y condiciones</a>
-                <span> | </span>
-                <a href="#" target="_blank">Políticas de privacidad</a>
-                <span> | </span>
-
-                <a href="#" target="_blank">Instagram</a>
-                <span> | </span>
-                <a href="#" target="_blank">Tik Tok</a>
-                <span> | </span>
+    <!--FORMULARIO-->
+    <div class="container mx-auto" style="width: 1000px;">
+       
+        <div class="row ">
+            <div class="col-sm-6 d-none d-md-block"> <!--efecto de desaparecer la imagen cada que se hace pequeño-->
+                <h1 class="text-center my-4">Contáctanos</h1>
+                <img class="img-fluid rounded" src="https://i.ibb.co/6NY1gB1/Sign-in-opcion-5.jpg" alt="Contáctanos">
+               <div class="align-text-center">
+                <p>¿Algún problema con tu pedido?</p>
+                <p>¿O talvez requieres de asistencia antes de comprar?</p> 
+                <p>¿O simplemente buscas alguien igual de apasionado por lo geek con quien charlar?</p>
+            </div>
+            </div>
+            <div class="col-sm-6">
+                <form class="row g-3" id="registro">
+                    <div class="col-sm-12">
+                        <div class="col-sm-6 align-self-center mt-sm-5">
+                            <label for="inputNombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre">
+                            <label class="text-danger" style="display: none" id="errorNombre">*campo requrido</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="col-sm-6">
+                            <label for="inputemail" class="form-label">e-mail</label>
+                            <input type="email" class="form-control" id="email">
+                            <label class="text-danger" style="display: none" id="errorEmail">*campo requrido/formato inválido</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="col-sm-6">
+                            <label for="inputTelefono" class="form-label">Teléfono</label>
+                            <input type="number" class="form-control" id="telefono">
+                            <label class="text-danger" style="display: none" id="errorTelefono">*campo requrido</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="col-sm-6">
+                            <label for="inputMensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" rows="3"></textarea>
+                            <label class="text-danger" style="display: none" id="errorMensaje">*campo requrido</label>
+                        </div>  
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="col-sm-3">
+                            <form method="post">
+                            <button onclick="enviarEmail(event)" type="submit" class="btn btn-primary">Enviar</button></form>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
-    </footer>
 
-    <!--Scripts-->
+    </div>
+
+    <!-- Footer -->
+   
+    <script type="text/javascript"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="../js/contactanos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
-    
 </body>
+
 </html>
