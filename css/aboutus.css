@@ -11,14 +11,6 @@
 
 }
 
-/* icon color */
-
-/* .btn {
-
-    color: #ffff
-
-} */
-
 
 /* profile btn astr */
 #btn-p {
@@ -49,10 +41,17 @@
     color: #9C9EFE
 }
 
+/* p settings*/
 .p {
     font-family: 'DM sans';
+    font-size: 1em;
+}
 
-
+/* p words highligth*/
+.color-p{
+    font-family: 'VT323';
+    font-size: 2em;
+    color: #FC00DE;
 }
 
 /* Title about settings */
@@ -63,7 +62,6 @@
     color: #FC00DE;
     text-align: right;
 }
-
 
 
 /* nav bar collapse settings */
@@ -77,17 +75,6 @@
 
 }
 
-
-/*.row {
-    border: #9C9EFE 2px solid;
-
-}*/
-
-/*.carousel-item {
-
-    width: 850px;
-    height: 850px;
-}*/
 
 
 .d-block w-100{
