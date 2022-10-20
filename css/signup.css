@@ -1,0 +1,29 @@
+body{
+    background: #a66cff;
+    /*background: linear-gradient(to bottom,  #ffffff, #a66cff)*/
+    
+}
+.bg{
+    background-image: url(../assets/img/signup.jpg);
+    background-position: center center;
+}
+h2{
+    color: black;
+
+   
+}
+
+#inputnombre2, #inputnum2, #inputmail2, #inputpass2{
+    border-radius: 7px;
+   /* background-color: #b1e1ff; */
+   background-color: white;
+}
+
+#loginbtn2{
+    /* border-radius: 25px 25px; */
+    width: 150px;
+    margin-left: 27%;
+}
+label{
+    font-weight: bold;
+} 
