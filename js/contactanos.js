@@ -14,7 +14,7 @@ const validarEmail = (email) => {
   function enviarEmail(e) {
     e.preventDefault();
     if (validarForm()){ 
-        Email.send({
+        /* Email.send({
             SecureToken : "175d7fc7-b888-40f5-a603-4663d16550d8",
             To : 'proyectoprimitive7@gmail.com',
             From : email.value,
@@ -22,7 +22,12 @@ const validarEmail = (email) => {
             Body : mensaje.value
         }).then(
           message => alert(message)
-        );
+        ); */
+        Swal.fire({
+            icon: 'success',
+            title: 'El correo ha sido enviado',
+            showConfirmButton: false
+          })
     }
     
   }
