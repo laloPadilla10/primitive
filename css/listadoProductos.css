@@ -13,6 +13,11 @@ body {
     padding: 20px;
 }
 
+#galeria {
+    display: flex;
+    justify-content: space-between;
+  }
+
 /*------------------TYPOGRAPHY------------*/
 
 #title{
