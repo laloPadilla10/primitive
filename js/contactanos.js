@@ -15,25 +15,19 @@ const validarEmail = (email) => {
     e.preventDefault();
     if (validarForm()){ 
         Email.send({
-            Token: "a11f9b8e-238d-461a-8ef9-18d47073743a",
-            Host: "smtp.gmail.com",
-            Username: "proyectoprimitive7@gmail.com",
-            Password: "@proyecto_7",
-            To: 'proyectoprimitive7@gmail.com',
-            From: email.value,
-            Subject: "Contacto",
-            Body:  "El usuario: " + nombre.value + "\n" +
-                    "Correo: " + email.value + "\n" +
-                    "Telefono: " + telefono.value + "\n"+
-                    "Envia el siguiente mensaje: \n" + mensaje.value
-          }).then (
-            message => alert("Mail has been sent successfully "+ message)
+            SecureToken : "175d7fc7-b888-40f5-a603-4663d16550d8",
+            To : 'proyectoprimitive7@gmail.com',
+            From : email.value,
+            Subject : "This is the subject",
+            Body : mensaje.value
+        }).then(
+          message => alert(message)
         );
     }
     
   }
 
-  function validarForm (){
+  function validarForm (){  
 
     // Validacion de todos los inputs
     if (nombre.value === ""){
