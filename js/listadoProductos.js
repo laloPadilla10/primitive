@@ -1,13 +1,62 @@
 function addItem(item){
-    const itemHTML = '<div class="card" style="width: 18rem;">\n' +
+    const itemHTML = /*'<div class="card-group">\n'+
+    '<div class="card border-info" style="width: 18rem;">\n' +
         '    <img src="'+item.img +'" class="card-img-top" alt="image">\n' +
         '    <div class="card-body">\n' +
-        '        <h5 class="card-title">'+item.name+'</h5>\n' +
+        '        <h5 class="card-header">'+item.name+'</h5>\n' +
         '        <p class="card-text">'+item.description+'</p>\n' +
         '        <a href="#" class="btn btn-primary">Add</a>\n' +
         '    </div>\n' +
         '</div>\n' +
-        '<br/>';
+    '</div>\n' +
+        '<br/>';*/
+
+/* <div class=" " style="display:flex;justify-content:center;box-sizing:border-box">
+  <div class="col-sm">
+    <div class="card border-info">
+      <img src="${item.img}" class="card-img-top" alt="${item.name}">
+      <div class="card-body">
+        <h5 class="card-header">${item.name}</h5>
+        <p class="card-text">${item.description}</p>
+        <a href="#" class="btn btn-info"><i
+        class="fa-solid fa-cart-shopping"></i></a>
+      </div>
+    </div>
+  </div> */
+
+  ` <div class="card">
+        <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+            data-mdb-ripple-color="light">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/belt.webp"
+              class="w-100" />
+            <a href="#!">
+              <div class="mask">
+                <div class="d-flex justify-content-start align-items-end h-100">
+                  <h5><span class="badge bg-primary ms-2">New</span></h5>
+                </div>
+              </div>
+              <div class="hover-overlay">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </div>
+            </a>
+          </div>
+          <div class="card-body">
+            <a href="" class="text-reset">
+              <h5 class="card-title mb-3">Product name</h5>
+            </a>
+            <a href="" class="text-reset">
+              <p>Category</p>
+            </a>
+            <h6 class="mb-3">$61.99</h6>
+          </div>
+        </div>
+      
+      `
+      
+        
+
+    
+        
     const itemsContainer = document.getElementById("list-items");
     itemsContainer.innerHTML += itemHTML;
 }

@@ -13,10 +13,10 @@ body {
     padding: 20px;
 }
 
-#galeria {
+/* #list-items {
     display: flex;
-    justify-content: space-between;
-  }
+    justify-content: space-evenly;
+  } */
 
 /*------------------TYPOGRAPHY------------*/
 
