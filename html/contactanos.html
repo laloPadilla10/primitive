@@ -5,97 +5,57 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Primitive Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/contactanos.css">
 </head>
-<body>
-    <!-- Barra de navegación -->
-    <div>
-        <div class="collapse" id="navbarToggleExternalContent">
-            <div class="bg-dark p-4">
-                <h1 class="text-white h1"> <a color:white href="../index.html">Sobre Nosotros</a></h1>
-            </div>
-            <div class="bg-dark p-4">
-                <h1 class="text-white h1"> <a href=""></a> Categorías</h1>
-            </div>
-            <div class="bg-dark p-4">
-                <h1 class="text-white h1">Promociones</h1>
-            </div>
-            <div class="bg-dark p-4">
-                <h1 class="text-white h1">Novedades</h1>
-            </div>
-            <div class="bg-dark p-4">
-                <h1 class="text-white h1"> <a href="../index.html   ">Contáctanos</a></h1>
-            </div>
-        </div>
-        <nav class="navbar navbar-dark bg-primary ">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="container">
-                    <div class="row">
-                        <a href="#" target="" class="col-sm-1 mx-3 btn btn-danger"><i
-                                class="fa-solid fa-user-astronaut"></i>
-                        </a>
-                        <form class="col-sm-4 mx-3 d-flex" role="search">
-                            <div class="d-flex">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-light" type="submit">Search</button>
-                            </div>
-                        </form>
-                        <a href="#" target="" class="col-sm-1 btn btn-danger"><i
-                                class="fa-solid fa-cart-shopping"></i></a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </div>   
-    <!--FORMULARIO-->
-    <div class="container mx-auto" style="width: 900px;">       
-        <div class="row ">
-            <div class="col"> 
-                <h1 class="text-center my-4">Contáctanos</h1>
-            </div>
-        </div>
-            <div class="row">
-                <p style="text-align: center;">Agradecemos el interés con nosotros, si desea recibir mayor
-                    informacion sobre alguno de nuestros productos, por favor rellene el siguiente formaulario,
-                    estamos preparados para atender sus dudas y solicitudes con gusto.</p>     
-            <div class="col">                                              
-                <img class="img-fluid rounded" src="https://i.ibb.co/xYVBsyf/Sign-in-opcion-6.jpg" alt="Contáctanos">
+<body>  
+   <!-- FORMULARIO -->  
+    <div class="col-sm-8 offset-sm-2"  style="margin-top:30px">     
+            <div class="row"> 
+                <h1 class="title">Contáctanos<hr></h1>
             </div>           
-            <div class="col">
+    </div>   
+    <div class="col-sm-12" style="margin-top:10px" >
+        <div class="row justify-content-center"> 
+            <div class="col-sm-4">                                              
+                <img class="img-thumbnail" src="https://i.ibb.co/xYVBsyf/Sign-in-opcion-6.jpg" alt="imagen" style="height: 800px">   
+            </div>           
+            <div class="col-sm-4"> 
+                <p style="text-align: center;">Agradecemos el interés con nosotros, si desea recibir mayor
+                    información sobre alguno de nuestros productos, por favor rellene el siguiente formaulario.
+                    Estamos preparados para atender sus dudas y solicitudes con gusto.
+                </p>   
+                <br>
+                <br>
                 <form class="row g-3" id="registro">
                     <div class="col-sm-12">                     
-                            <label for="inputNombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="nombre" style="background-color:rgb(177, 225, 225);">
+                            <label for="inputNombre" class="form-label"><strong>Nombre</strong></label>
+                            <input type="text" class="form-control" id="nombre" style="background-color:rgb(221 231 245);">
                             <label class="text-danger" style="display: none" id="errorNombre">*campo requerido</label>                      
                     </div>
                     <div class="col-sm-12">                        
-                            <label for="inputemail" class="form-label">e-mail</label>
-                            <input type="email" class="form-control" id="email" style="background-color:rgb(177, 225, 225);">
+                            <label for="inputemail" class="form-label"><strong>e-mail</strong></label>
+                            <input type="email" class="form-control" id="email" style="background-color:rgb(221 231 245);">
                             <label class="text-danger" style="display: none" id="errorEmail">*campo requerido/formato inválido</label>                        
                     </div>
                     <div class="col-sm-12">                        
-                            <label for="inputTelefono" class="form-label">Teléfono</label>
-                            <input type="number" class="form-control" id="telefono" style="background-color:rgb(177, 225, 225);">
+                            <label for="inputTelefono" class="form-label"><strong>Teléfono</strong></label>
+                            <input type="number" class="form-control" id="telefono" style="background-color:rgb(221 231 245);">
                             <label class="text-danger" style="display: none" id="errorTelefono">*campo requerido</label>                       
                     </div>
                     <div class="col-sm-12">                        
-                            <label for="inputMensaje" class="form-label">Mensaje</label>
-                            <textarea class="form-control" id="mensaje" rows="5" style="background-color:rgb(177, 225, 225);"></textarea>
+                            <label for="inputMensaje" class="form-label"><strong>Mensaje</strong></label>
+                            <textarea class="form-control" id="mensaje" rows="5" style="background-color:rgb(221 231 245);"></textarea>
                             <label class="text-danger" style="display: none" id="errorMensaje">*campo requerido</label>                       
                     </div>
                     <div class="col-sm-12">                       
                             <form method="post">
-                            <button onclick="enviarEmail(event)" type="submit" class="btn btn-primary">Enviar</button></form>                       
+                            <button onclick="enviarEmail(event)" type="submit" class="btn btn-primary">Enviar</button></form>                      
                     </div>
                 </form>
-            </div>        
+
+            </div>
         </div>
     </div>
     <!-- Footer -->
