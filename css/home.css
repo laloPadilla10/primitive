@@ -61,3 +61,50 @@
     }
   }
   
+/* cursor de animacion de moviento en todo el body */
+body{
+  animation: animate 0.2s infinite;
+}
+@keyframes animate{
+ 25%{
+  cursor: url("../assets/cursor/cursorMovi/frame_0_delay-0.01s.gif") , auto;
+ }
+ 50%{
+  cursor: url("../assets/cursor/cursorMovi/frame_1_delay-0.01s.gif") , auto;
+ }
+ 75%{
+  cursor: url("../assets/cursor/cursorMovi/frame_2_delay-0.01s.gif") , auto;
+ }
+ 100%{
+  cursor: url("../assets/cursor/cursorMovi/frame_3_delay-0.01s.gif") , auto;
+ }
+
+} 
+
+.categorias{
+  animation: animate1 0.3s infinite;
+}
+@keyframes animate1{
+ 0%{
+  cursor: url("../assets/cursor/cursosCategorias/frame_0_delay-0.01s.gif") , auto;
+ }
+ 20%{
+  cursor: url("../assets/cursor/cursosCategorias/frame_1_delay-0.01s.gif") , auto;
+ }
+ 40%{
+  cursor: url("../assets/cursor/cursosCategorias/frame_2_delay-0.01s.gif") , auto;
+ }
+ 60%{
+  cursor: url("../assets/cursor/cursosCategorias/frame_3_delay-0.01s.gif") , auto;
+ }
+  80%{
+  cursor: url("../assets/cursor/cursosCategorias/frame_4_delay-0.01s.gif") , auto;
+ }
+ 100%{
+  cursor: url("../assets/cursor/cursosCategorias/frame_5_delay-0.01s.gif") , auto;
+ }
+ 
+} 
+
+
+
