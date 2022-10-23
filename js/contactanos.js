@@ -6,23 +6,17 @@ const validarEmail = (email) => {
       );
   }
   
-  const nombre = document.getElementById("nombre");
-  const email = document.getElementById("email");
-  const telefono = document.getElementById("telefono");
-  const mensaje = document.getElementById("mensaje");
+  let nombre, email, telefono, mensaje;
 
   function enviarEmail(e) {
+  
+    nombre = document.getElementById("nombre");
+    email = document.getElementById("email");
+    telefono = document.getElementById("telefono");
+    mensaje = document.getElementById("mensaje");
     e.preventDefault();
+    
     if (validarForm()){ 
-        /* Email.send({
-            SecureToken : "175d7fc7-b888-40f5-a603-4663d16550d8",
-            To : 'proyectoprimitive7@gmail.com',
-            From : email.value,
-            Subject : "This is the subject",
-            Body : mensaje.value
-        }).then(
-          message => alert(message)
-        ); */
         Swal.fire({
             icon: 'success',
             title: 'El correo ha sido enviado',
@@ -69,4 +63,56 @@ const validarEmail = (email) => {
 
     }
     return true;
+  }
+
+  function cargarContacto () {
+    let main = document.getElementById("main");
+    main.innerHTML = crearPaginaContacto();
+  }
+
+  function crearPaginaContacto (){
+    return '<div class="col-sm-8 offset-sm-2"  style="margin-top:30px">'+
+                '<div class="row">' +
+                    '<h1 class="title">Contáctanos<hr></h1>'+
+                '</div>'+
+            '</div>'+
+            '<div class="col-sm-12" style="margin-top:10px">' +
+                '<div class="row justify-content-center">' +
+                    '<div class="col-sm-4">' +                                            
+                        '<img class="img-thumbnail" src="https://i.ibb.co/xYVBsyf/Sign-in-opcion-6.jpg" alt="imagen" style="height: 700px">' +
+                    '</div>' +
+                    '<div class="col-sm-4">' +
+                        '<p style="text-align: center;">Agradecemos el interés en nosotros. Si desea recibir mayor ' +
+                            'información sobre alguno de nuestros productos, por favor rellene el siguiente formulario. ' +
+                            'Estamos listos para atender sus dudas y solicitudes.' +
+                        '</p>'+
+                        '<form class="row g-3" id="registro">' +
+                            '<div class="col-sm-12">' +
+                                    '<label for="inputNombre" class="form-label"><strong>Nombre</strong></label>' +
+                                    '<input type="text" class="form-control" id="nombre" style="background-color:rgb(221 231 245);">' +
+                                    '<label class="text-danger" style="display: none" id="errorNombre">*campo requerido</label>' +
+                            '</div>' +
+                            '<div class="col-sm-12">' +
+                                    '<label for="inputemail" class="form-label"><strong>e-mail</strong></label>' +
+                                    '<input type="email" class="form-control" id="email" style="background-color:rgb(221 231 245);">' +
+                                    '<label class="text-danger" style="display: none" id="errorEmail">*campo requerido/formato inválido</label> ' +
+                            '</div>' +
+                            '<div class="col-sm-12">' +
+                                    '<label for="inputTelefono" class="form-label"><strong>Teléfono</strong></label>' +
+                                    '<input type="number" class="form-control" id="telefono" style="background-color:rgb(221 231 245);">' +
+                                    '<label class="text-danger" style="display: none" id="errorTelefono">*campo requerido</label>' +
+                            '</div>' +
+                            '<div class="col-sm-12">' +
+                                    '<label for="inputMensaje" class="form-label"><strong>Mensaje</strong></label>' +
+                                    '<textarea class="form-control" id="mensaje" rows="5" style="background-color:rgb(221 231 245);"></textarea>' +
+                                    '<label class="text-danger" style="display: none" id="errorMensaje">*campo requerido</label>' +
+                            '</div>' +
+                            '<div class="col-sm-12">' +
+                                    '<form method="post">' +
+                                    '<button onclick="enviarEmail(event)" type="submit" class="btn btn-primary">Enviar</button></form>' +
+                            '</div>' +
+                        '</form>' +
+                    '</div>' +
+                '</div>' +
+            '</div>';
   }
