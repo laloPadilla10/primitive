@@ -12,6 +12,7 @@
 
 .like {
   font-size: 1.5rem;
+  color: #fc00de;
 }
 
 
@@ -21,4 +22,9 @@
 #title{
     font-family: Mondwest;
     text-align: center;
+    /* color: #fc00de; */
+}
+
+h4, p{
+  font-family: 'DM Sans';
 }

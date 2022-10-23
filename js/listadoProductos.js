@@ -5,7 +5,7 @@ function addItem(item) {
         <div class="card-header">
           <img class="card-img" src="${item.img}" alt="${item.name}" style="height: 322px;">
           <div class="card-img-overlay  justify-content-end">
-          <a href="#" class="card-link text-danger like">
+          <a href="#" class="card-link  like">
           <i class="fas fa-heart"></i>
           </a>
           </div>
