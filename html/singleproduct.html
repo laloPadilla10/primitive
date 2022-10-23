@@ -97,7 +97,7 @@
     <section class="container sproduct my-2 pt-2" >
         <div class="row ">
             <div class="col-lg-5 col-md-12 col-12">
-                <img class="img-fluid w-100 bp-1" src="https://i.ibb.co/7yT8czX/categori-accesorio-opcion-1.png" alt="Kirby Cap">
+                <img class="img-fluid w-100 bp-1" src="https://i.ibb.co/7yT8czX/categori-accesorio-opcion-1.png" id="MainImg" alt="Kirby Cap">
 
                 <div class=" small-img-group">
                     <div class="small-img-col">
@@ -137,8 +137,6 @@
                 <button class="buy-btn">Añadir a Carrito</button>
                 <h4 class="mt-5 mb-5">Detalles de producto</h4>
                 <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis veritatis, perferendis fuga, non sit cumque, optio quia assumenda quasi fugit sequi aperiam nostrum. Distinctio non, ab eum aperiam autem quos?</span>
-
-
             </div>
         </div>
     </section>
@@ -167,6 +165,24 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
+    <script>
+        let MainImg = document.getElementById('MainImg');
+        let smallImg = document.getElementsByClassName('small-img');
+
+        smallImg[0].onclick = function(){
+            MainImg.src = smallImg[0].src;
+        }
+        smallImg[1].onclick = function(){
+            MainImg.src = smallImg[1].src;
+        }
+        smallImg[2].onclick = function(){
+            MainImg.src = smallImg[2].src;
+        }
+        smallImg[3].onclick = function(){
+            MainImg.src = smallImg[3].src;
+        }
+
+    </script>
     
 </body>
 </html>
