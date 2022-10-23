@@ -1,5 +1,96 @@
+/* Navbar settings */
 
-/* Cores */
+header{
+    background-color: rgb(166, 108, 255);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 25%);
+    align-items: center;
+    font-family: 'DM Sans';
+    font-style: normal;
+}
+
+h2{
+    font-family: 'VT323';
+    font-style: normal;
+    font-size: 65px;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@media(max-width:960px){
+
+    h2{
+
+        font-family: 'VT323';
+        font-style: normal;
+        font-size: 40px;
+        font-weight: 400;
+        font-display: swap;
+    }
+}
+
+#geek{
+    font-family: 'VT323';
+    font-style: normal;
+    font-size: 31px;
+}
+
+@media(max-width:992px){
+
+    #geek{
+    
+        font-family: 'VT323';
+        font-style: normal;
+        font-size: 40px;
+        
+    }
+}
+
+#login{
+    font-family: 'VT323';
+    font-size: 25px;
+}
+
+#logo{
+    width: 100px;
+    height: 85px;
+    border-radius: 100px;
+    
+}
+
+.img-login{
+    width: 15px;
+    height: 1px;
+}
+
+.btn-search{
+    color: white;
+    background-color:rgb(252, 0, 222);
+    border-color: rgb(166, 108, 255);
+}
+
+.btn-circle {
+    width: 50px;
+    height: 50px;
+    padding: 7px 0px;
+    border-radius: 35px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.42857;
+    background-color: rgb(252, 0, 222);
+    border-color: rgb(166, 108, 255);
+    
+}
+
+#button-login{
+    font-family: 'VT323';
+    font-size: 25px;
+    background-color:rgb(166, 108, 225); 
+    border-color:rgb(166, 108, 225) ;
+
+}
+
+
+/*################## Cores ###################*/
 :root {
 
     --background: FFFFFF;
@@ -14,17 +105,17 @@
 
 
 /* profile btn astr */
-#btn-p {
+/* #btn-p {
     border-radius: 50px;
     height: 40px;
     width: 40px;
     background-color: #A66CFF;
     display: inline-block;
     color: #ffff
-}
+} */
 
 /* cart btn*/
-#btn-shop {
+/* #btn-shop {
 
     border-radius: 50px;
     height: 40px;
@@ -32,20 +123,25 @@
     background-color: #A66CFF;
     color: #ffff
 }
-
+ */
 /* search btn*/
-#docsearch {
+/* #docsearch {
 
     border-radius: 50px;
     height: 40px;
     width: 40px;
     color: #9C9EFE
-}
+} */
 
 /* p settings*/
 .p {
     font-family: 'DM sans';
     font-size: 1em;
+}
+
+p.slideshow {
+    font-family: 'DM sans';
+    font-size: 1.2em;
 }
 
 /* p words highligth*/
@@ -64,17 +160,23 @@
     text-align: right;
 }
 
+h5.slideshow {
+    font-family: 'VT323';
+    font-size: 2em;
+    color: #fefefe;
+
+}
 
 /* nav bar collapse settings */
 
-.collapse {
+/* .collapse {
 
     background-color: #A66CFF;
     font-family: 'DM sans';
     font-size: 300px;
     text-align: center;
 
-}
+} */
 
 
 
