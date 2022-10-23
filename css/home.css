@@ -56,12 +56,121 @@ body{
  }
  
 } 
-
+.selectorNomal{
+  animation: animate2 0.3s infinite;
+}
+@keyframes animate2{
+ 33%{
+  cursor: url("../assets/cursor/cursosNormal/frame_0_delay-0.01s.gif") , auto;
+ }
+ 50%{
+  cursor: url("../assets/cursor/cursosNormal/frame_1_delay-0.01s.gif") , auto;
+ }
+ 100%{
+  cursor: url("../assets/cursor/cursosNormal/frame_2_delay-0.01s.gif") , auto;
+ }
+ 
+} 
+/* Imagen fondo */
 .hero-image {
   background-image: url("../assets/img/fondo3.jpeg");
   /* background-repeat: no-repeat ;
   background-position: right top;
   background-attachment: scroll; */
 }
+/* Tipografia */
+.gradiCategorias1 {
+  font-family: 'VT323';
+  font-size: 70px;
+  color: #9c9efe;
+  text-align: center;
+}
 
 
+/* Para la barra de navegacion */
+.barraNavegacion{
+  background-color: rgb(166, 108, 255);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 25%);
+  align-items: center;
+  font-family: 'DM Sans';
+  font-style: normal;
+}
+
+
+#geek{
+  font-family: 'VT323';
+  font-style: normal;
+  font-size: 31px;
+}
+
+
+#login{
+  font-family: 'VT323';
+  font-size: 25px;
+}
+
+#logo{
+  width: 100px;
+  height: 85px;
+  border-radius: 100px;
+  
+}
+
+.img-login{
+  width: 15px;
+  height: 1px;
+}
+
+.btn-search{
+  color: white;
+  background-color:rgb(252, 0, 222);
+  border-color: rgb(166, 108, 255);
+}
+
+.btn-circle {
+  width: 50px;
+  height: 50px;
+  padding: 7px 0px;
+  border-radius: 35px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.42857;
+  background-color: rgb(252, 0, 222);
+  border-color: rgb(166, 108, 255);
+  
+}
+
+#button-login{
+  font-family: 'VT323';
+  font-size: 25px;
+  background-color:rgb(166, 108, 225); 
+  border-color:rgb(166, 108, 225) ;
+
+}
+
+
+/*################## Cores ###################*/
+:root {
+
+  --background: FFFFFF;
+
+}
+
+#img-icon {
+  width: 100px;
+  height: 100px;
+
+}
+
+.about {
+  font-family: 'VT323';
+  font-size: 100px;
+  color: #FC00DE;
+  text-align: right;
+}
+
+.d-block w-100{
+
+  width: 500px;
+  height: 281px;
+}
