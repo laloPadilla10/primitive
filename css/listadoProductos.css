@@ -8,10 +8,24 @@
 }
 
 /*------------------BODY------------------*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+
+.like {
+  font-size: 1.5rem;
+  color: #fc00de;
+}
+
+
 
 /*------------------TYPOGRAPHY------------*/
 
 #title{
     font-family: Mondwest;
     text-align: center;
+    color: #fc00de;
 }
+
+h4, p{
+  font-family: 'DM Sans';
+}
+
