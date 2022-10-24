@@ -9,58 +9,57 @@
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <!--CSS Personalizado-->
+    <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/shoppingcart.css">
+
 </head>
 <body>
-    <!-- Barra de navegación -->
-    <div>
-        <div class="collapse" id="navbarToggleExternalContent">
-            <div class="bg-dark p-4">
-                <h1 class="text-white h1"><a color:white href="./aboutus.html">Sobre Nosotros</a></h1>
-            </div>
-            <div class="bg-dark p-4">
-                <h1 class="text-white h1"><a href="./categorias.html">Categorías</a></h1>
-            </div>
-            <div class="bg-dark p-4">
-                <h1 class="text-white h1">Promociones</h1>
-            </div>
-            <div class="bg-dark p-4">
-                <h1 class="text-white h1">Novedades</h1>
-            </div>
-            <div class="bg-dark p-4">
-                <h1 class="text-white h1"><a color:white href="./contactanos.html">Contáctanos</a></h1>
-            </div>
+
+      <!-- Barra de navegación -->
+  <header>
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg justify-content-sm-start">
+        <button class="navbar-toggler dropdown-toggle-split" type="button" data-toggle="collapse"
+          data-bs-toggle="collapse" data-bs-target="#navbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand ms-lg-2 mx-sm-5" href="../index.html">
+          <img id="logo" src="../assets/img/logo1.png" alt="Logo Geekmitive" loading="lazy">
+        </a>
+        <span id="geek">Geekmitive</span>
+
+        <div class="navbar-collapse collapse ms-md-3 justify-content-around text-center col-xl-auto" id="navbar">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="../html/listadoProductos.html">Categorías<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Promociones<pan class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Novedades<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="../html/contactanos.html">Contáctanos<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <form class="input-group w-auto my-auto mx-lg-5">
+                <input autocomplete="off" type="search" class="form-control rounded" placeholder="Search">
+                <button class="btn-search" type="submit"><i class="fas fa-search"></i></button>
+              </form>
+            </li>
+          </ul>
+          <a class="btn btn-primary btn-lg btn-circle mx-1" href="../html/shoppingcart.html" role="button"><i
+              class="fa-solid fa-cart-shopping"></i></a>
+
+          <a class="btn btn-primary btn-lg btn-circle" href="../html/login.html" role="button"><i
+              class="fa-solid fa-user-astronaut"></i></a>
 
         </div>
-        <nav class="navbar navbar-dark bg-primary ">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="container">
-                    <div class="row">
-                        <a href="/index.html" target="" class="col-md-1 mx-3 btn btn-danger"><i
-                            class="fa-solid fa-house"></i>
-                        </a>
-                        <a href="./login.html" target="" class="col-md-1 mx-3 btn btn-danger"><i
-                                class="fa-solid fa-user-astronaut"></i>
-                        </a>
-                        <form class="col-sm-4 mx-3 d-flex" role="search">
-                            <div class="d-flex">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-light" type="submit">Search</button>
-                            </div>
-                        </form>
-                        <a href="./shoppingcart.html" target="" class="col-md-1 btn btn-danger"><i
-                                class="fa-solid fa-cart-shopping"></i></a>
-
-                    </div>
-                </div>
-            </div>
-        </nav>
+      </nav>
     </div>
+  </header>
 
     <!-- Content -->
     <br>
@@ -70,23 +69,41 @@
     <br>
     <hr>
 
-    <!-- Footer -->
-    <footer class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <a>Copyright 2022 Primitive</a>
-                <a href="#" target="_blank">Términos y condiciones</a>
-                <span> | </span>
-                <a href="#" target="_blank">Políticas de privacidad</a>
-                <span> | </span>
+  <footer class="text-center text-white" style="background-color: #e7dcf8;">
+    <!-- Grid container -->
+    <div class="container pt-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Instagram -->
+        <a
+          class="btn btn-link btn-floating btn-lg  m-1"
+          href="#"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-instagram"></i>
+        </a>
+        <!-- Instagram -->
 
-                <a href="#" target="_blank">Instagram</a>
-                <span> | </span>
-                <a href="#" target="_blank">Tik Tok</a>
-                <span> | </span>
-            </div>
-        </div>
-    </footer>
+        <!-- Tik Tok -->
+        <a
+          class="btn btn-link btn-floating btn-lg  m-1"
+          href="#"
+          role="button"
+          data-mdb-ripple-color="#fc00de"
+          ><i class="fab fa-tiktok"></i>
+        </a>
+        <!-- Tik Tok -->
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright || Geekmitive || <a href="#" target="">Términos y condiciones</a> || <a href="#" target="">Políticas de privacidad</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
 
     <!--Scripts-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
