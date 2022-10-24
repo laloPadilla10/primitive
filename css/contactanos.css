@@ -1,0 +1,27 @@
+/*------------------Fonts------------------*/
+@font-face {
+    font-family: 'Mondwest';
+    src: url('../assets/font/Mondwest-Regular.ttf') format('truetype')
+}
+
+h1{
+    font-family: Mondwest;
+    text-align: center;
+}
+h1.title {
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #665449;
+    
+}
+hr {
+    height: 3px;
+    background-color: red;
+}
+
+body{
+    background-color:#fff;
+}
+
+
