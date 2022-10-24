@@ -4,7 +4,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Primitive Home</title>
+    <title>Geekmitive Home</title>
     <!-- referencia para estilos y letras -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,14 +24,14 @@
               data-bs-toggle="collapse" data-bs-target="#navbar">
               <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand ms-lg-2 mx-sm-5" href="#">
+          <a class="navbar-brand ms-lg-2 mx-sm-5" href="./index.html">
                   <img id="logo" src="../assets/img/logoHome.png"Logo Geekmitive" loading="lazy">
           </a>
           <span id="geek">Geekmitive</span>
           <div class="navbar-collapse collapse ms-md-3 justify-content-around text-center col-xl-auto" id="navbar">
               <ul class="navbar-nav">
                   <li class="nav-item active">
-                      <a class="nav-link" href="#">Categorías<span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="./html/listadoProductos.html">Categorías<span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item active">
                       <a class="nav-link" href="#">Promociones<pan class="sr-only">(current)</span></a>
@@ -40,7 +40,7 @@
                       <a class="nav-link" href="#">Novedades<span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item active">
-                      <a class="nav-link" href="#">Contáctanos<span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="./html/contactanos.html">Contáctanos<span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item active">
                       <form class="input-group w-auto my-auto mx-lg-5">
@@ -49,9 +49,9 @@
                       </form>
                   </li>
               </ul>
-              <a class="btn btn-primary btn-lg btn-circle mx-1" href="#" role="button"><i
+              <a class="btn btn-primary btn-lg btn-circle mx-1" href="./html/shoppingcart.html" role="button"><i
                   class="fa-solid fa-cart-shopping"></i></a>
-              <a class="btn btn-primary btn-lg btn-circle" href="#" role="button"><i class="fa-solid fa-user-astronaut"></i></a>
+              <a class="btn btn-primary btn-lg btn-circle" href="./html/login.html" role="button"><i class="fa-solid fa-user-astronaut"></i></a>
           </div>
       </nav>
   </div>   
@@ -143,22 +143,42 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <a>Copyright 2022 Primitive</a>
-                <a href="#" target="_blank">Términos y condiciones</a>
-                <span> | </span>
-                <a href="#" target="_blank">Políticas de privacidad</a>
-                <span> | </span>
-                <a href="#" target="_blank">Instagram</a>
-                <span> | </span>
-                <a href="#" target="_blank">Tik Tok</a>
-                <span> | </span>
-            </div>
-        </div>
-    </footer>
+<!-- Footer -->
+  <footer class="text-center text-white" style="background-color: #e7dcf8;">
+    <!-- Grid container -->
+    <div class="container pt-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Instagram -->
+        <a
+          class="btn btn-link btn-floating btn-lg  m-1"
+          href="#"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-instagram"></i>
+        </a>
+        <!-- Instagram -->
+
+        <!-- Tik Tok -->
+        <a
+          class="btn btn-link btn-floating btn-lg  m-1"
+          href="#"
+          role="button"
+          data-mdb-ripple-color="#fc00de"
+          ><i class="fab fa-tiktok"></i>
+        </a>
+        <!-- Tik Tok -->
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright || Geekmitive || <a href="#" target="">Términos y condiciones</a> || <a href="#" target="">Políticas de privacidad</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
 
     <!--Scripts-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
