@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+     <!-- font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=VT323&display=swap" rel="stylesheet">
+    <!--CSS Personalizado-->
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+
+    <style>
+        .small-img-group{
+            display: flex;
+            justify-content: space-between;
+        }
+        .small-img-col{
+            flex-basis: 24%;
+            cursor: pointer;
+        }
+        .sproduct select{
+            display: block;
+            padding: 5px 10px;
+        }
+
+        .sproduct input{
+            width: 50px;
+            height: 40px;
+            padding-left: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .buy-btn{
+            background-color: blueviolet;
+            opacity: 1;
+            transition:0.3s all ;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <header>    
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg justify-content-sm-start">
+                <button class="navbar-toggler dropdown-toggle-split" type="button" data-toggle="collapse"
+                    data-bs-toggle="collapse" data-bs-target="#navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a class="navbar-brand ms-lg-2 mx-sm-5" href="#">
+                        <img id="logo" src="../assets/img/logo1.png" alt="Logo Geekmitive" loading="lazy">
+                </a>
+                <span id="geek">Geekmitive</span>
+    
+                <div class="navbar-collapse collapse ms-md-3 justify-content-around text-center col-xl-auto" id="navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Categorías<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Promociones<pan class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Novedades<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Contáctanos<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <form class="input-group w-auto my-auto mx-lg-5">
+                                <input autocomplete="off" type="search" class="form-control rounded" placeholder="Search">
+                                <button class="btn-search" type="submit"><i class="fas fa-search"></i></button>
+                            </form>
+                        </li>
+                    </ul>
+                    <a class="btn btn-primary btn-lg btn-circle mx-1" href="#" role="button"><i
+                        class="fa-solid fa-cart-shopping"></i></a>
+    
+                    <a class="btn btn-primary btn-lg btn-circle" href="#" role="button"><i class="fa-solid fa-user-astronaut"></i></a>
+
+                </div>
+            </nav>
+        </div>   
+    </header>
+
+    <!-- Content -->
+    <!-- <h1 class="glow" id="title">Geekmitive</h1> -->
+    <section class="container sproduct my-2 pt-2" >
+        <div class="row ">
+            <div class="col-lg-5 col-md-12 col-12">
+                <img class="img-fluid w-100 bp-1" src="https://i.ibb.co/7yT8czX/categori-accesorio-opcion-1.png" id="MainImg" alt="Kirby Cap">
+
+                <div class=" small-img-group">
+                    <div class="small-img-col">
+                        <img src="https://i.ibb.co/7yT8czX/categori-accesorio-opcion-1.png" width="100%" class="small-img" alt="Kirby Cap">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="https://i.ibb.co/7yT8czX/categori-accesorio-opcion-1.png" width="100%" class="small-img" alt="Kirby Cap">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="https://i.ibb.co/7yT8czX/categori-accesorio-opcion-1.png" width="100%" class="small-img" alt="Kirby Cap">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="https://i.ibb.co/7yT8czX/categori-accesorio-opcion-1.png" width="100%" class="small-img" alt="Kirby Cap">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-12">
+                <h6>Home/ Gorra</h6>
+                <h3 class="py-4">Gorra Kirby</h3>
+                <h2>$299</h2>
+                <select class="my-3">
+                    <option>Talla</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                </select>
+                <select class="my-3">
+                    <option>Cantidad</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                </select>
+                <button class="buy-btn">Añadir a Carrito</button>
+                <h4 class="mt-5 mb-5">Detalles de producto</h4>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis veritatis, perferendis fuga, non sit cumque, optio quia assumenda quasi fugit sequi aperiam nostrum. Distinctio non, ab eum aperiam autem quos?</span>
+            </div>
+        </div>
+    </section>
+
+    <br>
+    <hr>
+    <!-- Footer -->
+    <footer class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a>Copyright 2022 Primitive</a>
+                <a href="#" target="_blank">Términos y condiciones</a>
+                <span> | </span>
+                <a href="#" target="_blank">Políticas de privacidad</a>
+                <span> | </span>
+
+                <a href="#" target="_blank">Instagram</a>
+                <span> | </span>
+                <a href="#" target="_blank">Tik Tok</a>
+                <span> | </span>
+            </div>
+        </div>
+    </footer>
+
+    <!--Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script>
+        let MainImg = document.getElementById('MainImg');
+        let smallImg = document.getElementsByClassName('small-img');
+
+        smallImg[0].onclick = function(){
+            MainImg.src = smallImg[0].src;
+        }
+        smallImg[1].onclick = function(){
+            MainImg.src = smallImg[1].src;
+        }
+        smallImg[2].onclick = function(){
+            MainImg.src = smallImg[2].src;
+        }
+        smallImg[3].onclick = function(){
+            MainImg.src = smallImg[3].src;
+        }
+
+    </script>
+    
+</body>
+</html>
