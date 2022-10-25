@@ -12,12 +12,12 @@ h1.title {
     font-size: 30px;
     font-weight: 600;
     text-transform: uppercase;
-    color: #665449;
+    color: #fc00de;
     
 }
 hr {
-    height: 3px;
-    background-color: red;
+    height: 5px;
+    background-color: rgb(25, 0, 255);
 }
 
 body{
