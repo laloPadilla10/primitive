@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Regístrate</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/signup.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +17,50 @@
 
   </head>
   <body>
+    <!--navbar-->
+    <header>
+    <div class="container-fluid barraNavegacion">
+        <nav class="navbar navbar-expand-lg justify-content-sm-start">
+            <button class="navbar-toggler dropdown-toggle-split" type="button" data-toggle="collapse"
+                data-bs-toggle="collapse" data-bs-target="#navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand ms-lg-2 mx-sm-5 selectorHelp" href="#" onclick="location.reload();">
+                    <img id="logo" src="../assets/img/logoHome.png" alt ="Logo Geekmitive" loading="lazy">
+            </a>
+            <span id="geek">Geekmitive</span>
+            <div class="navbar-collapse collapse ms-md-3 justify-content-around text-center col-xl-auto" id="navbar">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link selectorNomal"  href="#" onclick="cargarAboutUs()">About Us</a>               
+                </li>
+                    <li class="nav-item active">
+                        <a class="nav-link selectorNomal" href="#" onclick="cargarProductos()">Categorías</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link selectorNomal" href="#">Promociones<pan class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link selectorNomal" href="#">Novedades<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link selectorNomal" href="#" onclick="cargarContacto()">Contáctanos</a>
+                    </li>
+                    <li class="nav-item active">
+                        <form class="input-group w-auto my-auto mx-lg-5  ">
+                            <input autocomplete="off" type="search" class="form-control rounded selectorText" placeholder="Search">
+                            <button class="btn-search selectorHelp" type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </li>
+                </ul>
+                <a class="btn btn-primary btn-lg btn-circle mx-1 selectorHelp" href="./html/shoppingcart.html" role="button"><i
+                    class="fa-solid fa-cart-shopping"></i></a>
+                <a class="btn btn-primary btn-lg btn-circle selectorHelp" href="#" onclick="cargarLogin()" role="button"><i class="fa-solid fa-user-astronaut"></i></a>
+            </div>
+        </nav>
+    </div> 
+    </header>  
+
     <!--w de width, mt margin top, rounded pa las corners, shadow pa ponerle sombrita, que se vea elevado el form-->
     <div class="container w-75 mt-5 rounded">
         <div class="row align-items-stretch">
@@ -51,13 +97,49 @@
                         <button type="submit" class="btn btn-primary" id="loginbtn2" onclick="validar()">Registrarse</button>
                     </div>
                     <div class="my-3">
-                        <span>¿Ya tienes una cuenta? <a href="#">Ingresar</a></span><br>
+                        <span>¿Ya tienes una cuenta? <a href="login.html">Ingresar</a></span><br>
                         
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
+    <!--footer-->
+    <footer class="text-center text-white" style="background-color: #e7dcf8;">
+        <!-- Grid container -->
+        <div class="container pt-4">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Instagram -->
+            <a
+              class="btn btn-link btn-floating btn-lg  m-1"
+              href="#"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-instagram"></i>
+            </a>
+            <!-- Instagram -->
+            <!-- Tik Tok -->
+            <a
+              class="btn btn-link btn-floating btn-lg  m-1"
+              href="#"
+              role="button"
+              data-mdb-ripple-color="#fc00de"
+              ><i class="fab fa-tiktok"></i>
+            </a>
+            <!-- Tik Tok -->
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2022 Copyright || Geekmitive || <a href="#" target="">Términos y condiciones</a> || <a href="#" target="">Políticas de privacidad</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
 
 
     <script src="../js/signup.js"></script>
