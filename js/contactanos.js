@@ -46,7 +46,7 @@ const validarEmail = (email) => {
         document.getElementById("errorEmail").style.display = "none";
     }
     if(telefono.value === "" ){
-        email.classList.add("border-danger");
+        telefono.classList.add("border-danger");
         document.getElementById("errorTelefono").style.display = "block";
         return false;
     }else if (telefono.classList.contains("border-danger")){
@@ -54,7 +54,7 @@ const validarEmail = (email) => {
         document.getElementById("errorTelefono").style.display = "none";
     }
     if (mensaje.value === ""){
-        email.classList.add("border-danger");
+        mensaje.classList.add("border-danger");
         document.getElementById("errorMensaje").style.display = "block";
         return false;           
     }else if (mensaje.classList.contains("border-danger")){
