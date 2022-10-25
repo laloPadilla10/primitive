@@ -71,11 +71,11 @@ const validarEmail = (email) => {
   }
 
   function crearPaginaContacto (){
-    return '<div class="col-sm-8 offset-sm-2"  style="margin-top:30px">'+
+    return '<div class="col-sm-8 offset-sm-2"  style="margin-top:30px">' +
                 '<div class="row">' +
-                    '<h1 class="title">Contáctanos<hr></h1>'+
-                '</div>'+
-            '</div>'+
+                    '<h1 class="title">Contáctanos<hr></h1>' +
+                '</div>' +
+            '</div>' +
             '<div class="col-sm-12" style="margin-top:10px">' +
                 '<div class="row justify-content-center">' +
                     '<div class="col-sm-4">' +                                            
@@ -95,7 +95,7 @@ const validarEmail = (email) => {
                             '<div class="col-sm-12">' +
                                     '<label for="inputemail" class="form-label"><strong>e-mail</strong></label>' +
                                     '<input type="email" class="form-control" id="email" style="background-color:rgb(221 231 245);">' +
-                                    '<label class="text-danger" style="display: none" id="errorEmail">*campo requerido/formato inválido</label> ' +
+                                    '<label class="text-danger" style="display: none" id="errorEmail">*campo requerido/formato inválido</label>' +
                             '</div>' +
                             '<div class="col-sm-12">' +
                                     '<label for="inputTelefono" class="form-label"><strong>Teléfono</strong></label>' +
