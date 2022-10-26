@@ -1,3 +1,102 @@
+const url ="../assets/json/usuario.json";
+//const url ="https://reqres.in/api/users?delay=2";
+
+//Verificar si ya existe LocalStorage:
+//Se activa funcion Fetch para conseguir datos
+function getUsers(){
+    const localData = JSON.parse(localStorage.getItem("users"));
+    if (localData && localData.time > Date.now()){
+        //showData(localData.dates);
+        console.log("localStorage data yet");
+        validUsers(localData.dates);
+    }
+    else solicitudFetch();
+}
+
+//Solicitud Fetch
+function solicitudFetch(){
+    fetch(url)
+    .then(response => (response.json()))
+    .then(conversion => {
+        saveLocalStorage(conversion.users)
+        validUsers(conversion.users);
+    })
+    .catch(error => {
+            console.log(error);
+    })
+    .finally( () => {
+    alert("Termina"); //aparec el boton
+        })
+    }
+
+function saveLocalStorage(data){
+    
+        const users ={
+            time: Date.now() + 60000,
+            dates: data
+        }
+        localStorage.setItem("users",JSON.stringify(users));
+}
+
+
+
+function validUsers(data){
+    
+    let user = document.getElementById("user-login").value;
+    let password = document.getElementById("password-login").value;
+    
+    if ((user == "") || (password == "")) {
+        alert("Ingresa todos los campos requeridos");
+        return false;
+    
+    }if ( (compareUsers(data) == false) && (comparePass(data) == false)){
+        alert("Aun no te has registrado")
+        return false;
+
+    } else if ( compareUsers(data) == false ){
+        alert("Usuario o email incorrecto. Verifica nuevamente.");
+        return false;
+
+    } else if ( comparePass(data) == false){
+        alert("Contraseña incorrecto. Verifica nuevamente.")
+        return false;
+
+    } else
+        return console.log("paso")//true
+}
+
+// /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}[^'\s]/
+
+function compareUsers(data){
+
+    let user = document.getElementById("user-login").value;
+    let password = document.getElementById("password-login").value;
+    
+    for(i = 0; i < data.length; i++){
+        
+        if ((data[i].user == user) || (data[i].email == user)){
+            return true;
+        } else {
+            return false;
+        }  
+}
+}
+
+function comparePass(data){
+
+    let password = document.getElementById("password-login").value;
+
+    for(i = 0; i < data.length; i++){
+        if ( data[i].password == password) {
+            return true;
+        } else {
+            return false;
+        }  
+}
+}
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function cargarLogin () {
     let main = document.getElementById("main");
     main.innerHTML =  
@@ -16,7 +115,7 @@ function cargarLogin () {
                     '<!-- Email/ username log in -->' +
                     '<div class="row justify-content-center form-outline mb-4 my-5">' +
                         '<div class="col-8">' +
-                            '<input type="email" style="background-color:rgb(177, 225, 225);" id="email-login" class="form-control text-center" placeholder="email / username" required/>' +
+                            '<input type="email" style="background-color:rgb(177, 225, 225);" id="user-login" class="form-control text-center" placeholder="email / username" required/>' +
                         '</div>' +
                     '</div>' +
                   
@@ -46,7 +145,7 @@ function cargarLogin () {
                     '<!-- Log in button -->' +
                     '<div class="row mb-4">' +
                         '<div class="col d-flex justify-content-center">' +
-                            '<button id="button-login" type="button" class="btn btn-primary btn-block mb-4">LOG IN</button>' +
+                            '<button id="button-login" type="button" class="btn btn-primary btn-block mb-4" onclick="getUsers()">LOG IN</button>' +
                         '</div>' +
                     '</div>' +
                     

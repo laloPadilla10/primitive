@@ -1,0 +1,39 @@
+{
+    "users": [
+      {
+        "user": "Arturo",
+        "email": "arturo@gmail.com",
+        "password": 1234
+      },
+      {
+        "user": "Anahi",
+        "email": "anahi@gmail.com",
+        "password": 1234
+      },
+      {
+        "user": "Lalo",
+        "email": "lao@gmail.com",
+        "password": 1234
+      },
+      {
+        "user": "Maggi",
+        "email": "maggi@gmail.com",
+        "password": 1234
+      },
+      {
+        "user": "Guadalupe",
+        "email": "guadalupe@gmail.com",
+        "password": 1234
+      },
+      {
+        "user": "Alan",
+        "email": "alan@gmail.com",
+        "password": 1234
+      },
+      {
+        "user": "Eduardo",
+        "email": "eduardo@gmail.com",
+        "password": 1234
+      }
+    ]
+  }
