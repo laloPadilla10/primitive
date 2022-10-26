@@ -52,7 +52,7 @@ function cargarLogin () {
                     
                     '<div class="text-center">' +
                         '<p>Have you not registered yet?</p>' +
-                        '<p>Sign up <a href="#">here</a></p>' +
+                        '<p>Sign up <a href="#" onClick="signUp()">here</a></p>' +
                        '<br>' +
                       '<p>or sign up with:</p>' +
                       '<button type="button" class="btn btn-primary btn-floating mx-1">' +
