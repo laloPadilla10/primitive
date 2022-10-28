@@ -35,3 +35,11 @@ h2{
     font-family: 'VT323';
     font-size: 25px;
 }
+
+#errorUser, #errorPass{
+    font-size: large;
+}
+
+#user-login, #password-login{
+    font-size: large;
+}

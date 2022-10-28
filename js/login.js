@@ -1,4 +1,5 @@
-const url ="../assets/json/usuario.json";
+const url ="../assets/json/login-users.json";
+
 //const url ="https://reqres.in/api/users?delay=2";
 
 //Verificar si ya existe LocalStorage:
@@ -6,8 +7,6 @@ const url ="../assets/json/usuario.json";
 function getUsers(){
     const localData = JSON.parse(localStorage.getItem("users"));
     if (localData && localData.time > Date.now()){
-        //showData(localData.dates);
-        console.log("localStorage data yet");
         validUsers(localData.dates);
     }
     else solicitudFetch();
@@ -24,75 +23,90 @@ function solicitudFetch(){
     .catch(error => {
             console.log(error);
     })
-    .finally( () => {
-    alert("Termina"); //aparec el boton
-        })
-    }
-
-function saveLocalStorage(data){
     
-        const users ={
-            time: Date.now() + 60000,
-            dates: data
-        }
-        localStorage.setItem("users",JSON.stringify(users));
 }
 
+function saveLocalStorage(data){
+    const users ={
+        time: Date.now() + 60000,
+        dates: data
+    }
+    localStorage.setItem("users",JSON.stringify(users));
+}
 
+let times = 0;
+let user;
+let password;
 
 function validUsers(data){
     
-    let user = document.getElementById("user-login").value;
-    let password = document.getElementById("password-login").value;
+    user = document.getElementById("user-login");
+    password = document.getElementById("password-login");
     
-    if ((user == "") || (password == "")) {
-        alert("Ingresa todos los campos requeridos");
+    if (times >= 2){
+        Swal.fire({
+            icon: 'error',
+            title: 'Que mal!...',
+            text: '¿Aún no tienes una cuenta con nosotros?',
+            footer: '<a href="../html/signup.html">Registrate</a>'
+          })
+        return;
+    }
+    
+    if ((user.value == "") || (password.value == "")) {
+        Swal.fire("Ingresa todos los campos requeridos");
+        
+        user.classList.add("border-danger");
+        password.classList.add("border-danger");
+        document.getElementById("errorUser").style.display = "block";
+        document.getElementById("errorPass").style.display = "block";
         return false;
     
     }if ( (compareUsers(data) == false) && (comparePass(data) == false)){
-        alert("Aun no te has registrado")
+        Swal.fire("Verifica los datos ingresados")
+        
+        user.classList.add("border-danger");
+        password.classList.add("border-danger");
+        document.getElementById("errorUser").style.display = "block";
+        document.getElementById("errorPass").style.display = "block";
+        times++    
         return false;
 
     } else if ( compareUsers(data) == false ){
-        alert("Usuario o email incorrecto. Verifica nuevamente.");
+        Swal.fire("Usuario o email incorrecto. Verifica nuevamente");
+        
+        user.classList.add("border-danger");
+        document.getElementById("errorUser").style.display = "block";
         return false;
 
     } else if ( comparePass(data) == false){
-        alert("Contraseña incorrecto. Verifica nuevamente.")
+        Swal.fire("Contraseña incorrecta. Verifica nuevamente")
+        
+        password.classList.add("border-danger");
+        document.getElementById("errorPass").style.display = "block";
         return false;
 
     } else
-        return console.log("paso")//true
+        document.location.assign("../index.html")
+        return true;
 }
-
-// /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}[^'\s]/
 
 function compareUsers(data){
-
-    let user = document.getElementById("user-login").value;
-    let password = document.getElementById("password-login").value;
-    
     for(i = 0; i < data.length; i++){
-        
-        if ((data[i].user == user) || (data[i].email == user)){
+        if ((data[i].user == user.value) || (data[i].email == user.value)){
             return true;
-        } else {
-            return false;
         }  
 }
+    return false;
 }
 
 function comparePass(data){
-
-    let password = document.getElementById("password-login").value;
-
     for(i = 0; i < data.length; i++){
-        if ( data[i].password == password) {
+        if ( data[i].password == password.value) {
             return true;
-        } else {
-            return false;
         }  
 }
+    return false;
 }
 
 

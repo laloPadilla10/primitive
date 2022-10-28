@@ -48,7 +48,6 @@
                         <!-- Seccion About US-->
                         <li class="nav-item active">
                             <a class="nav-link" href="../html/aboutus.html">About Us<span class="sr-only">(current)</span></a>
-                            <a class="nav-link" href="#" >Contáctanos</a>
                         </li>
                         <li class="nav-item active">
                             <form class="input-group w-auto my-auto mx-lg-5">
@@ -85,6 +84,7 @@
                     <div class="row justify-content-center form-outline mb-4 my-5">
                         <div class="col-8">
                             <input type="email" style="background-color:rgb(177, 225, 225);" id="user-login" class="form-control text-center" placeholder="email / username" required/>
+                            <label class="text-danger" id = "errorUser" style="display: none;">*información invalida</label>
                         </div>
                     </div>
                   
@@ -92,6 +92,7 @@
                     <div class="row justify-content-center form-outline mb-4">
                         <div class="col-8">
                             <input type="password" style="background-color:rgb(177, 225, 225);" id="password-login" class="form-control text-center" placeholder="password" required/>
+                            <label class="text-danger" id = "errorPass" style="display: none;">*información invalida</label>
                         </div>
                     </div>
                   
@@ -184,6 +185,8 @@
     <!-- Copyright -->
   </footer>
     <!-- Extensión Script-->
+    <script src="../js/login.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     
 
