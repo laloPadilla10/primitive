@@ -151,6 +151,38 @@ body{
   font-family: 'VT323';
   font-style: normal;
   font-size: 31px;
+  color: white
+  
+}
+
+/*################## settings barra de nav###################*/
+
+[name="navInfo"]{
+  color: white;
+  font-family: 'DM Sans';
+  
+}
+
+[name="navInfo"]:hover{
+  font-family: 'VT323';
+  color: #B1E1FF;
+  font-size: 20px;
+
+}
+
+[name="navInfo"]:visited{
+  font-family: 'VT323';
+  color: #B1E1FF;
+  font-size: 20px;
+
+}
+
+#input {
+
+  font-family: 'VT323';
+  font-size: 1.05em;
+  color: #FC00DE;
+
 }
 
 #login{
@@ -159,9 +191,9 @@ body{
 }
 
 #logo{
-  width: 100px;
-  height: 85px;
-  border-radius: 100px;
+  width: 55px;
+  height: 40px;
+  border-radius: 60px;
   
 }
 
@@ -174,6 +206,9 @@ body{
   color: white;
   background-color:rgb(252, 0, 222);
   border-color: rgb(166, 108, 255);
+  border-radius: 35px;
+  /*padding-left: 20px;*/
+
 }
 
 .btn-circle {
@@ -186,7 +221,17 @@ body{
   line-height: 1.42857;
   background-color: rgb(252, 0, 222);
   border-color: rgb(166, 108, 255);
+  box-shadow: 5px 5px 10px 2px rgba(0,0,0,.1);
   
+}
+
+.fa-solid{
+  color: white;
+}
+
+.btn-circle:hover{
+  color: white;
+  background-color: #B1E1FF;
 }
 
 #button-login{
@@ -231,3 +276,9 @@ body{
  
 }
 
+
+.nav {
+
+  color: white;
+
+}
