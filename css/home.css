@@ -1,3 +1,12 @@
+
+/*################## Fuente ###################*/
+@font-face {
+  font-family: 'Mondwest';
+  src: url('../assets/font/Mondwest-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+}
 /*################## Media para respuesta de categorias ###################*/
   @media (min-width: 768px) {
     .flex-md-equal > * {
