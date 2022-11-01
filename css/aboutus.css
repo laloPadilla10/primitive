@@ -16,9 +16,14 @@ h2{
     font-display: swap;
 }
 
-/* .div.carousel-item{
-    border-radius: 100px;
-}*/
+#carousel{
+    border-radius: 80px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 30%);
+}
+
+/* #carousel:hover{
+
+} */
 
 @media(max-width:960px){
 
@@ -107,8 +112,6 @@ h2{
 
 }
 
-
-
 /* p settings*/
 .p {
     font-family: 'DM sans';
@@ -131,9 +134,10 @@ p.slideshow {
 
 .about {
     font-family: 'VT323';
-    font-size: 100px;
+    font-size: 7em;
     color: #FC00DE;
     text-align: right;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.544);
 }
 
 h5.slideshow {
