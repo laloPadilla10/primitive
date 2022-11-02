@@ -4,21 +4,28 @@
     src: url('../assets/font/Mondwest-Regular.ttf') format('truetype')
 }
 
+
 h1{
     font-family: Mondwest;
     text-align: center;
 }
+
 h1.title {
     font-size: 30px;
     font-weight: 600;
     text-transform: uppercase;
     color: #fc00de;
-    
 }
 /* hr {
     height: 5px;
     background-color: rgb(25, 0, 255);
 } */
+
+h3.input {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #fc00de;
+}
 
 body{
     background-color:rgb(245, 235, 235);
