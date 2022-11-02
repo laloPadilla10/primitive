@@ -1,10 +1,10 @@
-<!doctype html>
-<html lang="es">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Primitive Home</title>
+    <title>Geekmitive Home</title>
     <!-- referencia para estilos y letras -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,8 +13,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/home.css">
-
+    <link rel="stylesheet" href="./css/contactanos.css">
+    <link rel="stylesheet" type="text/css" href="./css/home.css">
+    <link rel="stylesheet" type="text/css" href="./css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="./css/listadoProductos.css" />
+    <link rel="stylesheet" href="./css/aboutus.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/signup.css">
 </head>
 <body>
     <!-- Barra de navegación -->
@@ -24,14 +29,17 @@
               data-bs-toggle="collapse" data-bs-target="#navbar">
               <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand ms-lg-2 mx-sm-5 selectorHelp" href="#">
-                  <img id="logo" src="../assets/img/logoHome.png"Logo Geekmitive" loading="lazy">
+          <a class="navbar-brand ms-lg-2 mx-sm-5 selectorHelp" href="#" onclick="location.reload();">
+                  <img id="logo" src="../assets/img/logoHome.png" alt ="Logo Geekmitive" loading="lazy">
           </a>
           <span id="geek">Geekmitive</span>
           <div class="navbar-collapse collapse ms-md-3 justify-content-around text-center col-xl-auto" id="navbar">
               <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link selectorNomal"  href="#" onclick="cargarAboutUs()">About Us</a>               
+              </li>
                   <li class="nav-item active">
-                      <a class="nav-link selectorNomal" href="#">Categorías<span class="sr-only">(current)</span></a>
+                      <a class="nav-link selectorNomal" href="#" onclick="cargarProductos()">Categorías</a>
                   </li>
                   <li class="nav-item active">
                       <a class="nav-link selectorNomal" href="#">Promociones<pan class="sr-only">(current)</span></a>
@@ -40,7 +48,7 @@
                       <a class="nav-link selectorNomal" href="#">Novedades<span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item active">
-                      <a class="nav-link selectorNomal" href="#">Contáctanos<span class="sr-only">(current)</span></a>
+                      <a class="nav-link selectorNomal" href="#" onclick="cargarContacto()">Contáctanos</a>
                   </li>
                   <li class="nav-item active">
                       <form class="input-group w-auto my-auto mx-lg-5  ">
@@ -49,13 +57,14 @@
                       </form>
                   </li>
               </ul>
-              <a class="btn btn-primary btn-lg btn-circle mx-1 selectorHelp"  href="#" role="button"><i
+              <a class="btn btn-primary btn-lg btn-circle mx-1 selectorHelp" href="./html/shoppingcart.html" role="button"><i
                   class="fa-solid fa-cart-shopping"></i></a>
-              <a class="btn btn-primary btn-lg btn-circle selectorHelp" href="#" role="button"><i class="fa-solid fa-user-astronaut"></i></a>
+              <a class="btn btn-primary btn-lg btn-circle selectorHelp" href="#" onclick="cargarLogin()" role="button"><i class="fa-solid fa-user-astronaut"></i></a>
           </div>
       </nav>
   </div>   
     <!-- Content -->
+  <div id ="main">
     <main class="hero-image">
         <!-- Display -->
         <div class=" margen  md-5 md-3 ">
@@ -99,12 +108,14 @@
               <!-- <a href="http://king-lulu-deer.deviantart.com/"><img src="https://orig00.deviantart.net/4da4/f/2018/125/c/6/city_divider__re_edit__by_king_lulu_deer-dcaozvd.gif"></a> -->
               <h2 class=" gradiCategorias1 display-5">Ropa</h2>
             </div>
+
             <!-- <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div> -->
           </div>
           <!-- Categoria -->
           <div class=" categorias text-bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
             <div class="my-3 p-3">
               <h2 class=" gradiCategorias1 display-5">Figuras</h2>
+
             </div>
             <!-- <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div> -->
           </div>
@@ -123,6 +134,7 @@
             <div class="my-3 py-3">
               <h2 class=" gradiCategorias1 display-5">Gadgets</h2>
             </div>
+
             <!-- <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div> -->
           </div>
             <!-- Categoria -->
@@ -141,6 +153,8 @@
           </div>
         </div>
     </main>
+  </div>
+    
     <!-- Footer -->
   <footer class="text-center text-white" style="background-color: #e7dcf8;">
     <!-- Grid container -->
@@ -176,7 +190,6 @@
     </div>
     <!-- Copyright -->
   </footer>
-
     <!-- <footer class="container">
         <div class="row">
             <div class="col-md-12">
@@ -193,9 +206,13 @@
         </div>
     </footer> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-        crossorigin="anonymous"></script>
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
     <script src="./js/contactanos.js"></script>
+    <script src="./js/listadoProductos.js"></script>
+    <script src="./js/aboutus.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/signup.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
