@@ -68,12 +68,13 @@ h3.input {
     
 }
 
+
+
 /*##################### btn style ##################*/
 
 .btn-enviar{
 
-    display: inline-block;
-    
+    display: inline-block; 
     border-radius: 100px;
     background-color: #9C9EFE;
     border: none;
