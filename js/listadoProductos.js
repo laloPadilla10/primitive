@@ -14,24 +14,28 @@ function cargarProductos () {
     img: "https://i.ibb.co/yp8SDBG/Cobra-Kai-Strike-First-Unisex-T-Shirt.jpg",
     description:
       "Una camiseta Cobra Kai cómoda con mangas cortas y cuello redondo. ¡Perfecto para usar mientras viaja o descansando adentro!",
+    price: "$125.00 MXN",
   });
 
   addItem({
     name: "Camiseta unisex Maestro Roshi de Dragon Ball",
     img: "https://i.ibb.co/HzRV5tD/maestro-Roshi.jpg",
     description: "Producto con licencia oficial de Dragon Ball.",
+    price: "$125.00 MXN",
   });
 
   addItem({
     name: "Sudadera con gorro Gamer unisex",
     img: "https://i.ibb.co/px8jFvb/Game-Stop-Gamer-Unisex-Hooded-Sweatshirt.jpg",
     description: "Una sudadera con gorro que ofrece comodidad y calidad premium",
+    price: "$125.00 MXN",
   });
 
   addItem({
     name: "Sudadera con gorro StarWars unisex",
     img: "https://i.ibb.co/VxNzhYC/categoria-ropa-opcion-2.png",
     description: "Una sudadera con gorro que ofrece comodidad y calidad premium",
+    price: "$125.00 MXN",
   });
 
   addItem({
@@ -39,12 +43,14 @@ function cargarProductos () {
     img: "https://i.ibb.co/CbH5bhk/batman-the-killing-joke-deluxe.jpg",
     description:
       "En Batman: The Killing Joke, The Joker, toma el origen del mayor supervillano de los cómics y cambia el mundo de Batman para siempre.",
+    price: "$125.00 MXN",
   });
 
   addItem({
     name: "Tamagotchi R2-D2",
     img: "https://i.ibb.co/Y0pCxpf/starwars-Tamagotchi.webp",
     description: "Cuida de R2-D2 manteniéndolo cargado, limpio y jugando con él.",
+    price: "$125.00 MXN",
   });
 
   addItem({
@@ -52,6 +58,7 @@ function cargarProductos () {
     img: "https://i.ibb.co/f2kLpDs/Nintendo-Switch-Lite-Console-Gray.jpg",
     description:
       "Presentamos Nintendo Switch™ Lite, una nueva versión del sistema Nintendo Switch que está optimizada para el juego portátil personal.",
+    price: "$125.00 MXN",
   });
 
   addItem({
@@ -59,12 +66,14 @@ function cargarProductos () {
     img: "https://i.ibb.co/fYrJV59/c3po-figure.png",
     description:
       "La figura de C-3PO a escala de 6 pulgadas se detalla para parecerse al personaje de la pelicula Star Wars, con detalles de primera calidad y múltiples puntos de articulación.",
+    price: "$125.00 MXN",
   });
 
   addItem({
     name: 'Figura Oficial Furyu Hatsune Miku Cat Auriculares Versión 1/7 25cm (9.8")',
     img: "https://i.ibb.co/nf4LTM6/heo-hm-cehf11-1024x1024.webp",
     description: "Producto con licencia oficial de Hatsune Miku. ",
+    price: "$125.00 MXN",
   });
 
   addItem({
@@ -72,6 +81,7 @@ function cargarProductos () {
     img: "https://i.ibb.co/FmKNN0s/Robotech-3-D-Blank-Book-Cover-3.jpg",
     description:
       "Robotech: Macross Saga consta de 264 páginas de asombrosa calidad artística. Los fanáticos de Robotech no se sentirán decepcionados.",
+    price: "$125.00 MXN",
   });
 }
 
@@ -92,7 +102,7 @@ function addItem(item) {
           <p class="card-text">${item.description}</p>
         </div>
         <div class=" card-footer buy d-flex justify-content-between align-items-center">
-          <div class="price text-"><h5 class="mt-4">$125</h5></div>
+          <div class="price text-"><h5 class="mt-4">${item.price}</h5></div>
           <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
         </div>
       </div>
