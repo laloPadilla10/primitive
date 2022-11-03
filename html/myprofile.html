@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/myprofile.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=VT323&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!--navbar!-->
+    <header>    
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg justify-content-sm-start">
+                <button class="navbar-toggler dropdown-toggle-split" type="button" data-toggle="collapse"
+                    data-bs-toggle="collapse" data-bs-target="#navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a class="navbar-brand ms-lg-2 mx-sm-5" href="../index.html">
+                        <img id="logo" src="../assets/img/logo1.png" alt="Logo Geekmitive" loading="lazy">
+                </a>
+                <span id="geek">Geekmitive</span>
+    
+                <div class="navbar-collapse collapse ms-md-3 justify-content-around text-center col-xl-auto" id="navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../html/listadoProductos.html">Categorías<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Promociones<pan class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Novedades<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../html/contactanos.html">Contáctanos<span class="sr-only">(current)</span></a>
+                        </li>
+                        <!-- Seccion About US-->
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../html/aboutus.html">About Us<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <form class="input-group w-auto my-auto mx-lg-5">
+                                <input autocomplete="off" type="search" class="form-control rounded" placeholder="Search">
+                                <button class="btn-search" type="submit"><i class="fas fa-search"></i></button>
+                            </form>
+                        </li>
+                    </ul>
+                    <a class="btn btn-primary btn-lg btn-circle mx-1" href="../html/shoppingcart.html" role="button">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+                    <a class="btn btn-primary btn-lg btn-circle" href="../html/login.html" role="button">
+                        <i class="fa-solid fa-user-astronaut"></i>
+                    </a>
+                </div>
+            </nav>
+        </div>   
+    </header>
+
+
+    <!--body de la pagina de Mi Perfil-->
+    <br>
+    
+    <div class="container" id="fullcontainer">
+
+
+        <div class="row shadow-lg">
+            <div class="col-sm-3  offset-3">
+                <img class="img-fluid" src="../assets/img/pezcurioso.jpg" alt="fotodeusuario">
+            </div>
+            <div class="col-sm-4">
+                <h2 id="nombreUsuario" class="textitosEncabezado">FirstName LastName</h2>
+              
+            </div>
+            
+        </div>
+
+        <div class="row">
+            <div class="col-sm">
+                <h5 id="mensajeBienvenida">¡Es un gusto verte de nuevo!💜</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm" align="center">
+                <button class="btn btn-primary botonsitosOpciones">💳Formas de pago</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm" align="center">
+                <button class="btn btn-primary botonsitosOpciones">📦Historial de pedidos</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm" align="center">
+                <button class="btn btn-primary botonsitosOpciones">⚙Configuración</button>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+  <!-- Footer -->
+  <footer class="text-center text-white" style="background-color: #e7dcf8;">
+    <!-- Grid container -->
+    <div class="container pt-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Instagram -->
+        <a
+          class="btn btn-link btn-floating btn-lg  m-1"
+          href="#"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fa-brands fa-facebook"></i>
+        </a>
+        <!-- Instagram -->
+
+        <!-- Tik Tok -->
+        <a
+          class="btn btn-link btn-floating btn-lg  m-1"
+          href="#"
+          role="button"
+          data-mdb-ripple-color="#fc00de"
+          ><i class="fab fa-tiktok"></i>
+        </a>
+        <!-- Tik Tok -->
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);" id="footer">
+      © 2022 Copyright || Geekmitive || <a href="#" target="">Términos y condiciones</a> || <a href="#" target="">Políticas de privacidad</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  </body>
+</html>

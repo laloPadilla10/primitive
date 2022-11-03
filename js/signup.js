@@ -1,91 +1,122 @@
-function validar(){
 
-  
-    /*form.<nombredelinput.propiedad
-       - return false para terminar la ejecucion
-        - focus para llevar el puntero al campo vacío despues de emitir la alerta corresp.
-        - <si al final has ingresado todos los campos correctamente saldrá una alerta exitosa>
-    */
+let nombre, telefono, email;
 
-    //validando nombre
-    let form = document.form;
-    if(form.nombre.value == 0){
-        alert("El campo nombre está vacio");
-        form.nombre.value="";
-        form.nombre.focus();
+function validarForm (){
+    //validando cada input
+    if(nombre.value === ""){
+        nombre.classList.add("border-danger");
+        document.getElementById("errorNombre").style.display = "block";
         return false;
-
+    }else if (nombre.classList.contains("border-danger")){
+        nombre.classList.remove("border-danger");
+        document.getElementById("errorNombre").style.display = "none";
     }
-    //validando telefono
-    if(form.numtel.value==0){
-        alert("el campo telefono está vacío");
-        form.numtel.value="";
-        form.numtel.focus();
+    if(telefono.value === "" ){
+        telefono.classList.add("border-danger");
+        document.getElementById("errorTelefono").style.display = "block";
         return false;
+    }else if (telefono.classList.contains("border-danger")){
+        telefono.classList.remove("border-danger");
+        document.getElementById("errorTelefono").style.display = "none";
     }
-    //validando mail
-    if(form.email.value == 0){
-        alert("el campo correo está vacío");
-        form.email.value="";
-        form.email.focus();
+    if (email.value === "" || !validarEmail(email.value)){
+        email.classList.add("border-danger");
+        document.getElementById("errorEmail").style.display = "block";
         return false;
+    } else if (email.classList.contains("border-danger")){
+        email.classList.remove("border-danger");
+        document.getElementById("errorEmail").style.display = "none";
     }
-
-    //validando password
-    if(form.password.value==0){
-        alert("Ingresa una contraseña");
-        form.password.value="";
-        form.password.focus();
-        return false;
+    if (password.value === ""){
+        password.classList.add("border-danger");
+        document.getElementById("errorPassword").style.display = "block";
+        return false;           
+    }else if (password.classList.contains("border-danger")){
+        password.classList.remove("border-danger");
+        document.getElementById("errorPassword").style.display = "none";
     }
-    alert("¡Te has registrado con éxito, Bienvenid@!");
-    form.submit();
+    return true;
 }
+
+//JSON SECTION
+let usuarios = [];
 
 function signUp(){
     Swal.fire({
         width: 1200,
         html: '<div class="container w-75 mt-5 rounded">'+
-        '<div class="row align-items-stretch">'+
-            '<div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded">'+
-                '<!--d-none y d-lg-block son pa el responsive, none indica que no muestre la imagen cuando esté muy pequeña la ventana, lg block indica que si se muestre a partir de cierto tamaño-->'+
-
+            '<div class="row align-items-stretch">'+
+                '<div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded">'+
+                    '<!--d-none y d-lg-block son pa el responsive, none indica que no muestre la imagen cuando esté muy pequeña la ventana, lg block indica que si se muestre a partir de cierto tamaño-->'+
+                '</div>'+
+            '<div class="col p-5 rounded-end">'+
+            '<div class="tex-end">'+
             '</div>'+
-        '<div class="col p-5 rounded-end">'+
-        '<div class="tex-end">'+
-        
+            '<h2 class="fw-bold text-center py-5">Registrate, es gratis💜</h2>'+
+            
+            '<!--inputs con sus labels y propiedades, cada uno en su div-->'+
+            '<form name="form" action="#" method="post">'+
+                '<div class="mb-4">'+
+                    '<label for="nombre" class="form-label">Nombre</label>'+
+                    '<input type="text" class="form-control" id="nombre" placeholder="xXxNarutoxXx ">'+
+                    '<label class="text-danger" style="display: none" id="errorNombre">*campo requerido</label>' +
+                '</div>'+
+                '<div class="mb-4">'+
+                    '<label for="numtel" class="form-label">Numero telefónico</label>'+
+                    '<input type="number" class="form-control" placeholder="+529996663333" id="telefono">'+
+                    '<label class="text-danger" style="display: none" id="errorTelefono">*campo requerido</label>' +
+                '</div>'+
+                '<div class="mb-4">'+
+                    '<label for="email" class="form-label">Correo Electrónico</label>'+
+                    '<input type="email" class="form-control" id="email" placeholder="example@mail.com">'+
+                    '<label class="text-danger" style="display: none" id="errorEmail">*campo requerido</label>' +
+                '</div>'+
+                '<div class="mb-4">'+
+                    '<label for="password" class="form-label">Contraseña</label>'+
+                    '<input type="password" class="form-control" id="password" placeholder="soygeekyque123">'+
+                    '<label class="text-danger" style="display: none" id="errorPassword">*campo requerido</label>' +
+                '</div>'+
+            '</form>'+
         '</div>'+
-        '<h2 class="fw-bold text-center py-5">Registrate, es gratis💜</h2>'+
+        '</div>'+
+        '</div>',
+    confirmButtonText: "Registrarse",
+    showConfirmButton: true,
+    preConfirm: () => {    
+        nombre = document.getElementById("nombre");
+        telefono = document.getElementById("telefono");
+        email = document.getElementById("email");
+        password = document.getElementById("password");
         
-        '<!--inputs con sus labels y propiedades, cada uno en su div-->'+
-        '<form name="form" action="#" method="post">'+
-            '<div class="mb-4">'+
-                '<label for="nombre" class="form-label">Nombre</label>'+
-                '<input type="text" class="form-control" name="nombre" placeholder="xXxNarutoxXx " id="inputnombre2" required>'+
-            '</div>'+
-            '<div class="mb-4">'+
-                '<label for="numtel" class="form-label">Numero telefónico</label>'+
-                '<input type="number" class="form-control" name="numtel" placeholder="+529996663333" id="inputnum2" required>'+
-            '</div>'+
-            '<div class="mb-4">'+
-                '<label for="email" class="form-label">Correo Electrónico</label>'+
-                '<input type="email" class="form-control" name="email" placeholder="example@mail.com" id="inputmail2" required>'+
-            '</div>'+
-            '<div class="mb-4">'+
-                '<label for="password" class="form-label">Contraseña</label>'+
-                '<input type="password" class="form-control" name="password" placeholder="soygeekyque123" id="inputpass2" required>'+
-            '</div>'+
+        return new Promise( (resolve, reject) => {
+            if (!validarForm()){
+                reject("Favor de validar los campos");
+            } else {
+                resolve(true);
+            }
+        }).then((res)=>{
+            if(!res){
+                throw new Error(res);
+            } else 
+                return true;
+        }).catch(()=>{
+            return false;
+        });
+    }
+    }).then (function(res){
+        if (res.isConfirmed){
+            usuarios.push({
+                userName: document.getElementById('nombre').value,
+                number: document.getElementById('telefono').value,
+                UserEmail: document.getElementById('email').value,
+                UserPassword: document.getElementById('password').value
+            });
+
+            document.forms[0].reset(); //to clear for next entries 
         
-            '<div class="d-grid">'+
-                '<button type="submit" class="btn btn-primary" id="loginbtn2" onclick="validar()">Registrarse</button>'+
-            '</div>'+
-            '<div class="my-3">'+
-                '<span>¿Ya tienes una cuenta? <a href="login.html">Ingresar</a></span><br>'+
-                
-            '</div>'+
-        '</form>'+
-    '</div>'+
-    '</div>'+
-    '</div>;'
+            //saving to localstorage
+            localStorage.setItem('MyUsersList', JSON.stringify(usuarios));
+            Swal.fire("¡Felicidades!", "Te has registrado con éxito.", "success");
+        }
     });
 }

@@ -6,14 +6,17 @@ const validarEmail = (email) => {
       );
   }
   
-  let nombre, email, telefono, mensaje;
+  let formulario;
 
   function enviarEmail(e) {
   
-    nombre = document.getElementById("nombre");
-    email = document.getElementById("email");
-    telefono = document.getElementById("telefono");
-    mensaje = document.getElementById("mensaje");
+    formulario = {
+        nombre: document.getElementById("nombre"),
+        email: document.getElementById("email"),
+        telefono: document.getElementById("telefono"),
+        mensaje: document.getElementById("mensaje")
+    }
+
     e.preventDefault();
     
     if (validarForm()){ 
@@ -23,51 +26,55 @@ const validarEmail = (email) => {
             showConfirmButton: false
           })
     }
-    
   }
 
   function validarForm (){  
 
     // Validacion de todos los inputs
-    if (nombre.value === ""){
-        nombre.classList.add("border-danger");
+    if (formulario.nombre.value === ""){
+        formulario.nombre.classList.add("border-danger");
         document.getElementById("errorNombre").style.display = "block";
         return false;
-    } else if (nombre.classList.contains("border-danger")){
-        nombre.classList.remove("border-danger");
+    } else if (formulario.nombre.classList.contains("border-danger")){
+        formulario.nombre.classList.remove("border-danger");
         document.getElementById("errorNombre").style.display = "none";
     }
-    if (email.value === "" || !validarEmail(email.value)){
-        email.classList.add("border-danger");
+    if (formulario.email.value === "" || !validarEmail(email.value)){
+        formulario.email.classList.add("border-danger");
         document.getElementById("errorEmail").style.display = "block";
         return false;
-    } else if (email.classList.contains("border-danger")){
-        email.classList.remove("border-danger");
+    } else if (formulario.email.classList.contains("border-danger")){
+        formulario.email.classList.remove("border-danger");
         document.getElementById("errorEmail").style.display = "none";
     }
-    if(telefono.value === "" ){
-        telefono.classList.add("border-danger");
+    if(formulario.telefono.value === "" ){
+        formulario.telefono.classList.add("border-danger");
         document.getElementById("errorTelefono").style.display = "block";
         return false;
-    }else if (telefono.classList.contains("border-danger")){
-        telefono.classList.remove("border-danger");
+    }else if (formulario.telefono.classList.contains("border-danger")){
+        formulario.telefono.classList.remove("border-danger");
         document.getElementById("errorTelefono").style.display = "none";
     }
-    if (mensaje.value === ""){
-        mensaje.classList.add("border-danger");
+    if (formulario.mensaje.value === ""){
+        formulario.mensaje.classList.add("border-danger");
         document.getElementById("errorMensaje").style.display = "block";
         return false;           
-    }else if (mensaje.classList.contains("border-danger")){
-        mensaje.classList.remove("border-danger");
+    }else if (formulario.mensaje.classList.contains("border-danger")){
+        formulario.mensaje.classList.remove("border-danger");
         document.getElementById("errorMensaje").style.display = "none";
 
     }
+    formulario.nombre = formulario.nombre.value;
+    formulario.telefono = formulario.telefono.value;
+    formulario.email = formulario.email.value;
+    formulario.mensaje = formulario.mensaje.value;
     return true;
   }
 
   function cargarContacto () {
     let main = document.getElementById("main");
     main.innerHTML = crearPaginaContacto();
+    
   }
 
   function crearPaginaContacto (){
