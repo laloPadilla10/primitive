@@ -1,4 +1,4 @@
-function validar(){
+// function validar(){
 
   
     /*form.<nombredelinput.propiedad
@@ -8,7 +8,7 @@ function validar(){
     */
 
     //validando nombre
-    let form = document.form;
+/*     let form = document.form;
     if(form.nombre.value == 0){
         alert("El campo nombre está vacio");
         form.nombre.value="";
@@ -40,7 +40,112 @@ function validar(){
     }
     alert("¡Te has registrado con éxito, Bienvenid@!");
     form.submit();
+} */
+
+
+const validarEmail = (email) => {
+    return String(email)
+    .toLowerCase()
+    .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
 }
+
+let nombre, telefono, email, password;
+function enviarEmail(e) {
+    nombre = document.getElementById("nombre");
+    telefono = document.getElementById("telefono");
+    email = document.getElementById("email");
+    password = document.getElementById("password");
+    
+    e.preventDefault();
+
+
+
+//alert al hacer registro exitoso
+    if (validarForm()){
+        swal("¡Felicidades!", "Te has registrado con éxito.", "success");
+        
+        /* Swal.fire({
+            icon: 'success',
+            title: '¡Te has registrado con éxito!',
+            showConfirmButton: false
+        })  */
+    }
+
+}
+
+function validarForm (){
+    //validando cada input
+    if(nombre.value === ""){
+        nombre.classList.add("border-danger");
+        document.getElementById("errorNombre").style.display = "block";
+        return false;
+    }else if (nombre.classList.contains("border-danger")){
+        nombre.classList.remove("border-danger");
+        document.getElementById("errorNombre").style.display = "none";
+    }
+    if(telefono.value === "" ){
+        telefono.classList.add("border-danger");
+        document.getElementById("errorTelefono").style.display = "block";
+        return false;
+    }else if (telefono.classList.contains("border-danger")){
+        telefono.classList.remove("border-danger");
+        document.getElementById("errorTelefono").style.display = "none";
+    }
+    if (email.value === "" || !validarEmail(email.value)){
+        email.classList.add("border-danger");
+        document.getElementById("errorEmail").style.display = "block";
+        return false;
+    } else if (email.classList.contains("border-danger")){
+        email.classList.remove("border-danger");
+        document.getElementById("errorEmail").style.display = "none";
+    }
+    if (password.value === ""){
+        password.classList.add("border-danger");
+        document.getElementById("errorPassword").style.display = "block";
+        return false;           
+    }else if (password.classList.contains("border-danger")){
+        password.classList.remove("border-danger");
+        document.getElementById("errorPassword").style.display = "none";
+
+    }
+    return true;
+
+}
+
+//JSON SECTION
+let usuarios = [];
+const addUsers = (ev)=>{
+//ev(); //to stop the form submitting
+ev.preventDefault();
+
+let newUser = {
+userName: document.getElementById('nombre').value,
+number: document.getElementById('telefono').value,
+UserEmail: document.getElementById('email').value,
+UserPassword: document.getElementById('password').value
+}
+usuarios.push(newUser);
+document.forms[0].reset(); //to clear for next entries 
+
+//=======ESTO NO===============================================
+//for display purposes only
+/* console.warn('added' , {usuarios} );
+let pre = document.querySelector('#msg pre');
+pre.textContent = '\n' + JSON.stringify(usuarios,
+'\t', 2); */
+//=============================================================
+
+//saving to localstorage
+localStorage.setItem('MyUsersList', JSON.stringify(usuarios));
+}
+document.addEventListener('DOMContentLoaded', ()=>{
+document.getElementById('loginbtn2').addEventListener('click', addUsers);
+})  
+
+
+
 
 function signUp(){
     Swal.fire({
