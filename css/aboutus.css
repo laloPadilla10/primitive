@@ -1,4 +1,4 @@
-/* Navbar settings */
+/* ########### Navbar settings ################# */
 
 header{
     background-color: rgb(166, 108, 255);
@@ -16,6 +16,31 @@ h2{
     font-display: swap;
 }
 
+#carousel{
+    border-radius: 60px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 30%);
+}
+
+
+#carouselControlPrev{
+    border-radius: 100px;
+    background-color: rgb(166, 108, 255);
+
+}
+
+/* #carousel:hover{
+
+} */
+
+#carouselControlNext{
+    border-radius: 100px;
+    background-color: rgb(166, 108, 255);
+} 
+
+/* #carousel:hover{
+
+} */
+
 @media(max-width:960px){
 
     h2{
@@ -27,7 +52,7 @@ h2{
         font-display: swap;
     }
 }
-
+/* ########### Logo escrito settings ################# */
 #geek{
     font-family: 'VT323';
     font-style: normal;
@@ -103,36 +128,6 @@ h2{
 
 }
 
-
-/* profile btn astr */
-/* #btn-p {
-    border-radius: 50px;
-    height: 40px;
-    width: 40px;
-    background-color: #A66CFF;
-    display: inline-block;
-    color: #ffff
-} */
-
-/* cart btn*/
-/* #btn-shop {
-
-    border-radius: 50px;
-    height: 40px;
-    width: 40px;
-    background-color: #A66CFF;
-    color: #ffff
-}
- */
-/* search btn*/
-/* #docsearch {
-
-    border-radius: 50px;
-    height: 40px;
-    width: 40px;
-    color: #9C9EFE
-} */
-
 /* p settings*/
 .p {
     font-family: 'DM sans';
@@ -155,9 +150,14 @@ p.slideshow {
 
 .about {
     font-family: 'VT323';
-    font-size: 100px;
+    font-size: 7em;
     color: #FC00DE;
     text-align: right;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.544);
+}
+
+.about:hover{
+
 }
 
 h5.slideshow {
@@ -166,17 +166,6 @@ h5.slideshow {
     color: #fefefe;
 
 }
-
-/* nav bar collapse settings */
-
-/* .collapse {
-
-    background-color: #A66CFF;
-    font-family: 'DM sans';
-    font-size: 300px;
-    text-align: center;
-
-} */
 
 
 
@@ -196,11 +185,3 @@ h5.slideshow {
 }*/
 
 /*------------------BODY------------------*/
-
-/*------------------TYPOGRAPHY------------*/
-
-/*#title{
-    font-family: Mondwest;
-    text-align: center;
-
-}*/
