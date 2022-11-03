@@ -1,0 +1,80 @@
+
+
+/* Para generar el borde de los iconos para las marca y el primer color */
+.buttonIcon{
+    margin-right: 20px;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    box-shadow: 0px 10px 10px rgba(156, 158, 254, 0.5);
+}
+/* Para realizar fondo transparente en los iconos de marcas */
+.fondoTransparente{
+  background: rgba(166, 108, 255, 0.8);
+}
+ /* Respuesta del contendor de marca  */
+.buttonIcon.icon{
+    height: 97px;
+    width: 97px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  .buttonIcon .icon i{
+    transition: all 0.3s ease-in-out;
+    line-height: 97x;
+  
+  }
+
+
+  .buttonIcon span{
+    font-size: 20px;
+    font-weight: 50;
+    line-height: 97px;
+    margin-left: 1px;
+    font-family: 'VT323';
+
+  }
+  /* Desplazamiento de a 200px cuando se haga click */
+  .buttonIcon:hover{
+    width: 200px;
+  }
+/* Se asigna un color para da marca */
+  .buttonIcon:nth-child(1):hover .icon{
+    background: rgb(244, 118, 27);
+  }
+  .buttonIcon:nth-child(2):hover .icon{
+    background: rgb(255,11,11);
+    background: linear-gradient(90deg, rgba(255,11,11,1) 31%, rgba(255,255,255,1) 100%);
+    
+  }
+  .buttonIcon:nth-child(3):hover .icon{
+    background-image:linear-gradient(#113ccf,#bff5fd);
+   
+  }
+  .buttonIcon:nth-child(4):hover .icon{
+    background-image:linear-gradient(#e72b12,#eeea20fd);
+   
+  }
+  .buttonIcon:nth-child(5):hover .icon{
+    background-image:linear-gradient(rgb(231,0,9),#fff);
+   
+  }
+  .buttonIcon:nth-child(6):hover .icon{
+    background: rgb(6,6,6);
+    background: linear-gradient(90deg, rgba(6,6,6,1) 0%, rgba(255,255,255,1) 100%);
+    
+   
+  }
+  
+
+
+
+
+
