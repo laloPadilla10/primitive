@@ -15,7 +15,7 @@
   color: #fc00de;
 }
 
-.btn {
+.btncart {
   /* font-size: 1.5rem; */
   background-color: #fc00de;
   border-color: #fc00de;
@@ -24,15 +24,18 @@
 .card {
   background-color: #ffff;
   border-color:#a66cff;
+  border-width: .07cm;
 }
 
 .card-header {
   background-color: #ffff;
   border-color: #a66cff;
+  border-width: .07cm;
 }
 .card-footer {
 
   border-color: #a66cff;
+  border-width: .07cm;
 }
 
 

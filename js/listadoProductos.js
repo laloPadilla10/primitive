@@ -103,7 +103,7 @@ function addItem(item) {
         </div>
         <div class=" card-footer buy d-flex justify-content-between align-items-center">
           <div class="price text-"><h5 class="mt-4">${item.price}</h5></div>
-          <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
+          <a href="#" class="btn btncart btn-danger"><i class="fas fa-shopping-cart"></i></a>
         </div>
       </div>
     </div> `;
