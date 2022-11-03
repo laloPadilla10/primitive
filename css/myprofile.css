@@ -1,0 +1,31 @@
+
+img{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    
+}
+.row{
+    padding: 10px;
+    margin: 10px;
+    align-items: center;
+}
+#nombreUsuario{
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+}
+#descripcionMiPerfil{
+    text-align: center;
+    padding-left: 23%;
+}
+#mensajeBienvenida{
+    text-align: center;
+    padding: 10px;
+    color: #87A2FB;
+
+}
+.botonsitosOpciones{
+    background-color:rgb(166, 108, 225); 
+    border-color:rgb(166, 108, 225) ;
+}
