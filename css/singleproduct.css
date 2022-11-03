@@ -1,0 +1,47 @@
+.small-img-group{
+    display: flex;
+    justify-content: space-between;
+}
+.small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+.sproduct select{
+    /* display: block; */
+    padding: 5px 10px;
+}
+
+.sproduct input{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.buy-btn{
+    background-color: #a66cff;
+    border-color: white;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 1;
+    transition:0.3s all ;
+}
+.buy-btn:hover{
+    background-color: #fc00de;
+    border-color: #a66cff;
+    opacity: 1;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border-radius: 8px;
+    transition:0.3s all ; 
+}
+
+.rating{
+    color: #fc00de;
+    font-weight: bold;
+}
+
+.select{
+    border-radius: 5px;
+}
