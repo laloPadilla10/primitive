@@ -1,3 +1,10 @@
+h2{
+    font-family: 'VT323';
+    /*font-style: normal;*/
+    font-size: 60px; 
+    color:#fc00de;
+}
+
 .small-img-group{
     display: flex;
     justify-content: space-between;
@@ -45,3 +52,18 @@
 .select{
     border-radius: 5px;
 }
+
+/* Contador Carrito */
+.badge:after{
+    content:attr(value);
+    font-size:12px;
+    color: #fff;
+    background: #fc00de;
+    border-radius:50%;
+    padding: 10px 10px;
+    position:relative;
+    left:-5px;
+    top:-10px;
+    opacity:1;
+}
+
