@@ -21,6 +21,20 @@
   border-color: #fc00de;
 }
 
+.card {
+  background-color: #ffff;
+  border-color:#a66cff;
+}
+
+.card-header {
+  background-color: #ffff;
+  border-color: #a66cff;
+}
+.card-footer {
+
+  border-color: #a66cff;
+}
+
 
 /*------------------TYPOGRAPHY------------*/
 
