@@ -12,25 +12,22 @@ h1{
     text-align: center;
 }
 
-h1.title {
-    font-size: 30px;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #fc00de;
-}
+
 
 /*######### párrafo ############*/
 
 .p{
+    
+    font-size: 100px;
     font-family: 'DM sans';
-    color: #A66CFF;
+    
 }
 
 
 /*######### Texto inputs  ############*/
 
-h3.input {
-    font-size: 1.7em;
+label.form-label {
+    font-size: 1.3em;
     font-weight: 600;
     color: #fc00de;
     font-family: 'DM sans';
@@ -88,7 +85,7 @@ h3.input {
     cursor: pointer;
     margin: 5px;
     
-}
+}--
 
 
 

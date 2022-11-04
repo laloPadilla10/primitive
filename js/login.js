@@ -120,16 +120,17 @@ function cargarLogin () {
         '<div class="row">' +
             '<!-- Imagen -->' +
             '<div class="col d-none d-md-flex align-items-center">' +
-                '<img id="imagen-login" class="img-fluid mx-auto d-block" src="../assets/img/goku.jpg" alt="imagen-login">' +
+                '<img id="imagen-login" class="img-fluid mx-auto d-block" src="../assets/img/singin2.jpg" alt="imagen-login" style="height: 1000px">' +
             '</div>' +
             '<!-- Login -->' +
             '<div class="col my-5">' +
                 '<form>' +
-                    '<h2 class="text-center">Log in զ( ›  ͜ ‹  )ჳ</h2>' +
+                    '<h2 class="text-center">¡Bienvenido!</h2>' +
                     '<!-- Email/ username log in -->' +
                     '<div class="row justify-content-center form-outline mb-4 my-5">' +
                         '<div class="col-8">' +
                             '<input type="email" style="background-color:rgb(177, 225, 225);" id="user-login" class="form-control text-center" placeholder="email / username" required/>' +
+                            '<label class="text-danger" id = "errorUser" style="display: none;">*información invalida</label>'+
                         '</div>' +
                     '</div>' +
                   
@@ -137,6 +138,7 @@ function cargarLogin () {
                     '<div class="row justify-content-center form-outline mb-4">' +
                         '<div class="col-8">' +
                             '<input type="password" style="background-color:rgb(177, 225, 225);" id="password-login" class="form-control text-center" placeholder="password" required/>' +
+                            '<label class="text-danger" id = "errorPass" style="display: none;">*información invalida</label>'+
                         '</div>' +
                     '</div>' +
                   
@@ -145,45 +147,51 @@ function cargarLogin () {
                       '<div class="col d-flex justify-content-center">' +
                         '<div class="form-check">' +
                           '<input class="form-check-input" type="checkbox" value="" id="checkbox-input" checked />' +
-                          '<label class="form-check-label" for="checkbox-input"> Remember me </label>' +
+                          '<label class="form-check-label" for="checkbox-input" id="checkbox">Recuérdame</label>' +
                         '</div>' +
                       '</div>' +
                     '</div>' +
 
+                    '<!-- Log in button -->'+
+                    '<div class="row mb-2">'+
+                        '<div class="col d-flex justify-content-center">'+
+                          '<form > <!--method="post"-->'+
+                            '<button id="button-login" type="button" class="btn-login" onclick="getUsers()">Ingresar</button>'+
+                          '</form>'+
+                        '</div>'+
+                    '</div>'+
+
                     '<!-- Forgot password link -->' +
                     '<div class="row mb-4">' +
                         '<div class="col d-flex justify-content-center">' +
-                            '<a href="#!">Forgot password?</a>' +
+                            '<a href="#!">Olvidé mi contraseña</a>' +
                         '</div>' +
                     '</div> ' +                      
                     '<!-- Log in button -->' +
-                    '<div class="row mb-4">' +
-                        '<div class="col d-flex justify-content-center">' +
-                            '<button id="button-login" type="button" class="btn btn-primary btn-block mb-4" onclick="getUsers()">LOG IN</button>' +
-                        '</div>' +
-                    '</div>' +
-                    
-                    '<div class="text-center">' +
-                        '<p>Have you not registered yet?</p>' +
-                        '<p>Sign up <a href="#" onClick="signUp()">here</a></p>' +
-                       '<br>' +
-                      '<p>or sign up with:</p>' +
-                      '<button type="button" class="btn btn-primary btn-floating mx-1">' +
-                        '<i class="fab fa-facebook-f fa-2x"></i>' +
-                      '</button>' +
-                  
-                      '<button type="button" class="btn btn-danger btn-floating mx-1">' +
-                        '<i class="fab fa-reddit fa-2x"></i>' +
-                      '</button>' +
-                  
-                      '<button type="button" class="btn btn-link btn-floating mx-1">' +
-                        '<i class="fab fa-twitter fa-2x"></i>' +
-                      '</button>' +
-                  
-                      '<button type="button" class="btn btn-dark btn-floating mx-1">' +
-                        '<i class="fab fa-instagram fa-2x"></i>' +
-                      '</button>' +
-                    '</div>' +
+                    '<div class="text-center">'+
+                
+                    '<p>o ingresa con:</p>'+
+                    '<button type="button" class="btn btn-floating mx-1">'+
+                      '<i class="fa-brands fa-facebook"></i>'+
+                    '</button>'+
+                
+                    '<button type="button" class="btn btn-floating mx-1">'+
+                      '<i class="fa-brands fa-reddit-alien"></i>'+
+                    '</button>'+
+                
+                    '<button type="button" class="btn btn-floating mx-1">'+
+                      '<i class="fa-brands fa-twitter"></i>'+
+                    '</button>'+
+                
+                    '<button type="button" class="btn btn-floating mx-1">'+
+                      '<i class="fa-brands fa-instagram"></i>'+
+                    '</button>'+
+                    '<br>'+
+                    '<br>'+
+
+                    '<p>¿Aún no eres miembro?</p>'+
+                    '<p>Regístrate <a href="#" onclick="signUp()" >aquí</a></p>'+
+                  '</div>'+
                   '</form>' +
             '</div>' +
         '</div>' +

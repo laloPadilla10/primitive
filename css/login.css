@@ -73,7 +73,7 @@ a:hover {
     color: rgb(245, 235, 235);
     text-align: center;
     font-family: 'VT323';
-    font-size: 1.2em;
+    font-size: 2.0em;
     padding: 3px;
     width: 250px;
     transition: all 0.5s;
@@ -98,7 +98,7 @@ p{
 
     font-family: 'DM sans';
     color: #A66CFF;
-    font-size: 0.7em;
+    font-size: 0.9em;
 
 }
 

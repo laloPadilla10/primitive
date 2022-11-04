@@ -1,4 +1,4 @@
-const validarEmail = (email) => {
+const validEmail = (email) => {
     return String(email)
       .toLowerCase()
       .match(
@@ -19,7 +19,7 @@ const validarEmail = (email) => {
 
     e.preventDefault();
     
-    if (validarForm()){ 
+    if (validForm()){ 
         Swal.fire({
             icon: 'success',
             title: 'El correo ha sido enviado',
@@ -28,7 +28,7 @@ const validarEmail = (email) => {
     }
   }
 
-  function validarForm (){  
+  function validForm (){  
 
     // Validacion de todos los inputs
     if (formulario.nombre.value === ""){
@@ -39,7 +39,7 @@ const validarEmail = (email) => {
         formulario.nombre.classList.remove("border-danger");
         document.getElementById("errorNombre").style.display = "none";
     }
-    if (formulario.email.value === "" || !validarEmail(email.value)){
+    if (formulario.email.value === "" || !validEmail(formulario.email.value)){
         formulario.email.classList.add("border-danger");
         document.getElementById("errorEmail").style.display = "block";
         return false;
@@ -79,9 +79,6 @@ const validarEmail = (email) => {
 
   function crearPaginaContacto (){
     return '<div class="col-sm-8 offset-sm-2"  style="margin-top:30px">' +
-                '<div class="row">' +
-                    '<h1 class="title">Contáctanos<hr></h1>' +
-                '</div>' +
             '</div>' +
             '<div class="col-sm-12" style="margin-top:10px">' +
                 '<div class="row justify-content-center">' +
@@ -89,34 +86,34 @@ const validarEmail = (email) => {
                         '<img class="img-thumbnail" src="https://i.ibb.co/xYVBsyf/Sign-in-opcion-6.jpg" alt="imagen" style="height: 700px">' +
                     '</div>' +
                     '<div class="col-sm-4">' +
-                        '<p style="text-align: center;">Agradecemos el interés en nosotros. Si desea recibir mayor ' +
+                        '<p class="p" style="text-align: center;">Agradecemos el interés en <strong>Geekmitive</strong>. Si desea recibir mayor ' +
                             'información sobre alguno de nuestros productos, por favor rellene el siguiente formulario. ' +
-                            'Estamos listos para atender sus dudas y solicitudes.' +
+                            'Estamos listos para atender sus dudas y solicitudes. <strong>UwU</strong>' +
                         '</p>'+
                         '<form class="row g-3" id="registro">' +
                             '<div class="col-sm-12">' +
-                                    '<label for="inputNombre" class="form-label"><strong>Nombre</strong></label>' +
-                                    '<input type="text" class="form-control" id="nombre" style="background-color:rgb(221 231 245);">' +
+                                    '<label for="inputNombre" class="form-label">Nombre</label>' +
+                                    '<input type="text" class="form-control" id="nombre" style="background-color:rgb(177, 225, 225);">' +
                                     '<label class="text-danger" style="display: none" id="errorNombre">*campo requerido</label>' +
                             '</div>' +
                             '<div class="col-sm-12">' +
-                                    '<label for="inputemail" class="form-label"><strong>e-mail</strong></label>' +
-                                    '<input type="email" class="form-control" id="email" style="background-color:rgb(221 231 245);">' +
+                                    '<label for="inputemail" class="form-label">e-mail</label>' +
+                                    '<input type="email" class="form-control" id="email" style="background-color:rgb(177, 225, 225);">' +
                                     '<label class="text-danger" style="display: none" id="errorEmail">*campo requerido/formato inválido</label>' +
                             '</div>' +
                             '<div class="col-sm-12">' +
-                                    '<label for="inputTelefono" class="form-label"><strong>Teléfono</strong></label>' +
-                                    '<input type="number" class="form-control" id="telefono" style="background-color:rgb(221 231 245);">' +
+                                    '<label for="inputTelefono" class="form-label">Teléfono</label>' +
+                                    '<input type="number" class="form-control" id="telefono" style="background-color:rgb(177, 225, 225);">' +
                                     '<label class="text-danger" style="display: none" id="errorTelefono">*campo requerido</label>' +
                             '</div>' +
                             '<div class="col-sm-12">' +
-                                    '<label for="inputMensaje" class="form-label"><strong>Mensaje</strong></label>' +
-                                    '<textarea class="form-control" id="mensaje" rows="5" style="background-color:rgb(221 231 245);"></textarea>' +
+                                    '<label for="inputMensaje" class="form-label">Mensaje</label>' +
+                                    '<textarea class="form-control" id="mensaje" rows="5" style="background-color:rgb(177, 225, 225);"></textarea>' +
                                     '<label class="text-danger" style="display: none" id="errorMensaje">*campo requerido</label>' +
                             '</div>' +
                             '<div class="col-sm-12">' +
                                     '<form method="post">' +
-                                    '<button onclick="enviarEmail(event)" type="submit" class="btn btn-primary">Enviar</button></form>' +
+                                    '<button onclick="enviarEmail(event)" type="submit" class="btn-enviar">Enviar</button></form>' +
                             '</div>' +
                         '</form>' +
                     '</div>' +
