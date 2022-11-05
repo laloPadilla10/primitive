@@ -20,12 +20,14 @@
     <link rel="stylesheet" href="./css/aboutus.css">
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/signup.css">
+    <link rel="stylesheet" href="./css/categorias.css">
     
 </head>
 <body>
     <!-- Barra de navegación -->
     <div class="container-fluid barraNavegacion">
       <nav class="navbar navbar-expand-lg justify-content-sm-start">
+        
           <button class="navbar-toggler dropdown-toggle-split" type="button" data-toggle="collapse"
               data-bs-toggle="collapse" data-bs-target="#navbar">
               <span class="navbar-toggler-icon"></span>
@@ -39,9 +41,34 @@
                 <li class="nav-item active">
                   <a class="nav-link selectorNomal" name="navInfo" href="#" onclick="cargarAboutUs()">About Us</a>               
               </li>
-                  <li class="nav-item active">
-                      <a class="nav-link selectorNomal" name="navInfo"  href="#" onclick="cargarProductos()">Categorías</a>
+              
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" name="navInfo"  href="#" role="button" data-bs-toggle="dropdown"
+                       ><span>Categorías</span></a>
+                      
+                       <ul class="dropdown-menu">
+                        <li>
+                          <a href="#" class="dropdown-item" onclick="cargarProductos()">Ropa</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown-item">Figuras</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown-item">Comics Mangas</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown-item">Gadgets</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown-item">Productos Nacionales</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown-item">Accesorios</a>
+                        </li>
+                       </ul>
+                     
                   </li>
+               
                   <li class="nav-item active">
                       <a class="nav-link selectorNomal" name="navInfo" href="#">Promociones<pan class="sr-only">(current)</span></a>
                   </li>
@@ -63,7 +90,8 @@
               <a class="btn btn-primary btn-lg btn-circle selectorHelp" href="#" onclick="cargarLogin()" role="button"><i class="fa-solid fa-user-astronaut"></i></a>
           </div>
       </nav>
-  </div>   
+    </div>
+    
     <!-- Content -->
   <div id ="main">
     <main class="hero-image">
