@@ -190,7 +190,7 @@ function cargarLogin () {
                     '<br>'+
 
                     '<p>¿Aún no eres miembro?</p>'+
-                    '<p>Regístrate <a href="#" onclick="signUp()" >aquí</a></p>'+
+                    '<p class="p1">Regístrate <a href="#" onclick="signUp()" >aquí</a></p>'+
                   '</div>'+
                   '</form>' +
             '</div>' +
