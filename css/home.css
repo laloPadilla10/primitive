@@ -60,7 +60,6 @@ body{
 /*Cursor selectro Categorias*/
 .categorias{
   animation: animate1 0.3s infinite;
-  background-image: url());
 }
 @keyframes animate1{
  0%{
@@ -147,7 +146,15 @@ body{
   font-size: 70px;
   color: #9c9efe;
   text-align: center;
-  
+}
+
+.imgcategoria{
+  width: 300px;
+  height: 300px;
+}
+
+#objecto2{
+  object-position: 50% 50%;
 }
 
 /*################## Barra de navegacion ###################*/
