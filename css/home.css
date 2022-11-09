@@ -138,6 +138,7 @@ body{
   background-repeat: no-repeat ;
   background-position: right top;
   background-attachment: scroll;
+  background-size: cover;
 }
 /*################## Tipografia ###################*/
 .gradiCategorias1 {

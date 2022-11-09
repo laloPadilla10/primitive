@@ -5,6 +5,7 @@
     font-weight: 400;
     font-style: normal;
     font-display: auto;
+    
 }
 
 /*------------------BODY------------------*/
@@ -15,3 +16,16 @@
     font-family: Mondwest;
     text-align: center;
 }
+
+.dropdown-menu, .dropdown-item{
+ background-color: rgb(234, 61, 182);
+
+}
+
+
+a.dropdown-item{
+    font-family: 'Mondwest';
+    font-size: medium;
+    color: aliceblue;
+}
+

@@ -6,34 +6,118 @@ h2{
     font-display: swap;
 }
 
+/*######### Título###########*/
+
 @media(max-width:960px){
 
     h2{
 
         font-family: 'VT323';
+        color: #fc00de;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.163);
         font-style: normal;
-        font-size: 40px;
-        font-weight: 400;
+        font-size: 100px;
+        font-weight: 300px;
         font-display: swap;
+   
     }
 }
 
-#button-login{
+/*######### Texto interno  inputs ###########*/
+
+#user-login{
     font-family: 'VT323';
-    font-size: 25px;
-    background-color:rgb(166, 108, 225); 
-    border-color:rgb(166, 108, 225) ;
+    font-size: 1.5em;
+    color: #9C9EFE;
+}
+
+/*##################### checkout style ##################*/ 
+
+.form-check-label{
+    
+    font-family: 'DM sans';
+    font-style: italic;
+    color: #A66CFF;
+    font-size: .7em;
+    
+}
+
+#checkbox-input{
+
+    border-radius: 100px;
+    background-color: #9C9EFE;
+}
+
+/*##################### style enlaces##################*/ 
+
+a {
+
+    color: #fc00de;
+    font-size: .7em;
 
 }
 
-.img-login{
+
+a:hover {
+
+   color: #9C9EFE;
+
+}
+/*##################### btn style ##################*/ 
+
+.btn-login{
+    display: inline-block; 
+    border-radius: 100px;
+    background-color: #9C9EFE;
+    border: none;
+    color: rgb(245, 235, 235);
+    text-align: center;
+    font-family: 'VT323';
+    font-size: 2.0em;
+    padding: 3px;
+    width: 250px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+
+}
+
+.btn-login:hover{
+    background-color: #A66CFF;
+    color: #B1E1FF;
+    
+}
+
+/* .img-login{
     width: 15px;
-    height: 1px;
+    height: 2px;
+} */
+
+
+.p1{
+
+    font-family: 'DM sans';
+    color: #A66CFF;
+    font-size: 0.9em;
+
+}
+
+.fa-brands{
+
+    color: #A66CFF;
+
+}
+
+.btn{
+    
+    background-color:rgb(177, 225, 225);
+    border-radius: 100px;
+
 }
 
 #login{
     font-family: 'VT323';
-    font-size: 25px;
+    font-size: 1.5em;
 }
 
 #errorUser, #errorPass{
@@ -42,4 +126,10 @@ h2{
 
 #user-login, #password-login{
     font-size: large;
+}
+
+
+/*##################### color body ##################*/
+body{
+    background-color:rgb(245, 235, 235);
 }
