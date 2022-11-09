@@ -140,13 +140,52 @@ body{
   background-attachment: scroll;
   background-size: cover;
 }
+
+/*################## fondo categorias ###################*/
+
+
+/****ropa****/
+
+#categoria1 {
+  background-image: url("../assets/img/categorias/Productos\ Nacionales_2.jpg");
+}
+
+/****figuras****/
+#categoria2 {
+  background-image: url("../assets/img/categorias/Accesorios_6.jpg");
+}
+
+/****comics/mangas****/
+#categoria3 {
+  background-image: url("../assets/img/categorias/Gadgets_3.jpg");
+}
+
+/****gadgets****/
+#categoria4 {
+  background-image: url("../assets/img/categorias/Ropa_1.jpg");
+} 
+
+/****productos nacionales****/
+#categoria5 {
+  background-image: url("../assets/img/categorias/Accesorios_6.jpg");
+}
+
+/****accesorios****/
+#categoria6 {
+  background-image: url("../assets/img/categorias/Comics_5.jpg");
+}
+
+
 /*################## Tipografia ###################*/
+
+
 .gradiCategorias1 {
   font-family: 'VT323';
   font-size: 70px;
   color: #9c9efe;
   text-align: center;
 }
+
 
 .imgcategoria{
   width: 300px;
