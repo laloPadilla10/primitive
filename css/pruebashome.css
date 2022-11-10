@@ -1,0 +1,289 @@
+
+/*################## Fuente ###################*/
+@font-face {
+    font-family: 'Mondwest';
+    src: url('../assets/font/Mondwest-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+  }
+  /*################## Media para respuesta de categorias ###################*/
+    @media (min-width: 768px) {
+      .flex-md-equal > * {
+        flex: 1;
+      }
+    }
+  /*################## borde y margen para display ###################*/
+    .margen{
+      padding: 0px;
+      margin-bottom: 10px;
+      }
+  
+  /*################## Barra de scroll ###################*/
+  body::-webkit-scrollbar{
+    width: 15px;
+    background-image: linear-gradient(#a66cff,#b1e1ff);
+    /* background: #b1e1ff; */
+  }
+  body::-webkit-scrollbar-thumb{
+    background-image: linear-gradient(#fc00de,#a66cff);
+    /* background: rgba(166, 108, 255, 0.623); */
+    border-radius: 10px;
+    border-right: 2px solid;
+  }
+  /*################## Animacion cursor ###################*/
+  /* cursor de animacion de moviento en todo el body */
+  body{
+    animation: animate 0.2s infinite;
+  }
+  
+  @keyframes animate{
+   25%{
+    cursor: url("../assets/cursor/cursorMovi/frame_0_delay-0.01s.gif") , auto;
+   }
+   50%{
+    cursor: url("../assets/cursor/cursorMovi/frame_1_delay-0.01s.gif") , auto;
+   }
+   75%{
+    cursor: url("../assets/cursor/cursorMovi/frame_2_delay-0.01s.gif") , auto;
+   }
+   100%{
+    cursor: url("../assets/cursor/cursorMovi/frame_3_delay-0.01s.gif") , auto;
+   }
+  
+  } 
+  /*Cursor selectro Categorias*/
+  .categorias{
+    animation: animate1 0.3s infinite;
+  }
+  @keyframes animate1{
+   0%{
+    cursor: url("../assets/cursor/cursosCategorias/frame_0_delay-0.01s.gif") , auto;
+   }
+   20%{
+    cursor: url("../assets/cursor/cursosCategorias/frame_1_delay-0.01s.gif") , auto;
+   }
+   40%{
+    cursor: url("../assets/cursor/cursosCategorias/frame_2_delay-0.01s.gif") , auto;
+   }
+   60%{
+    cursor: url("../assets/cursor/cursosCategorias/frame_3_delay-0.01s.gif") , auto;
+   }
+    80%{
+    cursor: url("../assets/cursor/cursosCategorias/frame_4_delay-0.01s.gif") , auto;
+   }
+   100%{
+    cursor: url("../assets/cursor/cursosCategorias/frame_5_delay-0.01s.gif") , auto;
+   }
+   
+  } 
+  /*Cursor selectro Normal*/
+  .selectorNomal{
+    animation: animate2 0.3s infinite;
+  }
+  @keyframes animate2{
+   33%{
+    cursor: url("../assets/cursor/cursosNormal/frame_0_delay-0.01s.gif") , auto;
+   }
+   50%{
+    cursor: url("../assets/cursor/cursosNormal/frame_1_delay-0.01s.gif") , auto;
+   }
+   100%{
+    cursor: url("../assets/cursor/cursosNormal/frame_2_delay-0.01s.gif") , auto;
+   }
+   
+  } 
+  /*Cursor selector text*/
+  .selectorText{
+    animation: animate3 0.3s infinite;
+  }
+  @keyframes animate3{
+   33%{
+    cursor: url("../assets/cursor/cursorText/frame_0_delay-0.01s.gif") , auto;
+   }
+   50%{
+    cursor: url("../assets/cursor/cursorText/frame_1_delay-0.01s.gif") , auto;
+   }
+   100%{
+    cursor: url("../assets/cursor/cursorText/frame_2_delay-0.01s.gif") , auto;
+   }
+   
+  } 
+  
+  /*Cursor selector help*/
+  .selectorHelp{
+    animation: animate4 0.3s infinite;
+  }
+  @keyframes animate4{
+   33%{
+    cursor: url("../assets/cursor/cursorHelp/frame_0_delay-0.01s.gif") , auto;
+   }
+   50%{
+    cursor: url("../assets/cursor/cursorHelp/frame_1_delay-0.01s.gif") , auto;
+   }
+   100%{
+    cursor: url("../assets/cursor/cursorHelp/frame_2_delay-0.01s.gif") , auto;
+   }
+   
+  } 
+  
+  /*################## Imagen fondo main ###################*/
+  .hero-image {
+    background-image: url("../assets/img/fondo3.jpeg");
+    background-repeat: no-repeat ;
+    background-position: right top;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  /*################## Tipografia ###################*/
+  .gradiCategorias1 {
+    font-family: 'VT323';
+    font-size: 70px;
+    color: #9c9efe;
+    text-align: center;
+  }
+  
+  /*################## Barra de navegacion ###################*/
+  .barraNavegacion{
+    background-color: rgb(166, 108, 255);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 25%);
+    align-items: center;
+    font-family: 'DM Sans';
+    font-style: normal;
+  }
+  
+  #geek{
+    font-family: 'VT323';
+    font-style: normal;
+    font-size: 31px;
+    color: white
+    
+  }
+  
+  /*################## settings barra de nav###################*/
+  
+  [name="navInfo"]{
+    color: white;
+    font-family: 'DM Sans';
+    
+  }
+  
+  [name="navInfo"]:hover{
+    font-family: 'VT323';
+    color: #B1E1FF;
+    font-size: 20px;
+  
+  }
+  
+  [name="navInfo"]:visited{
+    font-family: 'VT323';
+    color: #B1E1FF;
+    font-size: 20px;
+  
+  }
+  
+  #input {
+  
+    font-family: 'VT323';
+    font-size: 1.05em;
+    color: #FC00DE;
+  
+  }
+  
+  #login{
+    font-family: 'VT323';
+    font-size: 25px;
+  }
+  
+  #logo{
+    width: 55px;
+    height: 40px;
+    border-radius: 60px;
+    
+  }
+  
+  .img-login{
+    width: 15px;
+    height: 1px;
+  }
+  
+  .btn-search{
+    color: white;
+    background-color:rgb(252, 0, 222);
+    border-color: rgb(166, 108, 255);
+    border-radius: 35px;
+    /*padding-left: 20px;*/
+  
+  }
+  
+  .btn-circle {
+    width: 50px;
+    height: 50px;
+    padding: 7px 0px;
+    border-radius: 35px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.42857;
+    background-color: rgb(252, 0, 222);
+    border-color: rgb(166, 108, 255);
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.1);
+    
+  }
+  
+  .fa-solid{
+    color: white;
+  }
+  
+  .btn-circle:hover{
+    color: white;
+    background-color: #B1E1FF;
+  }
+  
+  #button-login{
+    font-family: 'VT323';
+    font-size: 25px;
+    background-color:rgb(166, 108, 225); 
+    border-color:rgb(166, 108, 225) ;
+  
+  }
+  /*################## Cores ###################*/
+  :root {
+    --background: FFFFFF;
+  }
+  
+  #img-icon {
+    width: 100px;
+    height: 100px;
+  
+  }
+  
+  .about {
+    font-family: 'VT323';
+    font-size: 100px;
+    color: #FC00DE;
+    text-align: right;
+  }
+  
+  .d-block w-100{
+  
+    width: 500px;
+    height: 281px;
+  }
+  
+  /*################## fondo gif prueba ###################*/
+  
+  .gifFondo{
+    background-image: url("https://orig00.deviantart.net/4da4/f/2018/125/c/6/city_divider__re_edit__by_king_lulu_deer-dcaozvd.gif");
+    /* background-repeat: no-repeat ; */
+    background-position: center ;
+    /* background-attachment: scroll; */
+    background-size: cover;
+   
+  }
+  
+  
+  .nav {
+  
+    color: white;
+  
+  }

@@ -2,7 +2,7 @@
 
 /* Para generar el borde de los iconos para las marca y el primer color */
 .buttonIcon{
-    margin-right: 20px;
+    margin-right: 3px;
     height: 100px;
     width: 100px;
     cursor: pointer;
@@ -32,19 +32,26 @@
   
   }
 
-
   .buttonIcon span{
-    font-size: 20px;
+    font-size: 29px;
     font-weight: 50;
     line-height: 97px;
     margin-left: 1px;
     font-family: 'VT323';
 
   }
-  /* Desplazamiento de a 200px cuando se haga click */
-  .buttonIcon:hover{
-    width: 200px;
+  /* Desplazamiento de a 200px cuando se haga click si es mayor a 913px*/
+  /* LOS ICONOS DE LAS MARCAS NO SE DEBEN DESPLAZAR EN DISPOSITIVOS MOVILES */
+  @media (min-width: 1281px) {
+    .buttonIcon{
+      margin-right: 50px;
+    }
+    .buttonIcon:hover{
+      width: 250px;
+      
+    }
   }
+
 /* Se asigna un color para da marca */
   .buttonIcon:nth-child(1):hover .icon{
     background: rgb(244, 118, 27);
