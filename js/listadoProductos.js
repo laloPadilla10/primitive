@@ -32,14 +32,14 @@ const arrayProductos = [
   } */,
   {
     name: "Spiderman vs Venom",
-    img: "https://i.ibb.co/X2JrkLF/funko-venom-carnage-marvel.jpg",
+    img: "https://i.ibb.co/Nm2myMw/funko-venom-carnage-marvel.jpg",
     description: "Funko Pop Comic Moment: Marvel.",
     price: "$1,800.00 MXN",
     categoria: "Figuras",
   },
   {
     name: "Cartera Mulan",
-    img: "https://i.ibb.co/B2gJBT7/Cartera-Mulan-Disney.jpg",
+    img: "https://i.ibb.co/frhBg5D/Cartera-Mulan-Disney.jpg",
     description:
       "Disney Mulan Castle - Cartera con cierre alrededor.",
     price: "$600.00 MXN",
@@ -47,7 +47,7 @@ const arrayProductos = [
   },
   {
     name: "Figura oficial C-3PO escala 1:6",
-    img: "https://i.ibb.co/fYrJV59/c3po-figure.png",
+    img: "https://i.ibb.co/BtFVVDW/c3po-figure-2.png",
     description:
       "La figura de C-3PO a escala de 6 pulgadas se detalla para parecerse al personaje de la pelicula Star Wars, con detalles de primera calidad y múltiples puntos de articulación.",
     price: "$7,589.00 MXN",
@@ -62,7 +62,7 @@ const arrayProductos = [
   }, */
   {
     name: "Wall-E y Eva",
-    img: "https://i.ibb.co/YpmYhS2/figuras-walle-disney.jpg",
+    img: "https://i.ibb.co/QpMTdfM/figuras-walle-disney.jpg",
     description:
       "Pixar Disney Wall-E Película, Cifras de acción Wall-E y Eva, Personajes auténticos de la película, Posable y Coleccionable.",
     price: "$300.00 MXN",
@@ -70,7 +70,7 @@ const arrayProductos = [
   },
   {
     name: "Aurriculares inalámbricos Iroman",
-    img: "https://i.ibb.co/DRj8bdL/auriculares-inalambricos-ironman-disney.jpg",
+    img: "https://i.ibb.co/c25qFWh/auriculares-inalambricos-ironman-disney.jpg",
     description:
       "BASEMAN Marvel Iron Man Auriculares Bluetooth V5.0, Auriculares estéreo HD, Auriculares inalámbricos con micrófono para PC, teléfono, computadora portátil, Mp3/4, Tablet, TV, PSP, iPad",
     price: "$550.00 MXN",
@@ -78,7 +78,7 @@ const arrayProductos = [
   },
   {
     name: "Portalápices Darth Vader",
-    img: "https://i.ibb.co/z2h2BVW/portalapices-darthvader-disney.jpg",
+    img: "https://i.ibb.co/GcywCkw/portalapices-darthvader-disney.jpg",
     description:
       "Darth Vader - Portalápices con impresión 3D, accesorios de oficina, regalo ideal para los fans de Star Wars",
     price: "$500.00 MXN",
@@ -86,7 +86,7 @@ const arrayProductos = [
   },
   {
     name: "Waflera Star Wars",
-    img: "https://i.ibb.co/khBY1SG/deluxe-milennium-falcon-wafflera-disney.jpg",
+    img: "https://i.ibb.co/WHVzM1G/deluxe-milennium-falcon-wafflera-disney.jpg",
     description:
       "Máquina para hacer waffles Deluxe Millennium Falcon estándar.",
     price: "$2,200.00 MXN",
@@ -94,7 +94,7 @@ const arrayProductos = [
   },
   {
     name: "Tostadora Darth Vader",
-    img: "https://i.ibb.co/vsTr7WY/tostador-darthvader-disney.jpg",
+    img: "https://i.ibb.co/pjq5sNH/toaster.jpg",
     description:
       "Lleva a Vader a tu cocina: el icónico casco de Darth Vader es una tostador de trabajo detallada. Especificaciones del producto: chips de sonido Vader y luces en una secuencia de sonido de 10 segundos al tostar.",
     price: "$1,800.00 MXN",
@@ -110,7 +110,7 @@ const arrayProductos = [
   }, */
   {
     name: "Mario Amiibo Super Smash Bros.",
-    img: "https://i.ibb.co/WPcHCz3/figura-amiibo-mariobros-nintendo.jpg",
+    img: "https://i.ibb.co/GpftCf2/1.jpg",
     description: "Obtén increíbles bonificaciones para los juegos con las figuras amiibo. Solo coloca un amiibo en el punto NFC de las consolas. Compatible con Nintendo Switch, New Nintendo 2DS XL, New Nintendo 3DS XL  y Wii U.",
     price: "$799.00 MXN",
     categoria: "Figuras",
@@ -125,14 +125,14 @@ const arrayProductos = [
   }, */
   {
     name: "Cartera Super Nintendo caballero",
-    img: "https://i.ibb.co/qnBPLQb/Cartera-SNES-nintendo.jpg",
+    img: "https://i.ibb.co/Dp88D3c/Cartera-SNES-nintendo.jpg",
     description: "Cartera para Hombre Edición Especial Super Nintendo.",
     price: "$270.00 MXN",
     categoria: "Accesorios",
   },
   {
     name: "Gorra Kirby",
-    img: "https://i.ibb.co/K7xqpRN/1.jpg",
+    img: "https://i.ibb.co/zf4sYLX/kirby1.png",
     description:
       "Diseño personalizado: una imagen bordada de Kirby durmiendo decora este sombrero mientras que un par de burbujas flota sobre él. A los fanáticos del personaje de videojuegos les encantará el diseño bordado en este sombrero de contraste.",
     price: "$399.00 MXN",
@@ -140,7 +140,7 @@ const arrayProductos = [
   },
   {
     name: "Calcetines Disney",
-    img: "https://i.ibb.co/MS82v2b/set-calcetines-disney.jpg",
+    img: "https://i.ibb.co/Z8VywfB/set-calcetines-disney.jpg",
     description: "Personajes clásicos de Disney, Paquetes surtidos.",
     price: "$370.00 MXN",
     categoria: "Accesorios",
@@ -155,28 +155,28 @@ const arrayProductos = [
   }, */
   {
     name: "Dragon Ball Super",
-    img: "https://i.ibb.co/G3434nJ/dragon-ball-super-volume15-manga.jpg",
+    img: "https://i.ibb.co/pQpycDc/dragon-ball-super-volume15-manga.jpg",
     description: "La aventura de Goku del manga clásico volumen 15.",
     price: "$600.00 MXN",
     categoria: "Comic",
   },
   {
     name: "Venom: Protector Letal - Marvel",
-    img: "https://i.ibb.co/k1hMHnW/venom-protector-letal-comic.jpg",
+    img: "https://i.ibb.co/m4WxWzq/venom-protector-letal-comic.jpg",
     description: "Idioma: Español, Pasta blanda: 144 páginas.",
     price: "$300.00 MXN",
     categoria: "Comic",
   },
   {
     name: "Cómic The Superior Spider-Man",
-    img: "https://i.ibb.co/BBnwMzV/the-superior-spiderman-comic.jpg",
+    img: "https://i.ibb.co/stxGZtW/1.png",
     description: "Después de años de ser derrotado a manos del trepamuros, OTTO OCTAVIUS ha conseguido lo impensable… ¡PONER SU MENTE EN EL CUERPO DE PETER PARKER! Una asombrosa era terminó, ¡pero una nueva inicia para un inteligente y fuerte Superior Spider-Man!.",
     price: "$349.00 MXN",
     categoria: "Comic",
   },
   {
     name: "Fortnite x Marvel: Conflicto Cero N.2",
-    img: "https://i.ibb.co/7gJJSvg/fortnite-x-marvel-comic.jpg",
+    img: "https://i.ibb.co/h98gpbG/fortnite-x-marvel-comic.jpg",
     description: "Pasta blanda 32 páginas, edad de lectura a partir de 7 años.",
     price: "$70.00 MXN",
     categoria: "Comic",
@@ -206,28 +206,28 @@ const arrayProductos = [
   }, */
   {
     name: "Sudadera dragomzitos",
-    img: "https://i.ibb.co/3rqmDxj/categoria-nacional.png",
+    img: "https://i.ibb.co/sqBP0RJ/categoria-nacional.jpg",
     description: "Sudaderas dragoncitos dog perro.",
     price: "$400.00 MXN",
     categoria: "Productos",
   },
   {
     name: "Pulsera leyenda zelda",
-    img: "https://i.ibb.co/18Qw6gM/pulsera-nintendo-plata-varios-personajes.jpg",
+    img: "https://i.ibb.co/GkdCJD9/pulsera-nintendo-plata-varios-personajes.jpg",
     description: "LeyendaDeZelda,Link,Nintendo,Videojuego.",
     price: "$239.00 MXN",
     categoria: "Productos",
   },
   {
     name: "Mochila star wars baby Yoda",
-    img: "https://i.ibb.co/m0hWy76/mochila-star-wars-mandalorian-baby-yoda.jpgg",
+    img: "https://i.ibb.co/ZLtG6xM/mochila-star-wars-mandalorian-baby-yoda.jpg",
     description: "Mochila Back Star Wars Mandalorean Con Lonchera Baby Yoda.",
     price: "$600.00 MXN",
     categoria: "Productos",
   },
   {
     name: "Mochila Star Wars Loungefly",
-    img: "https://i.ibb.co/ZcqBDHG/mochila-star-wars-kawaii.jpg",
+    img: "https://i.ibb.co/6gJKZZM/mochila-star-wars-kawaii.jpg",
     description: "Mochila Star Wars con material Nailon.",
     price: "$890.00 MXN",
     categoria: "Productos",
