@@ -259,10 +259,10 @@ function cargarProductos(filtro) {
 }
 
 function addItem(item) {
-  const itemHTML = `<div class="col-md-4 col-sm-6 col-xs-12" id="card" style=" padding-bottom:20px;" >
+  const itemHTML = `<div class="col-md-4 col-sm-6 col-xs-12" id="card" style=" padding-bottom:30px;" >
       <div class="card h-100" >
         <div class="card-header">
-          <img class="card-img" src="${item.img}" alt="${item.name}" style="height: 322px;">
+          <img class="card-img" src="${item.img}" alt="${item.name}" <!-- style="height: 322px;" -->>
           <div class="card-img-overlay  justify-content-end">
           <a href="#" class="card-link  like">
           <i class="fas fa-heart"></i>
@@ -274,7 +274,7 @@ function addItem(item) {
           <p class="card-text">${item.description}</p>
         </div>
         <div class=" card-footer buy d-flex justify-content-between align-items-center">
-          <div class="price text-"><h5 class="mt-4">${item.price}</h5></div>
+          <div class="price align-text-"><h5 class="mt-4">${item.price}</h5></div>
           <!-- <a href="#" class="btn btncart btn-danger"><i class="fas fa-shopping-cart"></i></a> -->
         </div>
       </div>
