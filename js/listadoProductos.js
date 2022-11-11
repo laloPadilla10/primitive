@@ -1,5 +1,5 @@
 const arrayProductos = [
-  {
+  /* {
     name: "Camiseta Cobra Kai",
     img: "https://i.ibb.co/yp8SDBG/Cobra-Kai-Strike-First-Unisex-T-Shirt.jpg",
     description:
@@ -13,27 +13,27 @@ const arrayProductos = [
     description: "Producto con licencia oficial de Dragon Ball.",
     price: "$125.00 MXN",
     categoria: "Ropa",
-  },
-  {
+  }, */
+  /* {
     name: "Iron Spiderman Model Toy",
     img: "https://i.ibb.co/rFDB1Qh/figura-spiderman-sentinel-marvel.jpg",
     description:
       "BSHM Modelo De Juguete, Modelo Avengers Iron Spider-Man, Modelo Spider-Man Superhero Model para Niños.",
     price: "$300.00 MXN",
     categoria: "Figuras",
-  },
-  {
+  }, */
+  /* {
     name: "Sudadera con gorro StarWars unisex",
     img: "https://i.ibb.co/VxNzhYC/categoria-ropa-opcion-2.png",
     description:
       "Una sudadera con gorro que ofrece comodidad y calidad premium",
     price: "$125.00 MXN",
     categoria: "Ropa",
-  },
+  } */,
   {
     name: "Spiderman vs Venom",
-    img: "https://i.ibb.co/XY0jtcJ/funko-venom-carnage-marvel.jpg",
-    description: "Funko Pop Comic Moment: Marvel - .",
+    img: "https://i.ibb.co/X2JrkLF/funko-venom-carnage-marvel.jpg",
+    description: "Funko Pop Comic Moment: Marvel.",
     price: "$1,800.00 MXN",
     categoria: "Figuras",
   },
@@ -41,25 +41,25 @@ const arrayProductos = [
     name: "Cartera Mulan",
     img: "https://i.ibb.co/B2gJBT7/Cartera-Mulan-Disney.jpg",
     description:
-      "portafolios con cierre alrededor de Mulan, talla única, Mulan, Una talla, Disney Mulan Castle - portafolios con cierre alrededor.",
+      "Disney Mulan Castle - Cartera con cierre alrededor.",
     price: "$600.00 MXN",
     categoria: "Accesorios",
   },
   {
-    name: "Figura oficial de Sideshow Collectibles Star Wars C-3PO escala 1:6",
+    name: "Figura oficial C-3PO escala 1:6",
     img: "https://i.ibb.co/fYrJV59/c3po-figure.png",
     description:
       "La figura de C-3PO a escala de 6 pulgadas se detalla para parecerse al personaje de la pelicula Star Wars, con detalles de primera calidad y múltiples puntos de articulación.",
-    price: "$125.00 MXN",
+    price: "$7,589.00 MXN",
     categoria: "Figuras",
   },
-  {
+  /* {
     name: 'Figura Oficial Furyu Hatsune Miku Cat Auriculares Versión 1/7 25cm (9.8")',
     img: "https://i.ibb.co/nf4LTM6/heo-hm-cehf11-1024x1024.webp",
     description: "Producto con licencia oficial de Hatsune Miku. ",
     price: "$125.00 MXN",
     categoria: "Figuras",
-  },
+  }, */
   {
     name: "Wall-E y Eva",
     img: "https://i.ibb.co/YpmYhS2/figuras-walle-disney.jpg",
@@ -96,33 +96,33 @@ const arrayProductos = [
     name: "Tostadora Darth Vader",
     img: "https://i.ibb.co/vsTr7WY/tostador-darthvader-disney.jpg",
     description:
-      "Uncanny Brands Star Wars Darth Vader Halo Toaster - Ilumina y hace sonidos de sable de luz.",
+      "Lleva a Vader a tu cocina: el icónico casco de Darth Vader es una tostador de trabajo detallada. Especificaciones del producto: chips de sonido Vader y luces en una secuencia de sonido de 10 segundos al tostar.",
     price: "$1,800.00 MXN",
     categoria: "Gadgets",
   },
-  {
+  /* {
     name: "Marvel Casco Iron Man",
     img: "https://i.ibb.co/jDJB13x/Casco-Ironman-Marvel.jpg",
     description:
       "Ojos de led, efectos de sonido electrónicos, placa frontal desmontable magnetizada y medida para adultos.",
     price: "$3,500.00 MXN",
     categoria: "Gadgets",
-  },
+  }, */
   {
-    name: "Mario amiibo",
+    name: "Mario Amiibo Super Smash Bros.",
     img: "https://i.ibb.co/WPcHCz3/figura-amiibo-mariobros-nintendo.jpg",
-    description: "Figura de coleccion Super Smash Bros.",
-    price: "$2,500.00 MXN",
+    description: "Obtén increíbles bonificaciones para los juegos con las figuras amiibo. Solo coloca un amiibo en el punto NFC de las consolas. Compatible con Nintendo Switch, New Nintendo 2DS XL, New Nintendo 3DS XL  y Wii U.",
+    price: "$799.00 MXN",
     categoria: "Figuras",
   },
-  {
+  /* {
     name: "Aniiii The Legend of Zelda Skyward Sword Link",
     img: "https://i.ibb.co/4Vh51Xq/figura-legend-of-zelda-link-nintendo.jpg",
     description:
       "Figura De Acción De Juguete con Accesorios Figuras De Anime Móviles Estatua Personajes Coleccionables Personajes De Juegos De Dibujos Animados Muñecas.",
     price: "$400.00 MXN",
     categoria: "Figuras",
-  },
+  }, */
   {
     name: "Cartera Super Nintendo caballero",
     img: "https://i.ibb.co/qnBPLQb/Cartera-SNES-nintendo.jpg",
@@ -131,11 +131,11 @@ const arrayProductos = [
     categoria: "Accesorios",
   },
   {
-    name: "Gorra Monsters Inc",
-    img: "https://i.ibb.co/Dk48ktx/Gorra-Monsters-Inc-Disney.jpg",
+    name: "Gorra Kirby",
+    img: "https://i.ibb.co/K7xqpRN/1.jpg",
     description:
-      "Univeristy Gorra de béisbol Ajustable, Color Azul, Azul/Patchwork.",
-    price: "$630.00 MXN",
+      "Diseño personalizado: una imagen bordada de Kirby durmiendo decora este sombrero mientras que un par de burbujas flota sobre él. A los fanáticos del personaje de videojuegos les encantará el diseño bordado en este sombrero de contraste.",
+    price: "$399.00 MXN",
     categoria: "Accesorios",
   },
   {
@@ -145,14 +145,14 @@ const arrayProductos = [
     price: "$370.00 MXN",
     categoria: "Accesorios",
   },
-  {
+  /* {
     name: "Soporte Base De Mickey Mouse Para Google Home Mini",
     img: "https://i.ibb.co/ftjctpf/Soporte-Base-Mickey-Mouse-Googe-Home.jpg",
     description:
       "Con sistema de audio multi-room, cámara, pantalla táctil y bluetooth.",
     price: "$370.00 MXN",
     categoria: "Accesorios",
-  },
+  }, */
   {
     name: "Dragon Ball Super",
     img: "https://i.ibb.co/G3434nJ/dragon-ball-super-volume15-manga.jpg",
@@ -168,10 +168,10 @@ const arrayProductos = [
     categoria: "Comic",
   },
   {
-    name: "Superior Spider-Man",
+    name: "Cómic The Superior Spider-Man",
     img: "https://i.ibb.co/BBnwMzV/the-superior-spiderman-comic.jpg",
-    description: "Idioma inglés y número de páginas 490.",
-    price: "$480.00 MXN",
+    description: "Después de años de ser derrotado a manos del trepamuros, OTTO OCTAVIUS ha conseguido lo impensable… ¡PONER SU MENTE EN EL CUERPO DE PETER PARKER! Una asombrosa era terminó, ¡pero una nueva inicia para un inteligente y fuerte Superior Spider-Man!.",
+    price: "$349.00 MXN",
     categoria: "Comic",
   },
   {
@@ -180,15 +180,16 @@ const arrayProductos = [
     description: "Pasta blanda 32 páginas, edad de lectura a partir de 7 años.",
     price: "$70.00 MXN",
     categoria: "Comic",
+    
   },
-  {
+  /* {
     name: "Secret Wars Marvel Delux",
     img: "https://i.ibb.co/QmCzKTW/secret-wars-comic-marvel.jpg",
     description: "Idioma español y número de páginas 304.",
     price: "$370.00 MXN",
     categoria: "Comic",
-  },
-  {
+  }, */
+  /* {
     name: "Camiseta de anime Komi Cant",
     img: "https://i.ibb.co/TPKMbsf/playera-komi-san-acidpop.jpg",
     description:
@@ -202,7 +203,7 @@ const arrayProductos = [
     description: "Playeras Frikis Alchemist Manga Corta.",
     price: "$400.00 MXN",
     categoria: "Ropa",
-  },
+  }, */
   {
     name: "Sudadera dragomzitos",
     img: "https://i.ibb.co/3rqmDxj/categoria-nacional.png",
@@ -231,13 +232,13 @@ const arrayProductos = [
     price: "$890.00 MXN",
     categoria: "Productos",
   },
-  {
+  /* {
     name: "Suéter Star Wars ",
     img: "https://i.ibb.co/25fxDPq/sueter-starwars-stormtrooper-darthvader-1.jpg",
     description: "Suéter navideño unisex ugly.",
     price: "$700.00 MXN",
     categoria: "Productos",
-  },
+  }, */
 ];
 
 function cargarProductos(filtro) {
@@ -274,7 +275,7 @@ function addItem(item) {
         </div>
         <div class=" card-footer buy d-flex justify-content-between align-items-center">
           <div class="price text-"><h5 class="mt-4">${item.price}</h5></div>
-          <a href="#" class="btn btncart btn-danger"><i class="fas fa-shopping-cart"></i></a>
+          <!-- <a href="#" class="btn btncart btn-danger"><i class="fas fa-shopping-cart"></i></a> -->
         </div>
       </div>
     </div> `;
