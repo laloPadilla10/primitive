@@ -4,7 +4,7 @@ function addItem(item) {
         <section class="container sproduct my-2 pt-2" >
         <div class="row ">
             <div class="col-lg-4 col-md-12 col-12">
-                <img class="img-fluid w-100 bp-1" src="${item.img}" id="MainImg" alt="Kirby Cap">
+                <img class="img-fluid w-100 bp-1" src="${item.img}" id="MainImg" alt="Product Image">
             </div>
             <div class="col-lg-1 col-12"></div>
             <!-- Texto  -->
