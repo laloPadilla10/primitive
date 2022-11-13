@@ -1,19 +1,23 @@
-
-img{
+/* *{
+    font-family: 'DM sans';
+} */
+#logomyprofile{
     width: 150px;
     height: 150px;
     border-radius: 100px;
     
 }
-.row{
+.rowdemyprofile{
     padding: 10px;
     margin: 10px;
     align-items: center;
 }
-#nombreUsuario{
+#nombreUsuarioProfile{
     text-align: center;
     padding: 10px;
     margin-top: 30px;
+    font-size: 23px;
+    font-family: 'DM sans';
 }
 #descripcionMiPerfil{
     text-align: center;
@@ -23,9 +27,12 @@ img{
     text-align: center;
     padding: 10px;
     color: #87A2FB;
+    font-family: 'DM sans';
 
 }
 .botonsitosOpciones{
     background-color:rgb(166, 108, 225); 
     border-color:rgb(166, 108, 225) ;
+    width: 200px;
+    font-family: 'DM sans';
 }

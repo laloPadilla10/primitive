@@ -87,7 +87,8 @@ function validUsers(data){
         return false;
 
     } else
-        document.location.assign("../index.html")
+        //document.location.assign("../index.html")
+        cargarMiPerfilPersonal()
         return true;
 }
 
