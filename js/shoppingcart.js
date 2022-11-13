@@ -1,26 +1,22 @@
-function carrito () {
+function verDetalle(json) {
+
+    let htmlImagenes = '';
+    let imagenes = json[0].imagenes;
+    for(let i=1; i<imagenes.length; i++){
+        htmlImagenes += '<div class="small-img-col">'+
+                            '<img src="' + imagenes[i] + '" width="100%" class="small-img" alt="Kirby Cap" onclick="changeMainSrc(this)">'+
+                        '</div>';
+    }
+
+
     let main = document.getElementById("main");
     main.innerHTML = '<!-- Content -->'+
     '<!-- <h1 class="glow" id="title">Geekmitive</h1> -->'+
     '<section class="container sproduct my-2 pt-2" >'+
         '<div class="row ">'+
             '<div class="col-lg-5 col-md-12 col-12">'+
-                '<img class="img-fluid w-100 bp-1" src="https://i.ibb.co/zf4sYLX/kirby1.png" id="MainImg" alt="Kirby Cap">'+
-
-                '<div class=" small-img-group">'+
-                    '<div class="small-img-col">'+
-                        '<img src="https://i.ibb.co/zf4sYLX/kirby1.png" width="100%" class="small-img" alt="Kirby Cap">'+
-                    '</div>'+
-                    '<div class="small-img-col">'+
-                        '<img src="https://i.ibb.co/X2JjXW7/kirby2.png" width="100%" class="small-img" alt="Kirby Cap">'+
-                    '</div>'+
-                    '<div class="small-img-col">'+
-                        '<img src="https://i.ibb.co/ymT24hN/kirby4.png" width="100%" class="small-img" alt="Kirby Cap">'+
-                    '</div>'+
-                    '<div class="small-img-col">'+
-                        '<img src="https://i.ibb.co/fn0RG9S/kirby5.png" width="100%" class="small-img" alt="Kirby Cap">'+
-                    '</div>'+
-                '</div>'+
+                '<img class="img-fluid w-100 bp-1" src="' + imagenes[1] + '" id="MainImg" alt="Kirby Cap">'+
+                '<div class=" small-img-group">'+ htmlImagenes + '</div>'+
             '</div>'+
             '<div class="col-lg-6 col-md-12 col-12">'+
                 '<h6>Home/ Categorías / Accesorios</h6>'+
@@ -60,18 +56,6 @@ function carrito () {
  '<hr>';
 }
 
-let MainImg = document.getElementById('MainImg');
-        let smallImg = document.getElementsByClassName('small-img');
-
-        smallImg[0].onclick = function(){
-            MainImg.src = smallImg[0].src;
-        }
-        smallImg[1].onclick = function(){
-            MainImg.src = smallImg[1].src;
-        }
-        smallImg[2].onclick = function(){
-            MainImg.src = smallImg[2].src;
-        }
-        smallImg[3].onclick = function(){
-            MainImg.src = smallImg[3].src;
-        }
+const changeMainSrc = (obj) =>{
+    document.getElementById('MainImg').src=obj.src;
+};

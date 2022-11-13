@@ -1,10 +1,11 @@
   const arrayProductos = [{
     name: "Camiseta Cobra Kai",
-    img: "https://i.ibb.co/yp8SDBG/Cobra-Kai-Strike-First-Unisex-T-Shirt.jpg",
+    img: "./assets/img/categorias/kck1.jpg",
     description:
       "Una camiseta Cobra Kai cómoda con mangas cortas y cuello redondo. ¡Perfecto para usar mientras viaja o descansando adentro!",
     price: "$125.00 MXN",
-    categoria:'Ropa'
+    categoria:'Ropa',
+    imagenes : ['./assets/img/categorias/kck1.jpg','./assets/img/categorias/kck2.jpg','./assets/img/categorias/kck3.jpg']
   },{
     name: "Camiseta unisex Maestro Roshi de Dragon Ball",
     img: "https://i.ibb.co/HzRV5tD/maestro-Roshi.jpg",
@@ -217,30 +218,30 @@ function cargarProductos (filtro) {
   arrayProductos.filter(i=> i.categoria===filtro).forEach((i)=>{
     addItem(i);
   });
+
+  let elementos = document.getElementsByClassName("imagenProducto");
+  for(let e of elementos){
+    e.addEventListener("click", function (){verDetalle(arrayProductos.filter(a=> a.img===e.attributes["src"].value))});
+  }
 }
 
 function addItem(item) {
   const itemHTML =
-    `<div class="col-md-4 col-sm-6 col-xs-12" id="card" style=" padding-bottom:20px;" >
-      <div class="card h-100" >
-        <div class="card-header">
-          <img class="card-img" src="${item.img}" alt="${item.name}" style="height: 322px;">
-          <div class="card-img-overlay  justify-content-end">
-          <a href="#" class="card-link  like">
-          <i class="fas fa-heart"></i>
-          </a>
-          </div>
-        </div>
-        <div class="card-body">
-          <h4 class="card-title">${item.name}</h4>
-          <p class="card-text">${item.description}</p>
-        </div>
-        <div class=" card-footer buy d-flex justify-content-between align-items-center">
-          <div class="price text-"><h5 class="mt-4">${item.price}</h5></div>
-          <a href="#" class="btn btncart btn-danger"><i class="fas fa-shopping-cart"></i></a>
-        </div>
-      </div>
-    </div> `;
+    '<div class="col-md-4 col-sm-6 col-xs-12" id="card" style=" padding-bottom:20px;">'+
+      '<div class="card h-100">' +
+        '<div class="card-header">'+
+            '<img class="card-img imagenProducto" src="' + item.img + '" alt="' + item.name +'" style="height: 322px;">'+
+        '</div>' +
+        '<div class="card-body">'+
+          '<h4 class="card-title">'+ item.name +'</h4>'+
+          '<p class="card-text">'+ item.description + '</p>'+
+        '</div>'+
+        '<div class="card-footer buy d-flex justify-content-between align-items-center">'+
+          '<div class="price text-"><h5 class="mt-4">${item.price}</h5></div>'+
+          '<a href="#" class="btn btncart btn-danger"><i class="fas fa-shopping-cart"></i></a>'+
+        '</div>'+
+      '</div>'+
+    '</div>';
 
   document.getElementById("list-items").innerHTML += itemHTML;
 }
