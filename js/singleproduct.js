@@ -1,26 +1,38 @@
-function addItem(item) {
-    const itemHTML =
-        `
-        <section class="container sproduct my-2 pt-2" >
+let contadorCarrito =0;
+
+if (localStorage.getItem("contadorCarrito")){
+    $("#iconoCarrito").append(`<span id="cart_menu_num" data-action="cart-can" class="badge rounded-circle">${localStorage.getItem("contadorCarrito")}</span>`);
+}
+
+function verDetalle(json) {
+
+    let htmlImagenes = '';
+    let imagenes = json.imagenes;
+    for(let i=1; i<imagenes.length; i++){
+        htmlImagenes += '<div class="small-img-col">'+
+                            '<img src="' + imagenes[i] + '" width="100%" class="small-img" alt="Kirby Cap" onclick="changeMainSrc(this)">'+
+                        '</div>';
+    }
+
+    let main = document.getElementById("main");
+    main.innerHTML = `<section class="container sproduct my-2 pt-2" >
         <div class="row ">
-            <div class="col-lg-4 col-md-12 col-12">
-                <img class="img-fluid w-100 bp-1" src="${item.img}" id="MainImg" alt="Product Image">
+            <div class="col-lg-5 col-md-12 col-12">
+                <img class="img-fluid w-100 bp-1" src=${imagenes[0]} id="MainImg" alt="Kirby Cap">
+                <div class=" small-img-group">${htmlImagenes}</div>
             </div>
-            <div class="col-lg-1 col-12"></div>
-            <!-- Texto  -->
             <div class="col-lg-6 col-md-12 col-12">
-                <h6>${item.brand}</h6>
-                <h3 class="py-4 product_name">${item.name}</h3>
-                <h2 class="price">$${item.price} MXN</h2>
+                <h3 class="py-4 product_name" id="nombreProducto">${json.name}</h3>
+                <h2 class="price">${json.price}</h2>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half"></i>
-                    <span class="rating_avg">(${item.rating})</span>
+                    <i class="fa-solid fa-star-half"></i>
+                    <span class="rating_avg">(4.7)</span>
                 </div>
-                <select class="my-3 select ">
+                <select class="my-3 select" id="cantidad">
                     <option>Cantidad</option>
                     <option>1</option>
                     <option>2</option>
@@ -29,45 +41,38 @@ function addItem(item) {
                     <option>5</option>
                     <option>6</option>
                     <option>7</option>
-                </select><br>
-                <button class="buy-btn">Añadir a Carrito<i class="fa-solid fa-cart-shopping"></i></button>
-                <button class="buy-btn">Comprar ahora <i class="fa-regular fa-credit-card "></i> <i class="fa-brands fa-paypal"></i></button>
+                </select>
+                <button class="buy-btn" onclick="agregarProducto()">Añadir a Carrito<i class="fa-solid fa-cart-shopping"></i></button>
                 <h4 class="mt-5 mb-5">Detalles de producto</h4>
-                <span class="product_description">${item.description}</span>
+                <span class="product_description">${json.description}</span>
             </div>
         </div>
     </section>
     <br>
-    <hr>`;
-  
-    const itemsContainer = document.getElementById("product-item");
-    itemsContainer.innerHTML += itemHTML;
+ <hr>`;
 }
 
-addItem({
-    name: "Gorra Kirby",
-    price:"399",
-    brand:"Nintendo",
-    img: "https://i.ibb.co/zf4sYLX/kirby1.png",
-    rating:"4.7",
-    description:"Diseño personalizado: una imagen bordada de Kirby durmiendo decora este sombrero mientras que un par de burbujas flota sobre él. A los fanáticos del personaje de videojuegos les encantará el diseño bordado en este sombrero de contraste.",
-  })
-  
-addItem({
-    name:"Tostadora Darth Vader",
-    price:"1800",
-    brand:"Star Wars",
-    img:"https://i.ibb.co/pjq5sNH/toaster.jpg",
-    rating:"4.4",
-    description:"Lleva a Vader a tu cocina: el icónico casco de Darth Vader es una tostador de trabajo detallada. Especificaciones del producto: chips de sonido Vader y luces en una secuencia de sonido de 10 segundos al tostar. "
-})  
+const agregarProducto = () => {  
+    let nombreProducto =  $("#nombreProducto")[0].textContent;
+    let jsonProducto = { ...arrayProductos.filter(i => i.name === nombreProducto)[0]};
+    jsonProducto.cantidad = Number($("#cantidad").val());
+    
+    let productoCarrito = arregloCarrito.filter(i => i.name === nombreProducto);
+    if (productoCarrito.length == 0){
+        arregloCarrito.push(jsonProducto);
+    } else {
+        productoCarrito[0].cantidad = Number($("#cantidad").val());
+    }
+    let init =0;
+    contadorCarrito = arregloCarrito.reduce((a,b) => { return a + b.cantidad}, init);
+    if($("#cart_menu_num").length>0){
+        $("#cart_menu_num").text(contadorCarrito);
+    } else {
+        $("#iconoCarrito").append(`<span id="cart_menu_num" data-action="cart-can" class="badge rounded-circle">${contadorCarrito}</span>`);
+    }
+    localStorage.setItem("contadorCarrito", contadorCarrito);
+}
 
-addItem({
-    name:"",
-    price:"",
-    brand:"",
-    img:"",
-    rating:"",
-    description:""
-}) 
-;
+const changeMainSrc = (obj) =>{
+    document.getElementById('MainImg').src=obj.src;
+};

@@ -132,6 +132,8 @@ body{
  
 } 
 
+img {cursor: pointer;}
+
 /*################## Imagen fondo main ###################*/
 .hero-image {
   background-image: url("../assets/img/fondo3.jpeg");

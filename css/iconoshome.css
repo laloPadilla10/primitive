@@ -79,6 +79,23 @@
     
    
   }
+ /* contador carrito*/
+  #cart_menu_num {
+    position: absolute;
+    top: 14px;
+    left: 82%;
+    background: rgb(9, 206, 68);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 2px;
+  }
+
+ 
   
 
 
