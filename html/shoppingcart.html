@@ -62,82 +62,58 @@
   </header>
 
     <!-- Content -->
-    <br>
-    <br>
+    <main class="container-fluid">
+      <page-title class="row justify-content-center my-3">
+        <div class="col text-center">
+          <h1>Mi Carrit UwU</h1>
+        </div>
+      </page-title>
 
-    <h1 class="" id="title">Shopping Cart</h1>
-    <br>
-    <hr>
-    <main>
-      <div class="container">
-          <div class="row mt-3">
-              <div class="col">
-                  <h2 class="d-flex justify-content-center mb-3">Realizar Compra</h2>
-                  <form id="procesar-pago" method="POST">
-                      <div class="form-group row">
-                          <label for="cliente" class="col-12 col-md-2 col-form-label h2">Cliente :</label>
-                          <div class="col-12 col-md-10">
-                              <input type="text" class="form-control" id="cliente"
-                                  placeholder="Ingresa nombre cliente" name="persona">
-                          </div>
-                      </div>
-                      <div class="form-group row">
-                          <label for="email" class="col-12 col-md-2 col-form-label h2">Correo :</label>
-                          <div class="col-12 col-md-10">
-                          <input type="text"  id="correo" class="form-control"  name="email.id" id="email.id">
-                          </div>
-                      </div>
+      <section class="row m-2">
+        <!--- Artículos del carrito --->
+        <section class="col-sm-9 mb-2">
+          <!--- Elemento en carrito -->
 
-                      <div id="carrito" class="form-group table-responsive">
-                          <table class="table" id="lista-compra">
-                              <thead>
-                                  <tr>
-                                      <th scope="col">Imagen</th>
-                                      <th scope="col">Nombre</th>
-                                      <th scope="col">Precio</th>
-                                      <th scope="col">Cantidad</th>
-                                      <th scope="col">Sub Total</th>
-                                  </tr>
-
-                              </thead>
-                              <tbody>
-
-                              </tbody>
-                              <tr>
-                                  <th colspan="4" scope="col" class="text-right">TOTAL
-                                      <p id="totalProceso"></p>
-                                  </th>
-                                  <!-- <th scope="col"></th> -->
-                              </tr>
-
-                          </table>
-                      </div>
-
-                      <div class="row justify-content-center d-none" id="spinner">
-                          <div class="spinner">
-                              <div class="dot1"></div>
-                              <div class="dot2"></div>
-                          </div>
-                      </div>
-
-                      <div class="row justify-content-between">
-                          <div class="col-md-4 mb-2">
-                              <a href="/index.html" class="btn btn-info btn-block">Seguir comprando</a>
-                          </div>
-                          <div class="col-xs-12 col-md-4">
-                               <input type="submit" class="btn btn-success btn-block" id="button" value="Finalizar compra" onclick="carritoprueba ()">
-                          </div>
-                      </div>
-                  </form>
-
-              </div>
-
-
+              <div id="fila-1"> <h2 class="text-center">Tu carrito está vacío :( </h2></div>
           </div>
+          <!--- Carta con botón de pago-->
+          <div class="card">
+            <div class="row">
 
-      </div>
-  </main>
+              <table id="tablaCarrito">
+                <thead>
+                  <tr>
+                    <th>imagen</th>
+                    <th>producto</th>
+                    <th>precio</th>
+                    <th>cantidad</th>
+                    <th>borrar</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
 
+              <div id="totalCarrito" class="col-sm-7 my-auto text-center">
+                 <!-- <h5> </h5>-->
+                </div>
+              
+              <div class="col-sm-3 text-center my-2">
+                <button href="#" class="btn btn-light"> Pagar </button>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col text-center mt-4">
+                    <small class="text-muted">
+                    ¿Tienes un problema con tu compra? ¡Contáctanos!
+                </small>
+                  </div>
+            </div>
+        
+        </section>
+        
+
+        <!--- Productos recomendados-->
+      
   <footer class="text-center text-white" style="background-color: #e7dcf8;">
     <!-- Grid container -->
     <div class="container pt-4">

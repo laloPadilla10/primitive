@@ -30,7 +30,7 @@ function addItem(item) {
                     <option>6</option>
                     <option>7</option>
                 </select><br>
-                <button class="buy-btn">Añadir a Carrito<i class="fa-solid fa-cart-shopping"></i></button>
+                <button class="buy-btn btnAgregar">Añadir a Carrito<i class="fa-solid fa-cart-shopping"></i></button>
                 <button class="buy-btn">Comprar ahora <i class="fa-regular fa-credit-card "></i> <i class="fa-brands fa-paypal"></i></button>
                 <h4 class="mt-5 mb-5">Detalles de producto</h4>
                 <span class="product_description">${item.description}</span>
@@ -42,6 +42,12 @@ function addItem(item) {
   
     const itemsContainer = document.getElementById("product-item");
     itemsContainer.innerHTML += itemHTML;
+    const btn = document.getElementsByClassName("btnAgregar");
+    btn.addEventListener("click", function(e){agregarCarrito(arrayProductos.filter(a=>a.name == e.closest("h3").text()))})
+}
+
+function agregarCarrito (element){
+    console.log(element);
 }
 
 addItem({

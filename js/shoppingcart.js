@@ -60,7 +60,7 @@ function carrito () {
  '<hr>';
 }
 
-let MainImg = document.getElementById('MainImg');
+/* let MainImg = document.getElementById('MainImg');
         let smallImg = document.getElementsByClassName('small-img');
 
         smallImg[0].onclick = function(){
@@ -74,4 +74,4 @@ let MainImg = document.getElementById('MainImg');
         }
         smallImg[3].onclick = function(){
             MainImg.src = smallImg[3].src;
-        }
+        } */
