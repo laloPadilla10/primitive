@@ -48,8 +48,7 @@ function verDetalle(json) {
             </div>
         </div>
     </section>
-    <br>
-    <hr>`;
+    <br>`;
   
 }
 
@@ -78,7 +77,7 @@ const agregarProducto = () => {
     localStorage.setItem("contadorCarrito", contadorCarrito);
 
     Swal.fire({
-        position: 'top-end',
+        position: 'absolute',
         icon: 'success',
         title: 'Tu producto ha sido añadido',
         showConfirmButton: false,
