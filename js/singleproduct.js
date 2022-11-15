@@ -33,7 +33,7 @@ function verDetalle(json) {
                     <span class="rating_avg">(4.7)</span>
                 </div>
                 <select class="my-3 select" id="cantidad">
-                    <option>Cantidad</option>
+                    <option value="">Cantidad</option>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -49,12 +49,17 @@ function verDetalle(json) {
         </div>
     </section>
     <br>
- <hr>`;
+    <hr>`;
+  
 }
 
+
 const agregarProducto = () => {  
+
+    if ($("#cantidad").val() == "") return;
+
     let nombreProducto =  $("#nombreProducto")[0].textContent;
-    let jsonProducto = { ...arrayProductos.filter(i => i.name === nombreProducto)[0]};
+    let jsonProducto = { ...arrayProductos.filter(i => i.name === nombreProducto)[0]}; // hace un filtro por el nombre. 
     jsonProducto.cantidad = Number($("#cantidad").val());
     
     let productoCarrito = arregloCarrito.filter(i => i.name === nombreProducto);
@@ -71,6 +76,14 @@ const agregarProducto = () => {
         $("#iconoCarrito").append(`<span id="cart_menu_num" data-action="cart-can" class="badge rounded-circle">${contadorCarrito}</span>`);
     }
     localStorage.setItem("contadorCarrito", contadorCarrito);
+
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Tu producto ha sido añadido',
+        showConfirmButton: false,
+        timer: 1500
+      })
 }
 
 const changeMainSrc = (obj) =>{

@@ -56,7 +56,7 @@ const arrayProductos = [
     imagenes: ["https://i.ibb.co/LdCr5dH/Waflera-Darth-Vader.jpg"],
     description:
       "Lleva a Vader a tu cocina: el icónico casco de Darth Vader es una tostador de trabajo detallada. Especificaciones del producto: chips de sonido Vader y luces en una secuencia de sonido de 10 segundos al tostar.",
-    price: "$1,800.00 MXN",
+    price: 1800.00,
     categoria: "Gadgets"
   },{
     name: "Mario Amiibo Super Smash Bros.",
