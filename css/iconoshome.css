@@ -79,6 +79,12 @@
     
    
   }
+  
+
+  .cart {
+    position: relative;
+  
+  }
  /* contador carrito*/
   #cart_menu_num {
     position: absolute;
