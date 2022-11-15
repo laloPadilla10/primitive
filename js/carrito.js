@@ -31,10 +31,10 @@ function cargarCarrito() {
               </thead>
               <tbody id="body"></tbody>
             </table>
-  
-            <div id="totalCarrito" class="col-sm-7 my-auto text-center" style="display:none">
+            <hr>
+            <div id="TotalCarrito" class="col-sm-7 my-auto text-center" style="display:none">
             </div>
-        
+            
             <div class="col-sm-3 text-center my-2">
               <button href="#" class="btn btn-light" ${arregloCarrito.length==0 ? "disabled" : ""}> Pagar </button>
             </div>
@@ -83,7 +83,7 @@ function carritoPrueba() {
   });
 
  //pinta mi total
-  $("#totalCarrito").append(`<h5> total carrito ${total}</h5>`).show();
+  $("#TotalCarrito").append(`<h5> Total carrito ${total}</h5>`).show();
 
   body = document.getElementById("body");
   body.innerHTML = listaHtml;
