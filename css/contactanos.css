@@ -27,7 +27,7 @@ h1{
 /*######### Texto inputs  ############*/
 
 label.form-label {
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-weight: 600;
     color: #fc00de;
     font-family: 'DM sans';
@@ -39,7 +39,7 @@ label.form-label {
 
     font-family: 'VT323';
     font-size: 1.5em;
-    color: #9C9EFE;
+    
    
 }
 
@@ -47,21 +47,21 @@ label.form-label {
 
     font-family: 'VT323';
     font-size: 1.5em;
-    color: #9C9EFE;
+    
 }
 
 #telefono{
 
     font-family: 'VT323';
     font-size: 1.5em;
-    color: #9C9EFE;
+   
 }
 
 #mensaje{
 
     font-family: 'VT323';
     font-size: 1.5em;
-    color: #9C9EFE;
+    
     
 }
 
@@ -70,7 +70,7 @@ label.form-label {
 /*##################### btn style ##################*/
 
 .btn-enviar{
-
+    
     display: inline-block; 
     border-radius: 100px;
     background-color: #9C9EFE;
@@ -80,18 +80,17 @@ label.form-label {
     font-family: 'VT323';
     font-size: 1.2em;
     padding: 2px;
-    width: 500px;
+    width: 200px;
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
-    
-}--
+}
 
 
 
 .btn-enviar:hover{
     background-color: #A66CFF;
-    padding-right: 25px;
+ 
     color: #B1E1FF;
 }
 

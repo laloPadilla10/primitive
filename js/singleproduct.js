@@ -43,16 +43,16 @@ function verDetalle(json) {
                     <option>7</option>
                 </select>
                 <button class="buy-btn" onclick="agregarProducto()">Añadir a Carrito<i class="fa-solid fa-cart-shopping"></i></button>
-                <h4 class="mt-5 mb-5">Detalles de producto</h4>
+                <h4 id="detallesp" class="mt-5 mb-5">Detalles de producto</h4>
                 <span class="product_description">${json.description}</span>
             </div>
         </div>
     </section>
-    <br>
-    <hr>`;
+    <br>`;
   
 }
 
+//función subarreglos del carrito
 
 const agregarProducto = () => {  
 
@@ -78,7 +78,7 @@ const agregarProducto = () => {
     localStorage.setItem("contadorCarrito", contadorCarrito);
 
     Swal.fire({
-        position: 'top-end',
+        position: 'absolute',
         icon: 'success',
         title: 'Tu producto ha sido añadido',
         showConfirmButton: false,

@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="./css/signup.css">
     <link rel="stylesheet" href="./css/categorias.css">
     <link rel="stylesheet" href="./css/myprofile.css">
+    <link rel="stylesheet" href="./css/shoppingcart.css">
     <!-- iconoshome es para el apartado de la barra de marcas-->
     <link rel="stylesheet" href="./css/iconoshome.css">
     <link rel="stylesheet" href="./css/singleproduct.css">
@@ -88,7 +89,7 @@
                       </form>
                   </li>
               </ul>
-              <a class="btn btn-primary btn-lg btn-circle mx-1 selectorHelp" onclick="cargarCarrito()" role="button"><i
+              <a class="btn btn-primary btn-lg btn-circle mx-1 selectorHelp cart" onclick="cargarCarrito()" role="button"><i
                   class="fa-solid fa-cart-shopping" id="iconoCarrito"></i></a>
               <a class="btn btn-primary btn-lg btn-circle selectorHelp" href="#" onclick="cargarLogin()" role="button"><i class="fa-solid fa-user-astronaut"></i></a>
           </div>
@@ -189,7 +190,8 @@
             <!-- Categoria -->
           <div id="categoria5" class=" categorias text-bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
             <div class="my-3 p-3 efectoZoom">
-              <h2 class=" gradiCategorias1 display-5">Productos<br>Nacionales</h2>
+              <h2 class=" gradiCategorias1 display-5">Productos Nacionales</h2>
+              <img class="imgcategoria" src="./assets/img/categorias/IMG_7491_720x (1).jpg">
             </div>
             <!-- <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div> -->
           </div>
@@ -235,7 +237,7 @@
     <!-- Grid container -->
   
     <!-- Copyright -->
-    <div class="text-center text-dark p-3 selectorNomal" style="background-color: rgba(0, 0, 0, 0.2);">
+    <div class="text-center text-dark p-3 selectorNomal" style="background-color: rgb(177, 225, 225);">
       © 2022 Copyright || Geekmitive || <a href="#" target="" class="selectorNomal">Términos y condiciones</a> || <a href="#" target="" class="selectorNomal">Políticas de privacidad</a>
     </div>
     <!-- Copyright -->
@@ -255,8 +257,8 @@
     <script src="./js/login.js"></script>
     <script src="./js/signup.js"></script>
     <script src="./js/carrito.js"></script>
-    <script src="../js/singleproduct.js"></script>
-    <script src="../js/myprofile.js"></script>
+    <script src="./js/singleproduct.js"></script>
+    <script src="./js/myprofile.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

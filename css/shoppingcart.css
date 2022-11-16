@@ -1,17 +1,67 @@
 /*------------------Fonts------------------*/
-@font-face {
-    font-family: 'Mondwest';
-    src: url('../assets/font/Mondwest-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: auto;
+.tablecar {
+    font-family: 'VT323';
+    font-size: 1.5em;
+    color: #FC00DE;
+    text-align: center;
 }
 
-/*------------------BODY------------------*/
-
-/*------------------TYPOGRAPHY------------*/
-
-#title{
-    font-family: Mondwest;
+.td {
+    font-family: 'DM sans';
+    font-size: 1.2em;
     text-align: center;
+    font-weight: bold;
+}
+
+h5.tcarrito{
+    font-family: 'DM sans';
+    font-size: 1.2em;
+    color:  #a66cff;
+}
+
+#imgCarrito{
+    border-radius: 30px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 20%);
+}
+
+
+.card1{
+
+    background-color: #e0f2fe;
+    border-color:#B1E1FF;
+    border-width: .07cm;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 20%);
+
+}
+
+.contactanoscarro{
+    font-family: 'DM sans';
+    font-size: 1.1em;
+}
+
+@media screen and (max-width: 600px) {
+    table {
+        width:100%;
+    }
+    thead {
+        display: none;
+    }
+    tr:nth-of-type(2n) {
+        background-color: inherit;
+    }
+    tr td:first-child {
+        background: #f0f0f0;
+        font-weight:bold;
+        font-size:1.3em;
+    }
+    tbody td {
+        display: block;
+        text-align:center;
+
+    }
+    tbody td:before {
+        content: attr(data-th);
+        display: block;
+        text-align:center;
+    }
 }
