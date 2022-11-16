@@ -5,6 +5,7 @@
     font-weight: 400;
     font-style: normal;
     font-display: auto;
+    
 }
 
 /*------------------BODY------------------*/
@@ -12,6 +13,19 @@
 /*------------------TYPOGRAPHY------------*/
 
 #title{
-    font-family: Mondwest;
+    font-family: 'VT323';
     text-align: center;
 }
+
+.dropdown-menu, .dropdown-item{
+ background-color: rgb(234, 61, 182);
+
+}
+
+
+a.dropdown-item{
+    font-family: 'VT323';
+    font-size: 1.3em;
+    color: aliceblue;
+}
+

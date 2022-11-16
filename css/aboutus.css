@@ -53,6 +53,7 @@ h2{
     }
 }
 /* ########### Logo escrito settings ################# */
+
 #geek{
     font-family: 'VT323';
     font-style: normal;
@@ -174,6 +175,13 @@ h5.slideshow {
     width: 500px;
     height: 281px;
 }
+
+/*##################### color body ##################*/
+/*##################### color body ##################*/
+body{
+    background-color:rgb(245, 235, 235);
+}
+
 
 /*------------------Fonts------------------*/
 /*/@font-face {

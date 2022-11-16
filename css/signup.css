@@ -52,33 +52,59 @@ header{
 
 /*------------------------------------*/
 body{
-    background: #fff;
-    /*background: linear-gradient(to bottom,  #ffffff, #a66cff)*/
+    background-color:rgb(245, 235, 235);
+  
     
 }
-.bg{
-    background-image: url(../assets/img/signup.jpg);
-    background-position: center center;
-}
-h2{
-    color: black;
 
+#nombre, #telefono, #email, #password{
+    border-radius: 10px;
+   background-color:rgb(177, 225, 225)
    
 }
 
-#inputnombre2, #inputnum2, #inputmail2, #inputpass2{
-    border-radius: 7px;
-   /* background-color: #b1e1ff; */
-   background-color: #b1e1ff;
-}
-
 #loginbtn2{
-    /* border-radius: 25px 25px; */
-    width: 150px;
-    margin-left: 27%;
-    background-color: rgb(166, 108, 225);
-    border-color: rgb(166, 108, 225);
+    display: inline-block; 
+    border-radius: 100px;
+    background-color: #9C9EFE;
+    border: none;
+    color: rgb(245, 235, 235);
+    text-align: center;
+    font-family: 'VT323';
+    font-size: 1.2em;
+    padding: 3px;
+    width: 250px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
 }
 label{
     font-weight: bold;
 } 
+
+/*##################### style enlaces##################*/ 
+
+a {
+
+    color: #fc00de;
+    font-size: .7em;
+
+}
+
+
+a:hover {
+
+   color: #9C9EFE;
+
+}
+
+#texto{
+    font-size: 40px;
+}
+
+#tamaño{
+    font-size: 1em;
+    font-weight: 600;
+    color: #fc00de;
+    font-family: 'DM sans';
+}

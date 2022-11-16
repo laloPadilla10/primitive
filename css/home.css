@@ -132,6 +132,8 @@ body{
  
 } 
 
+img {cursor: pointer;}
+
 /*################## Imagen fondo main ###################*/
 .hero-image {
   background-image: url("../assets/img/fondo3.jpeg");
@@ -140,12 +142,61 @@ body{
   background-attachment: scroll;
   background-size: cover;
 }
+
+/*################## fondo categorias ###################*/
+
+
+/****ropa****/
+
+#categoria1 {
+  background-image: url("../assets/img/categorias/Productos\ Nacionales_2.jpg");
+}
+
+/****figuras****/
+#categoria2 {
+  background-image: url("../assets/img/categorias/Accesorios_6.jpg");
+}
+
+/****comics/mangas****/
+#categoria3 {
+  background-image: url("../assets/img/categorias/Gadgets_3.jpg");
+}
+
+/****gadgets****/
+#categoria4 {
+  background-image: url("../assets/img/categorias/Ropa_1.jpg");
+} 
+
+/****productos nacionales****/
+#categoria5 {
+  background-image: url("../assets/img/categorias/Accesorios_6.jpg");
+}
+
+/****accesorios****/
+#categoria6 {
+  background-image: url("../assets/img/categorias/Comics_5.jpg");
+}
+
+
 /*################## Tipografia ###################*/
+
+
 .gradiCategorias1 {
   font-family: 'VT323';
-  font-size: 70px;
-  color: #9c9efe;
+  font-size: 4.3em;
+  color: #B1E1FF;
   text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.544);
+}
+
+
+.imgcategoria{
+  width: 320px;
+  height: 320px;
+}
+
+#objecto2{
+  object-position: 50% 50%;
 }
 
 /*################## Barra de navegacion ###################*/
@@ -292,3 +343,15 @@ body{
   color: white;
 
 }
+
+
+ /* Prueba de efecto Zoom */
+ .efectoZoom{
+  transition: all 500ms ease;
+ }
+
+ .efectoZoom:hover{
+  transform: scale(1.2);
+ }
+ 
+ 

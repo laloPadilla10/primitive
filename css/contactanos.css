@@ -1,27 +1,103 @@
-/*------------------Fonts------------------*/
+/*########## Fonts ###########*/
+
 @font-face {
     font-family: 'Mondwest';
     src: url('../assets/font/Mondwest-Regular.ttf') format('truetype')
 }
 
+/*######## Título ###########*/
+
 h1{
     font-family: Mondwest;
     text-align: center;
 }
-h1.title {
-    font-size: 30px;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #fc00de;
+
+
+
+/*######### párrafo ############*/
+
+.p{
+    
+    font-size: 100px;
+    font-family: 'DM sans';
     
 }
-hr {
-    height: 5px;
-    background-color: rgb(25, 0, 255);
+
+
+/*######### Texto inputs  ############*/
+
+label.form-label {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #fc00de;
+    font-family: 'DM sans';
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.163);
 }
 
+/*######### Texto interno  inputs ###########*/
+#nombre{
+
+    font-family: 'VT323';
+    font-size: 1.5em;
+    
+   
+}
+
+#email{
+
+    font-family: 'VT323';
+    font-size: 1.5em;
+    
+}
+
+#telefono{
+
+    font-family: 'VT323';
+    font-size: 1.5em;
+   
+}
+
+#mensaje{
+
+    font-family: 'VT323';
+    font-size: 1.5em;
+    
+    
+}
+
+
+
+/*##################### btn style ##################*/
+
+.btn-enviar{
+    
+    display: inline-block; 
+    border-radius: 100px;
+    background-color: #9C9EFE;
+    border: none;
+    color: rgb(245, 235, 235);
+    text-align: center;
+    font-family: 'VT323';
+    font-size: 1.2em;
+    padding: 2px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+
+
+.btn-enviar:hover{
+    background-color: #A66CFF;
+ 
+    color: #B1E1FF;
+}
+
+
+/*##################### color body ##################*/
 body{
-    background-color:#fff;
+    background-color:rgb(245, 235, 235);
 }
 
 

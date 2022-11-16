@@ -20,12 +20,18 @@
     <link rel="stylesheet" href="./css/aboutus.css">
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/signup.css">
-    
+    <link rel="stylesheet" href="./css/categorias.css">
+    <link rel="stylesheet" href="./css/myprofile.css">
+    <link rel="stylesheet" href="./css/shoppingcart.css">
+    <!-- iconoshome es para el apartado de la barra de marcas-->
+    <link rel="stylesheet" href="./css/iconoshome.css">
+    <link rel="stylesheet" href="./css/singleproduct.css">
 </head>
 <body>
     <!-- Barra de navegación -->
-    <div class="container-fluid barraNavegacion">
+    <div class="container-fluid barraNavegacion" id="principio">
       <nav class="navbar navbar-expand-lg justify-content-sm-start">
+        
           <button class="navbar-toggler dropdown-toggle-split" type="button" data-toggle="collapse"
               data-bs-toggle="collapse" data-bs-target="#navbar">
               <span class="navbar-toggler-icon"></span>
@@ -39,9 +45,34 @@
                 <li class="nav-item active">
                   <a class="nav-link selectorNomal" name="navInfo" href="#" onclick="cargarAboutUs()">About Us</a>               
               </li>
-                  <li class="nav-item active">
-                      <a class="nav-link selectorNomal" name="navInfo"  href="#" onclick="cargarProductos()">Categorías</a>
+              
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" name="navInfo"  href="#" role="button" data-bs-toggle="dropdown"
+                       ><span>Categorías</span></a>
+                      
+                       <ul class="dropdown-menu">
+                       <!--  <li>
+                          <a href="#" class="dropdown-item" onclick="cargarProductos('Ropa')">Ropa</a>
+                        </li> -->
+                        <li>
+                          <a href="#" class="dropdown-item" onclick="cargarProductos('Figuras')">Figuras</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown-item" onclick="cargarProductos('Comic')">Comics Mangas</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown-item" onclick="cargarProductos('Gadgets')">Gadgets</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown-item" onclick="cargarProductos('Productos')">Productos Nacionales</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown-item" onclick="cargarProductos('Accesorios')">Accesorios</a>
+                        </li>
+                       </ul>
+                     
                   </li>
+               
                   <li class="nav-item active">
                       <a class="nav-link selectorNomal" name="navInfo" href="#">Promociones<pan class="sr-only">(current)</span></a>
                   </li>
@@ -58,12 +89,13 @@
                       </form>
                   </li>
               </ul>
-              <a class="btn btn-primary btn-lg btn-circle mx-1 selectorHelp" href="./html/shoppingcart.html" role="button"><i
-                  class="fa-solid fa-cart-shopping"></i></a>
+              <a class="btn btn-primary btn-lg btn-circle mx-1 selectorHelp cart" onclick="cargarCarrito()" role="button"><i
+                  class="fa-solid fa-cart-shopping" id="iconoCarrito"></i></a>
               <a class="btn btn-primary btn-lg btn-circle selectorHelp" href="#" onclick="cargarLogin()" role="button"><i class="fa-solid fa-user-astronaut"></i></a>
           </div>
       </nav>
-  </div>   
+    </div>
+    
     <!-- Content -->
   <div id ="main">
     <main class="hero-image">
@@ -91,71 +123,90 @@
                 </button>
               </div>
         </div>
-        <!-- logos de marcas -->
-        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center  gifFondo">
-          <h1>Aqui van las marcas</h1>
-          <li class="marca1"><a href=""><i></i></a></li>
-          <li class="marca2"><a href=""><i class=" fa-2x" arie-hidden="true"></i></a></li>
-          <li class="marca3"><a href=""><i></i></a></li>
-          <li class="marca4"><a href=""><i></i></a></li>
-          <li class="marca5"><a href=""><i></i></a></li>
-        </div>
-      
-        <!-- 3 categorias -->
-        <div class=" d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 border">
-          <!-- Categoria -->
-          <div class="categorias text-bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden ">
-            <div class="my-3 py-3">
-              <!-- <a href="http://king-lulu-deer.deviantart.com/"><img src="https://orig00.deviantart.net/4da4/f/2018/125/c/6/city_divider__re_edit__by_king_lulu_deer-dcaozvd.gif"></a> -->
-              <h2 class=" gradiCategorias1 display-5">Ropa</h2>
+        <!-- Barra de marcas con gif de fondo-->
+        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center gifFondo ">
+          <div class="wrapper  justify-content-center">
+            <!-- Colocacion de las marcas -->
+            <div class="buttonIcon fondoTransparente selectorNomal">
+              <div class="icon " ><img src="../assets/img/crunchyroll_logo_icon_a96.ico" alt="marca" class="selectorNomal"> <i ></i><span>Crunchyroll</span></div>
             </div>
+            <div class="buttonIcon fondoTransparente selectorNomal">
+              <div class="icon selectorNomal selectorNomal" ><img src="../assets/img/marvel_logo_icon_a96.ico" alt="marca" class="selectorNomal"> <i ></i><span>Marvel</span></div>
+            </div>
+            <div class="buttonIcon fondoTransparente selectorNomal">
+              <div class="icon selectorNomal" ><img src="../assets/img/disney_logo_icon_a96.ico" alt="marca" class="selectorNomal"> <i ></i><span>Disney</span></div>
+            </div>
+            <div class="buttonIcon fondoTransparente selectorNomal">
+              <div class="icon" ><img src="../assets/img/bandaiaa96.ico" alt="marca" class="selectorNomal"><i ></i><span>Bandai Namco</span></div>
+            </div>
+            <div class="buttonIcon fondoTransparente selectorNomal">
+              <div class="icon selectorNomal" ><img src="../assets/img/nintendo_switch_icon_136357.ico" alt="marca" class="selectorNomal"> <i ></i><span>Nintendo</span></div>
+            </div>
+            <div class="buttonIcon fondoTransparente selectorNomal">
+              <div class="icon selectorNomal" ><img src="../assets/img/main_logo.ico" alt="marca" class="selectorNomal"> <i ></i><span>Acid Pop</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- 3 categorias -->
+        <div class=" d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+          <!-- Categoria -->
+          <div id="categoria1" class="categorias text-bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden ">
+            <div class="my-3 py-3 efectoZoom">
+              <!-- <a href="http://king-lulu-deer.deviantart.com/"><img src="./assets/img/categorias/png/categoria gadget opcion 1 (1).png"></a> -->  
+              <h2 class=" gradiCategorias1 display-5">Novedades</h2>
+            </div> 
 
             <!-- <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div> -->
           </div>
           <!-- Categoria -->
-          <div class=" categorias text-bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div class="my-3 p-3">
-              <h2 class=" gradiCategorias1 display-5">Figuras</h2>
+          <div id="categoria2" class=" categorias text-bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 p-3 efectoZoom">
+              <h2 class=" gradiCategorias1 display-5 ">Figuras</h2>
+              <img class="imgcategoria categorias" src="./assets/img/categorias/png/categoria figuras opcion 1.png">
 
             </div>
             <!-- <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div> -->
           </div>
           <!-- Categoria -->
-          <div class=" categorias text-bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div class="my-3 p-3">
+          <div id="categoria3" class=" categorias text-bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 p-3 efectoZoom">
               <h2 class=" gradiCategorias1 display-5">Comics <br> Mangas</h2>
+              <img class="imgcategoria categorias" src="./assets/img/categorias/png/categoria comics opcion 1.png">
             </div>
             <!-- <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div> -->
           </div>
         </div>
          <!-- otras 3 categorias -->
-         <div class=" d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 border">
+         <div  class=" d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
           <!-- Categoria -->
-          <div class=" categorias text-bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div class="my-3 py-3">
+          <div id="categoria4" id="categoria" class=" categorias text-bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div  class="my-3 py-3 efectoZoom">
               <h2 class=" gradiCategorias1 display-5">Gadgets</h2>
+              <img class="imgcategoria categorias" src="./assets/img/categorias/png/categoria gadget opcion 1 (1).png">
             </div>
 
             <!-- <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div> -->
           </div>
             <!-- Categoria -->
-          <div class=" categorias text-bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div class="my-3 p-3">
-              <h2 class=" gradiCategorias1 display-5">Productos<br>Nacionales</h2>
+          <div id="categoria5" class=" categorias text-bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 p-3 efectoZoom">
+              <h2 class=" gradiCategorias1 display-5">Productos Nacionales</h2>
+              <img class="imgcategoria" src="./assets/img/categorias/IMG_7491_720x (1).jpg">
             </div>
             <!-- <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div> -->
           </div>
             <!-- Categoria -->
-          <div class=" categorias text-bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div class="my-3 p-3">
+          <div id="categoria6" class=" categorias text-bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 p-3 efectoZoom">
               <h2 class=" gradiCategorias1 display-5">Accesorios</h2>
+              <img class="imgcategoria categorias" src="./assets/img/categorias/png/categori accesorio opcion 1.png">
             </div>
             <!-- <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div> -->
           </div>
         </div>
     </main>
   </div>
-    
+  
     <!-- Footer -->
   <footer class="text-center text-white" style="background-color: #e7dcf8;">
     <!-- Grid container -->
@@ -164,7 +215,7 @@
       <section class="mb-4">
         <!-- Instagram -->
         <a
-          class="btn btn-link btn-floating btn-lg  m-1"
+          class="btn btn-link btn-floating btn-lg  m-1 selectorNomal"
           href="#"
           role="button"
           data-mdb-ripple-color="dark"
@@ -173,7 +224,7 @@
         <!-- Instagram -->
         <!-- Tik Tok -->
         <a
-          class="btn btn-link btn-floating btn-lg  m-1"
+          class="btn btn-link btn-floating btn-lg  m-1 selectorNomal"
           href="#"
           role="button"
           data-mdb-ripple-color="#fc00de"
@@ -186,34 +237,28 @@
     <!-- Grid container -->
   
     <!-- Copyright -->
-    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2022 Copyright || Geekmitive || <a href="#" target="">Términos y condiciones</a> || <a href="#" target="">Políticas de privacidad</a>
+    <div class="text-center text-dark p-3 selectorNomal" style="background-color: rgb(177, 225, 225);">
+      © 2022 Copyright || Geekmitive || <a href="#" target="" class="selectorNomal">Términos y condiciones</a> || <a href="#" target="" class="selectorNomal">Políticas de privacidad</a>
     </div>
     <!-- Copyright -->
   </footer>
-    <!-- <footer class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <a>Copyright 2022 Primitive</a>
-                <a href="#" target="_blank">Términos y condiciones</a>
-                <span> | </span>
-                <a href="#" target="_blank">Políticas de privacidad</a>
-                <span> | </span>
-                <a href="#" target="_blank">Instagram</a>
-                <span> | </span>
-                <a href="#" target="_blank">Tik Tok</a>
-                <span> | </span>
-            </div>
-        </div>
-    </footer> -->
+    <!-- Boton de dezplazamiento hacia arriba -->
+    <a href="#principio"><img src="../assets/img/iconodebotonarriba.png" alt="botonArriba" id="botonArriba"></a>
+
+    <!-- Documentos js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
+    <script src="./js/boton-arriba.js"></script>
+    <script src="./js/jquery-3.6.1.min.js"></script>
     <script src="./js/contactanos.js"></script>
     <script src="./js/listadoProductos.js"></script>
     <script src="./js/aboutus.js"></script>
     <script src="./js/login.js"></script>
     <script src="./js/signup.js"></script>
+    <script src="./js/carrito.js"></script>
+    <script src="./js/singleproduct.js"></script>
+    <script src="./js/myprofile.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
