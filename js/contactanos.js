@@ -79,7 +79,7 @@ const validEmail = (email) => {
 
   function crearPaginaContacto (){
     return '<div class="col-sm-8 offset-sm-2"  style="margin-top:30px">' +
-            '</div>' +
+                '</div>' +
             '<div class="col-sm-12" style="margin-top:10px">' +
                 '<div class="row justify-content-center">' +
                     '<div class="col-sm-4 d-none d-md-flex align-items-center">' +                                            

@@ -109,8 +109,7 @@ function cargarAboutUs () {
         '</div>'+
        '<!--  <div class="col-md-1"></div> -->'+
         '<br>'+
-        '<div class="col-md-3"></div>'+
-        '<hr>'+
+        '<div class="col-md-3"></div>'+       
         '<br />';
 
 }

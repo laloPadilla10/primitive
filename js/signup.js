@@ -57,22 +57,22 @@ function signUp(){
                     '<h2 class="text-center" id="texto">Registrate, es gratis💜</h2>'+
                     '<form class="row g-3" name="form" action="#" method="post">'+
 
-                        '<div class="sm-6">'+             
+                        '<div class="col-sm-12">'+             
                             '<label for="nombre" class="form-label" id="tamaño">Nombre</label>'+
                             '<input type="text" class="form-control" id="nombre" placeholder="xXxNarutoxXx ">'+
                             '<label class="text-danger" style="display: none" id="errorNombre">*campo requerido</label>' +
                         '</div>'+
-                        '<div class="sm-6">'+
+                        '<div class="col-sm-12">'+
                             '<label for="numtel" class="form-label" id="tamaño">Numero telefónico</label>'+
                             '<input type="number" class="form-control" placeholder="+529996663333" id="telefono">'+
                             '<label class="text-danger" style="display: none" id="errorTelefono">*campo requerido</label>' +
                         '</div>'+
-                        '<div class="sm-6">'+
+                        '<div class="col-sm-12">'+
                             '<label for="email" class="form-label" id="tamaño">Correo Electrónico</label>'+
                             '<input type="email" class="form-control" id="email" placeholder="example@mail.com">'+
                             '<label class="text-danger" style="display: none" id="errorEmail">*campo requerido</label>' +
                         '</div>'+
-                        '<div class="sm-6">'+
+                        '<div class="col-sm-12">'+
                             '<label for="password" class="form-label" id="tamaño">Contraseña</label>'+
                             '<input type="password" class="form-control" id="password" placeholder="soygeekyque123">'+
                             '<label class="text-danger" style="display: none" id="errorPassword">*campo requerido</label>' +
