@@ -343,3 +343,15 @@ img {cursor: pointer;}
   color: white;
 
 }
+
+
+ /* Prueba de efecto Zoom */
+ .efectoZoom{
+  transition: all 500ms ease;
+ }
+
+ .efectoZoom:hover{
+  transform: scale(1.2);
+ }
+ 
+ 

@@ -118,13 +118,19 @@
    
   }
   
+  #botonArriba{
+    position:fixed;
+    bottom: 55px;
+    border-radius: 6px;
+    right:-100px;
+    /*los -100 es para que el boton no este en visualizado en la pantalla*/
+    width:40px;
+    transition: all 1s;
+    background: #b1e1ff;
+    /*transiciond de aparicion de boton*/
+  }
 
   
 
  
-  
-
-
-
-
 
