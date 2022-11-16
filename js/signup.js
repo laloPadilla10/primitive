@@ -43,42 +43,43 @@ let usuarios = [];
 
 function signUp(){
     Swal.fire({
-        width: 1200,
-        html: '<div class="container w-75 mt-5 rounded">'+
+        width: 1000,
+        html: 
+        '<div class="container w-75 mt-5 rounded">'+
+           
             '<div class="row align-items-stretch">'+
-                '<div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded">'+
+                '<div class="col-md-5 col-lg-5 col-xl-6 rounded d-none d-md-flex align-items-center">'+
+                    '<img class="img-thumbnail" src="../assets/img/singin3.jpg" alt="imagen" style="height: 500px" >'+
                     '<!--d-none y d-lg-block son pa el responsive, none indica que no muestre la imagen cuando esté muy pequeña la ventana, lg block indica que si se muestre a partir de cierto tamaño-->'+
                 '</div>'+
-            '<div class="col p-5 rounded-end">'+
-            '<div class="tex-end">'+
-            '</div>'+
-            '<h2 class="fw-bold text-center py-5">Registrate, es gratis💜</h2>'+
             
-            '<!--inputs con sus labels y propiedades, cada uno en su div-->'+
-            '<form name="form" action="#" method="post">'+
-                '<div class="mb-4">'+
-                    '<label for="nombre" class="form-label">Nombre</label>'+
-                    '<input type="text" class="form-control" id="nombre" placeholder="xXxNarutoxXx ">'+
-                    '<label class="text-danger" style="display: none" id="errorNombre">*campo requerido</label>' +
+                '<div class="col-sm-6 ">'+
+                    '<h2 class="text-center" id="texto">Registrate, es gratis💜</h2>'+
+                    '<form class="row g-3" name="form" action="#" method="post">'+
+
+                        '<div class="sm-6">'+             
+                            '<label for="nombre" class="form-label" id="tamaño">Nombre</label>'+
+                            '<input type="text" class="form-control" id="nombre" placeholder="xXxNarutoxXx ">'+
+                            '<label class="text-danger" style="display: none" id="errorNombre">*campo requerido</label>' +
+                        '</div>'+
+                        '<div class="sm-6">'+
+                            '<label for="numtel" class="form-label" id="tamaño">Numero telefónico</label>'+
+                            '<input type="number" class="form-control" placeholder="+529996663333" id="telefono">'+
+                            '<label class="text-danger" style="display: none" id="errorTelefono">*campo requerido</label>' +
+                        '</div>'+
+                        '<div class="sm-6">'+
+                            '<label for="email" class="form-label" id="tamaño">Correo Electrónico</label>'+
+                            '<input type="email" class="form-control" id="email" placeholder="example@mail.com">'+
+                            '<label class="text-danger" style="display: none" id="errorEmail">*campo requerido</label>' +
+                        '</div>'+
+                        '<div class="sm-6">'+
+                            '<label for="password" class="form-label" id="tamaño">Contraseña</label>'+
+                            '<input type="password" class="form-control" id="password" placeholder="soygeekyque123">'+
+                            '<label class="text-danger" style="display: none" id="errorPassword">*campo requerido</label>' +
+                        '</div>'+
+                    '</form>'+
                 '</div>'+
-                '<div class="mb-4">'+
-                    '<label for="numtel" class="form-label">Numero telefónico</label>'+
-                    '<input type="number" class="form-control" placeholder="+529996663333" id="telefono">'+
-                    '<label class="text-danger" style="display: none" id="errorTelefono">*campo requerido</label>' +
-                '</div>'+
-                '<div class="mb-4">'+
-                    '<label for="email" class="form-label">Correo Electrónico</label>'+
-                    '<input type="email" class="form-control" id="email" placeholder="example@mail.com">'+
-                    '<label class="text-danger" style="display: none" id="errorEmail">*campo requerido</label>' +
-                '</div>'+
-                '<div class="mb-4">'+
-                    '<label for="password" class="form-label">Contraseña</label>'+
-                    '<input type="password" class="form-control" id="password" placeholder="soygeekyque123">'+
-                    '<label class="text-danger" style="display: none" id="errorPassword">*campo requerido</label>' +
-                '</div>'+
-            '</form>'+
-        '</div>'+
-        '</div>'+
+            '</div>'+
         '</div>',
     confirmButtonText: "Registrarse",
     showConfirmButton: true,
