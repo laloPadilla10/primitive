@@ -43,7 +43,7 @@ function verDetalle(json) {
                     <option>7</option>
                 </select>
                 <button class="buy-btn" onclick="agregarProducto()">Añadir a Carrito<i class="fa-solid fa-cart-shopping"></i></button>
-                <h4 class="mt-5 mb-5">Detalles de producto</h4>
+                <h4 id="detallesp" class="mt-5 mb-5">Detalles de producto</h4>
                 <span class="product_description">${json.description}</span>
             </div>
         </div>
@@ -52,6 +52,7 @@ function verDetalle(json) {
   
 }
 
+//función subarreglos del carrito
 
 const agregarProducto = () => {  
 

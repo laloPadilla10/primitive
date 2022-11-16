@@ -23,31 +23,52 @@
 
 .card {
   background-color: #ffff;
-  border-color:#a66cff;
+  border-color:#B1E1FF;
   border-width: .07cm;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 20%);
 }
 
 .card-header {
   background-color: #ffff;
-  border-color: #a66cff;
+  border-color: #B1E1FF;
   border-width: .07cm;
+}
+
+.card-body {
+  font-size: 1.2em;
 }
 .card-footer {
 
-  border-color: #a66cff;
+  border-color: #B1E1FF;
   border-width: .07cm;
+  font-family: 'VT323';
+  color: #A66CFF;
+  font-size: 4em;
 }
 
 
 /*------------------TYPOGRAPHY------------*/
 
 #title{
-    font-family: Mondwest;
+    font-family: 'VT323';
     text-align: center;
     color: #fc00de;
 }
 
-h4, p{
+.card-title{
   font-family: 'DM Sans';
+  color:#9C9EFE;
+  font-weight: bold;
+
 }
 
+p{
+  font-family: 'DM Sans';
+  line-height : 1.4rem;
+}
+
+
+
+.mt-4{
+  font-size: 0.7em;
+}
