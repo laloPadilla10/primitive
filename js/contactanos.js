@@ -82,7 +82,7 @@ const validEmail = (email) => {
             '</div>' +
             '<div class="col-sm-12" style="margin-top:10px">' +
                 '<div class="row justify-content-center">' +
-                    '<div class="col-sm-4">' +                                            
+                    '<div class="col-sm-4 d-none d-md-flex align-items-center">' +                                            
                         '<img class="img-thumbnail" src="https://i.ibb.co/xYVBsyf/Sign-in-opcion-6.jpg" alt="imagen" style="height: 700px">' +
                     '</div>' +
                     '<div class="col-sm-4">' +
@@ -111,7 +111,7 @@ const validEmail = (email) => {
                                     '<textarea class="form-control" id="mensaje" rows="5" style="background-color:rgb(177, 225, 225);"></textarea>' +
                                     '<label class="text-danger" style="display: none" id="errorMensaje">*campo requerido</label>' +
                             '</div>' +
-                            '<div class="col-sm-12">' +
+                            '<div class="col-sm-12 d-flex justify-content-center">' +
                                     '<form method="post">' +
                                     '<button onclick="enviarEmail(event)" type="submit" class="btn-enviar">Enviar</button></form>' +
                             '</div>' +

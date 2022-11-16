@@ -121,7 +121,7 @@ function cargarLogin () {
         '<div class="row">' +
             '<!-- Imagen -->' +
             '<div class="col d-none d-md-flex align-items-center">' +
-                '<img id="imagen-login" class="img-fluid mx-auto d-block" src="../assets/img/singin2.jpg" alt="imagen-login" style="height: 1000px">' +
+                '<img id="imagen-login" class="img-fluid mx-auto d-block" src="../assets/img/singin2.jpg" alt="imagen-login" style="height: 700px">' +
             '</div>' +
             '<!-- Login -->' +
             '<div class="col my-5">' +
