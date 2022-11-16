@@ -118,18 +118,18 @@ function cargarLogin () {
     '<!-- Login-->' +
     '<div class="container-fluid" id="login">' +
         '<!-- Cuerpo de Login-->' +
-        '<div class="row">' +
+        '<div class="row justify-content-center" style="margin-top:20px">' +
             '<!-- Imagen -->' +
-            '<div class="col d-none d-md-flex align-items-center">' +
-                '<img id="imagen-login" class="img-fluid mx-auto d-block" src="../assets/img/singin2.jpg" alt="imagen-login" style="height: 700px">' +
+            '<div class="col-sm-4 d-none d-md-flex align-items-center">' +
+                '<img class="img-thumbnail" id="imagen-login" class="img-fluid mx-auto d-block" src="../assets/img/singin2.jpg" alt="imagen-login" style="height: 700px">' +
             '</div>' +
             '<!-- Login -->' +
-            '<div class="col my-5">' +
-                '<form>' +
+            '<div class="col-sm-4">' +
+                '<form class="row g-3" >' +
                     '<h2 class="text-center">¡Bienvenido!</h2>' +
                     '<!-- Email/ username log in -->' +
                     '<div class="row justify-content-center form-outline mb-4 my-5">' +
-                        '<div class="col-8">' +
+                        '<div class="col-sm-12">' +
                             '<input type="email" style="background-color:rgb(177, 225, 225);" id="user-login" class="form-control text-center" placeholder="email / username" required/>' +
                             '<label class="text-danger" id = "errorUser" style="display: none;">*información invalida</label>'+
                         '</div>' +
@@ -137,7 +137,7 @@ function cargarLogin () {
                   
                     '<!-- Password input -->' +
                     '<div class="row justify-content-center form-outline mb-4">' +
-                        '<div class="col-8">' +
+                        '<div class="col-12">' +
                             '<input type="password" style="background-color:rgb(177, 225, 225);" id="password-login" class="form-control text-center" placeholder="password" required/>' +
                             '<label class="text-danger" id = "errorPass" style="display: none;">*información invalida</label>'+
                         '</div>' +
@@ -157,7 +157,7 @@ function cargarLogin () {
                     '<div class="row mb-2">'+
                         '<div class="col d-flex justify-content-center">'+
                           '<form > <!--method="post"-->'+
-                            '<button id="button-login" type="button" class="btn-login" onclick="getUsers()">Ingresar</button>'+
+                            '<button id="button-login" type="button" class="btn-login" onclick="cargarMiPerfilPersonal()">Ingresar</button>'+
                           '</form>'+
                         '</div>'+
                     '</div>'+
