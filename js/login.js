@@ -1,47 +1,14 @@
-const url ="../assets/json/login-users.json";
 
-//const url ="https://reqres.in/api/users?delay=2";
-
-//Verificar si ya existe LocalStorage:
-//Se activa funcion Fetch para conseguir datos
-function getUsers(){
-    const localData = JSON.parse(localStorage.getItem("users"));
-    if (localData && localData.time > Date.now()){
-        validUsers(localData.dates);
-    }
-    else solicitudFetch();
-}
-
-//Solicitud Fetch
-function solicitudFetch(){
-    fetch(url)
-    .then(response => (response.json()))
-    .then(conversion => {
-        saveLocalStorage(conversion.users)
-        validUsers(conversion.users);
-    })
-    .catch(error => {
-            console.log(error);
-    })
-    
-}
-
-function saveLocalStorage(data){
-    const users ={
-        time: Date.now() + 60000,
-        dates: data
-    }
-    localStorage.setItem("users",JSON.stringify(users));
+function guardarLocalStorage(data){
+    localStorage.setItem("user", JSON.stringify({time: Date.now() + 60000, usuario: data}));
 }
 
 let times = 0;
-let user;
-let password;
 
-function validUsers(data){
+function validUser(data){
     
-    user = document.getElementById("user-login");
-    password = document.getElementById("password-login");
+    let user = $("#user-login").val();
+    let password = $("#password-login").val();
     
     if (times >= 2){
         Swal.fire({
@@ -53,66 +20,40 @@ function validUsers(data){
         return;
     }
     
-    if ((user.value == "") || (password.value == "")) {
+    if ((user == "") || (password == "")) {
         Swal.fire("Ingresa todos los campos requeridos");
         
-        user.classList.add("border-danger");
-        password.classList.add("border-danger");
+        $("#user-login").addClass("border-danger");
+        $("#password-login").addClass("border-danger");
         document.getElementById("errorUser").style.display = "block";
         document.getElementById("errorPass").style.display = "block";
         return false;
-    
-    }if ( (compareUsers(data) == false) && (comparePass(data) == false)){
-        Swal.fire("Verifica los datos ingresados")
-        
-        user.classList.add("border-danger");
-        password.classList.add("border-danger");
-        document.getElementById("errorUser").style.display = "block";
-        document.getElementById("errorPass").style.display = "block";
-        times++    
-        return false;
+    }
 
-    } else if ( compareUsers(data) == false ){
+    fetch(`http://localhost:8080/geekmitive/usuarios/getByNickPass?nickName=${user}&password=${password}`)
+    .then(response => {
+        if(response.ok)
+            return response.json();
+        else
+            throw new Error('Something went wrong.');
+    }).then(u => {
+        guardarLocalStorage(u);
+        cargarMiPerfilPersonal(u.nickname);
+    }).catch(error => {
         Swal.fire("Usuario o email incorrecto. Verifica nuevamente");
-        
-        user.classList.add("border-danger");
+        $("#user-login").addClass("border-danger");
+        $("#password-login").addClass("border-danger");
         document.getElementById("errorUser").style.display = "block";
-        return false;
-
-    } else if ( comparePass(data) == false){
-        Swal.fire("Contraseña incorrecta. Verifica nuevamente")
-        
-        password.classList.add("border-danger");
         document.getElementById("errorPass").style.display = "block";
-        return false;
-
-    } else
-        //document.location.assign("../index.html")
-        cargarMiPerfilPersonal()
-        return true;
+        console.error(error);
+        times++;
+    });    
+    
+    return true;
 }
 
-function compareUsers(data){
-    for(i = 0; i < data.length; i++){
-        if ((data[i].user == user.value) || (data[i].email == user.value)){
-            return true;
-        }  
-}
-    return false;
-}
-
-function comparePass(data){
-    for(i = 0; i < data.length; i++){
-        if ( data[i].password == password.value) {
-            return true;
-        }  
-}
-    return false;
-}
-
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function cargarLogin () {
+    if (localStorage.getItem("user")) return;
     let main = document.getElementById("main");
     main.innerHTML =  
     '<!-- Login-->' +
@@ -157,7 +98,7 @@ function cargarLogin () {
                     '<div class="row mb-2">'+
                         '<div class="col d-flex justify-content-center">'+
                           '<form > <!--method="post"-->'+
-                            '<button id="button-login" type="button" class="btn-login" onclick="cargarMiPerfilPersonal()">Ingresar</button>'+
+                            '<button id="button-login" type="button" class="btn-login" onclick="validUser()">Ingresar</button>'+
                           '</form>'+
                         '</div>'+
                     '</div>'+

@@ -31,7 +31,7 @@ function cargarCarrito() {
           </div>
             
           <div class="col-sm-3 text-center my-2">
-            <button href="#" class="btn" ${arregloCarrito.length==0 ? "disabled" : ""}> Pagar </button>
+            <button href="#" class="btn" ${arregloCarrito.length==0 ? "disabled" : ""} onclick="pagar()"> Pagar </button>
           </div>
       <div>
     <div>      
@@ -44,7 +44,7 @@ function cargarCarrito() {
           </div>
           </div>`
   
-  carritoPrueba();
+  carritoPrueba(); 
 };
 
 
@@ -65,21 +65,40 @@ function carritoPrueba() {
   let listaHtml = "";
   let total = 0;
   arregloCarrito.forEach(jsonCarrito => {
-    listaHtml += `<tr><td class="td"><img id="imgCarrito" src= ${jsonCarrito.imagenes} style="width:100px;heigth:100px;"></td>
-      <td class="td"> ${jsonCarrito.name} </td>
-      <td class="td"> ${jsonCarrito.price} </td>
-      <td class="td"> <input type="number" value = ${jsonCarrito.cantidad}  min="1" pattern="^[1-50]" style="width:45px;"> </td> 
-      <td class="td"> ${jsonCarrito.price * Number(jsonCarrito.cantidad)} </td>
+    listaHtml += `<tr><td class="td"><img id="imgCarrito" src= ${jsonCarrito.imagen} style="width:100px;heigth:100px;"></td>
+      <td class="td">${jsonCarrito.nombre}</td>
+      <td class="td">$${jsonCarrito.precio} MXN</td>
+      <td class="td"><input type="number" value = ${jsonCarrito.cantidad} min="1" pattern="^[1-50]" style="width:45px;" onChange="cambiarTotal()"></td> 
+      <td class="td">$${jsonCarrito.precio * Number(jsonCarrito.cantidad)} MXN</td>
       <td class="td"><a href="#" onclick="remove(this)"><img src="./assets/img/trash.png" style="width:35px;heigth:35px;"></i></a></td>`
-      total += jsonCarrito.price * jsonCarrito.cantidad;
+      total += jsonCarrito.precio * jsonCarrito.cantidad;
   });
-
+ 
  //pinta mi total
   $("#TotalCarrito").append(`<h5 class="tcarrito"> TOTAL =  $${total} MXN</h5>`).show();
 
   body = document.getElementById("body");
   body.innerHTML = listaHtml;
-
 }
+
+const cambiarTotal = () =>{
+  let total = 0;
+  $("#body tr").toArray().forEach((tr, i) => {
+    let subtotal = arregloCarrito[i].precio * Number($(tr).find("input").val());
+    $(tr).find("td:eq(4)").text(`$${subtotal} MXN`);
+    total += subtotal;
+  });
+  $(".tcarrito").remove();
+  $("#TotalCarrito").append(`<h5 class="tcarrito"> TOTAL =  $${total} MXN</h5>`);
+}
+
+function pagar(){
+  Swal.fire({
+    icon: 'success',
+    title: '¡Gracias por todo Generation!',
+    showConfirmButton: true
+  }).then(() => {$("#cart_menu_num").remove();});
+}
+
 
 
