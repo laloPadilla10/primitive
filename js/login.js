@@ -53,7 +53,6 @@ function validUser(data){
 }
 
 function cargarLogin () {
-    if (localStorage.getItem("user")) return;
     let main = document.getElementById("main");
     main.innerHTML =  
     '<!-- Login-->' +
