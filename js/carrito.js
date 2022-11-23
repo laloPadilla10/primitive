@@ -38,7 +38,7 @@ function cargarCarrito() {
           <div class="row">
               <div class="col text-center mt-4">
                   <small class="text-muted">
-                  ¿Tienes un problema con tu compra? <a class="contactanoscarro" href="../html/contactanos.html">¡Contáctanos!</a>
+                  ¿Tienes un problema con tu compra? <a class="contactanoscarro" href="#" onclick="cargarContacto()">¡Contáctanos!</a>
                    </small>
               </div>
           </div>
