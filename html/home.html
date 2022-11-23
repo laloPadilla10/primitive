@@ -24,7 +24,7 @@
 </head>
 <body>
     <!-- Barra de navegación -->
-    <div class="container-fluid barraNavegacion">
+    <div class="container-fluid barraNavegacion" id="principio">
       <nav class="navbar navbar-expand-lg justify-content-sm-start">
           <button class="navbar-toggler dropdown-toggle-split" type="button" data-toggle="collapse"
               data-bs-toggle="collapse" data-bs-target="#navbar">
@@ -60,15 +60,13 @@
                       </form>
                   </li>
               </ul>
-
               <a class="btn btn-primary btn-lg btn-circle mx-1 selectorHelp" href="./html/shoppingcart.html" role="button"><i
                   class="fa-solid fa-cart-shopping"></i></a>
               <a class="btn btn-primary btn-lg btn-circle selectorHelp" href="#" onclick="cargarLogin()" role="button"><i class="fa-solid fa-user-astronaut"></i></a>
-
-
           </div>
       </nav>
   </div>   
+
     <!-- Content -->
   <div id ="main">
     <main class="hero-image">
@@ -169,7 +167,8 @@
         </div>
     </main>
   </div>
-    
+    <!-- Boton de dezplazamiento hacia arriba -->
+  <a href="#principio"><img src="../assets/img/iconodebotonarriba.png" alt="botonArriba" id="botonArriba"></a>
     <!-- Footer -->
   <footer class="text-center text-white" style="background-color: #e7dcf8;">
     <!-- Grid container -->
@@ -209,6 +208,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
+    <script src="../js/boton-arriba.js"></script>
     <script src="../js/contactanos.js"></script>
     <script src="../js/listadoProductos.js"></script>
     <script src="../js/aboutus.js"></script>
@@ -218,53 +218,3 @@
 </body>
 </html>
 
-/////////////
-<!-- <div class="d-flex gap-5 justify-content-center">
-  <div class="dropdown-menu d-block position-static pt-0 mx-0 rounded-3 shadow overflow-hidden w-280px">
-    <form class="p-2 mb-2 bg-light border-bottom">
-      <input type="search" class="form-control" autocomplete="false" placeholder="Type to filter...">
-    </form>
-    <ul class="list-unstyled mb-0">
-      <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
-        <span class="d-inline-block bg-success rounded-circle p-1"></span>
-        Action
-      </a></li>
-      <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
-        <span class="d-inline-block bg-primary rounded-circle p-1"></span>
-        Another action
-      </a></li>
-      <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
-        <span class="d-inline-block bg-danger rounded-circle p-1"></span>
-        Something else here
-      </a></li>
-      <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
-        <span class="d-inline-block bg-info rounded-circle p-1"></span>
-        Separated link
-      </a></li>
-    </ul>
-  </div>
-
-  <div class="dropdown-menu dropdown-menu-dark d-block position-static border-0 pt-0 mx-0 rounded-3 shadow overflow-hidden w-280px">
-    <form class="p-2 mb-2 bg-dark border-bottom border-dark">
-      <input type="search" class="form-control form-control-dark" autocomplete="false" placeholder="Type to filter...">
-    </form>
-    <ul class="list-unstyled mb-0">
-      <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
-        <span class="d-inline-block bg-success rounded-circle p-1"></span>
-        Action
-      </a></li>
-      <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
-        <span class="d-inline-block bg-primary rounded-circle p-1"></span>
-        Another action
-      </a></li>
-      <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
-        <span class="d-inline-block bg-danger rounded-circle p-1"></span>
-        Something else here
-      </a></li>
-      <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
-        <span class="d-inline-block bg-info rounded-circle p-1"></span>
-        Separated link
-      </a></li>
-    </ul>
-  </div>
-</div> -->
